@@ -1,17 +1,17 @@
 {
   "question": "Is the trauma to the head significant?",
-  "answer": "Based on the provided context, I can only state what is visible in the image without speculating. \n\nThe image shows a patient in a hospital bed, with a healthcare provider bandaging the patient. The patient is wearing a bloodstained gown. The image is titled \"head injuries in hospital\". \n\nThere is no further information provided about the extent of the trauma. \n\nTherefore, I can only confirm that there are head injuries and the presence of blood, but I do not have enough information to assess the significance of the trauma to the head.",
+  "answer": "Based on the provided context, I can only state what is visible in the image without speculating. \n\nThe image shows a patient on a hospital bed with bloodstained gauze, and the caption mentions \"head injuries\". \n\nI cannot assess the significance of the trauma to the head as the context does not provide information on the severity of the injuries. \n\nWhat is visible in the image is a patient with head injuries on a hospital bed with bloodstained gauze.",
   "question_type": "general",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006783008575439453,
+    "question_analysis": 0.006318092346191406,
     "roi_detection": 0,
-    "concept_extraction": 4.088794708251953,
-    "grounding_check": 5.4836273193359375e-05,
-    "graph_construction": 0.21750307083129883,
-    "graph_traversal": 1.020167589187622,
-    "answer_synthesis": 2.610438346862793,
-    "total": 7.945101499557495
+    "concept_extraction": 3.103956699371338,
+    "grounding_check": 5.316734313964844e-05,
+    "graph_construction": 0.21629714965820312,
+    "graph_traversal": 2.2025017738342285,
+    "answer_synthesis": 2.5898892879486084,
+    "total": 8.120086193084717
   },
   "interim_results": {
     "question_analysis": {
@@ -46,10 +46,10 @@
       "raw_concepts": {
         "scene_setting": [
           {
-            "name": "trauma bay",
+            "name": "hospital bed",
             "attributes": {
-              "location": "hospital",
-              "appearance": "urgent care area"
+              "location": "emergency room",
+              "appearance": "bloodstained"
             },
             "grounding_score": 0.85
           }
@@ -59,7 +59,7 @@
             "name": "patient",
             "attributes": {
               "actions": "",
-              "position": "lying on a hospital bed"
+              "position": "lying on bed"
             },
             "grounding_score": 0.85
           },
@@ -67,35 +67,26 @@
             "name": "healthcare provider",
             "attributes": {
               "actions": "",
-              "position": "standing in the background"
+              "position": "standing in background"
             },
             "grounding_score": 0.85
           }
         ],
-        "procedures": [
-          {
-            "name": "bandaging",
-            "attributes": {
-              "technique": "wrapping around the head",
-              "stage": "ongoing or recently completed"
-            },
-            "grounding_score": 0.8
-          }
-        ],
+        "procedures": [],
         "equipment": [
           {
             "name": "hospital bed",
             "attributes": {
               "usage": "patient care",
-              "position": "center of the scene"
+              "position": "center of scene"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "blood-stained sheets",
+            "name": "bloodstained gauze",
             "attributes": {
-              "usage": "patient care",
-              "position": "on the bed"
+              "usage": "wound management",
+              "position": "on patient's head"
             },
             "grounding_score": 0.85
           }
@@ -104,7 +95,7 @@
           {
             "name": "head wound",
             "attributes": {
-              "significance": "visible injury",
+              "significance": "apparent trauma",
               "appearance": "bleeding and bandaged"
             },
             "grounding_score": 0.8
@@ -125,10 +116,10 @@
       "grounded_concepts": {
         "scene_setting": [
           {
-            "name": "trauma bay",
+            "name": "hospital bed",
             "attributes": {
-              "location": "hospital",
-              "appearance": "urgent care area"
+              "location": "emergency room",
+              "appearance": "bloodstained"
             },
             "grounding_score": 0.85
           }
@@ -138,7 +129,7 @@
             "name": "patient",
             "attributes": {
               "actions": "",
-              "position": "lying on a hospital bed"
+              "position": "lying on bed"
             },
             "grounding_score": 0.85
           },
@@ -146,35 +137,26 @@
             "name": "healthcare provider",
             "attributes": {
               "actions": "",
-              "position": "standing in the background"
+              "position": "standing in background"
             },
             "grounding_score": 0.85
           }
         ],
-        "procedures": [
-          {
-            "name": "bandaging",
-            "attributes": {
-              "technique": "wrapping around the head",
-              "stage": "ongoing or recently completed"
-            },
-            "grounding_score": 0.8
-          }
-        ],
+        "procedures": [],
         "equipment": [
           {
             "name": "hospital bed",
             "attributes": {
               "usage": "patient care",
-              "position": "center of the scene"
+              "position": "center of scene"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "blood-stained sheets",
+            "name": "bloodstained gauze",
             "attributes": {
-              "usage": "patient care",
-              "position": "on the bed"
+              "usage": "wound management",
+              "position": "on patient's head"
             },
             "grounding_score": 0.85
           }
@@ -183,7 +165,7 @@
           {
             "name": "head wound",
             "attributes": {
-              "significance": "visible injury",
+              "significance": "apparent trauma",
               "appearance": "bleeding and bandaged"
             },
             "grounding_score": 0.8
@@ -210,7 +192,7 @@
           ],
           "relation_types": []
         },
-        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Activities: bandaging. Equipment: hospital bed, bloodstained gown",
+        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze",
         "scene_elements": {
           "image": [
             {
@@ -228,14 +210,14 @@
         "graph_patterns": []
       },
       "traversal_strategy": "reasoning_traversal",
-      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Activities: bandaging. Equipment: hospital bed, bloodstained gown"
+      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze"
     }
   },
   "metrics": {
-    "bleu": 0.015470894308331349,
-    "rouge": 0.11650485436893204,
-    "sent": 0.5777588486671448,
-    "ent": 0.010870099067687988,
+    "bleu": 0.008193095011512865,
+    "rouge": 0.13483146067415733,
+    "sent": 0.5372105836868286,
+    "ent": 0.357143372297287,
     "clip_c": 0.0
   },
   "reference_answer": "Yes the patient has suffered a major critical injury to head."

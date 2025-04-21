@@ -1,0 +1,278 @@
+{
+  "question": "Is the patient in a critical state?",
+  "answer": "The context does not contain enough information to determine if the patient is in a critical state. \n\nWhat is visible in the image is a hospital room with a patient on a hospital bed, and multiple healthcare providers are present and engaged in patient care. There are also medical equipment such as a medical monitor and a medical device with a screen being used.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.006836652755737305,
+    "roi_detection": 0,
+    "concept_extraction": 3.138946294784546,
+    "grounding_check": 6.723403930664062e-05,
+    "graph_construction": 0.24755120277404785,
+    "graph_traversal": 1.7375202178955078,
+    "answer_synthesis": 1.7755911350250244,
+    "total": 6.909123420715332
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1260,
+          720
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical equipment and supplies"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider 1",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "left side of bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider 2",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "center of bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider 3",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "right side of bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient care",
+            "attributes": {
+              "technique": "undetermined",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient support",
+              "position": "center of room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "wall-mounted"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical supplies",
+            "attributes": {
+              "usage": "patient care",
+              "position": "wall-mounted"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving care",
+              "appearance": "covered with blanket"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider 1",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare provider 2",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare provider 3",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical equipment and supplies"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider 1",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "left side of bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider 2",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "center of bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider 3",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "right side of bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient care",
+            "attributes": {
+              "technique": "undetermined",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient support",
+              "position": "center of room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "wall-mounted"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical supplies",
+            "attributes": {
+              "usage": "patient care",
+              "position": "wall-mounted"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving care",
+              "appearance": "covered with blanket"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider 1",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare provider 2",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare provider 3",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital room. People: healthcare provider, healthcare provider, healthcare provider. Activities: patient care. Equipment: hospital bed, medical monitor, medical device with screen",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital room. People: healthcare provider, healthcare provider, healthcare provider. Activities: patient care. Equipment: hospital bed, medical monitor, medical device with screen"
+    }
+  },
+  "metrics": {
+    "bleu": 0.04390076337849204,
+    "rouge": 0.19047619047619047,
+    "sent": 0.6281259655952454,
+    "ent": 0.005118158645927906,
+    "clip_c": 0.5120146017553991
+  },
+  "reference_answer": "Yes the patient seems to be critical. He is in the ICU, and is being attended by three healthcare workers."
+}

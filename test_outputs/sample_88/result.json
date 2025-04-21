@@ -1,17 +1,17 @@
 {
   "question": "Are the eyes being checked properly?",
-  "answer": "It is not possible to determine if the eyes are being checked properly. \n\nWhat is visible in the image: A hospital room with a physician, a patient, a medical monitor, an infusion pump, and electrodes. A medical examination is taking place. No specific eye examination or procedures are visible.",
+  "answer": "It is not possible to determine if the eyes are being checked properly. \n\nThe context mentions a medical examination is taking place, but it does not provide specific information about which parts of the body are being examined or how the examination is being performed.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.007184028625488281,
+    "question_analysis": 0.008985757827758789,
     "roi_detection": 0,
-    "concept_extraction": 3.4262449741363525,
-    "grounding_check": 5.8650970458984375e-05,
-    "graph_construction": 0.22370505332946777,
-    "graph_traversal": 2.578723430633545,
-    "answer_synthesis": 1.479701042175293,
-    "total": 7.719088554382324
+    "concept_extraction": 3.5740163326263428,
+    "grounding_check": 5.459785461425781e-05,
+    "graph_construction": 0.25643444061279297,
+    "graph_traversal": 2.66300368309021,
+    "answer_synthesis": 1.5059239864349365,
+    "total": 8.011141777038574
   },
   "interim_results": {
     "question_analysis": {
@@ -47,17 +47,17 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor",
-              "appearance": "medical"
+              "appearance": "medical equipment and supplies"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "doctor",
+            "name": "physician",
             "attributes": {
-              "actions": "treating",
-              "position": "standing over patient"
+              "actions": "treating patient",
+              "position": "standing beside the bed"
             },
             "grounding_score": 0.85
           },
@@ -65,7 +65,7 @@
             "name": "patient",
             "attributes": {
               "actions": "receiving treatment",
-              "position": "lying on bed"
+              "position": "lying on the bed"
             },
             "grounding_score": 0.85
           }
@@ -84,16 +84,24 @@
           {
             "name": "medical monitor",
             "attributes": {
-              "usage": "monitoring patient",
-              "position": "near bed"
+              "usage": "monitoring patient's vital signs",
+              "position": "in the foreground"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "IV pole",
+            "name": "infusion pump",
             "attributes": {
-              "usage": "administering medication",
-              "position": "near bed"
+              "usage": "administering medication or fluids",
+              "position": "on the right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "electrodes",
+            "attributes": {
+              "usage": "monitoring patient's heart activity",
+              "position": "on the patient's chest"
             },
             "grounding_score": 0.85
           }
@@ -102,15 +110,15 @@
           {
             "name": "electrode",
             "attributes": {
-              "significance": "monitoring",
-              "appearance": "on patient's chest"
+              "significance": "monitoring heart activity",
+              "appearance": "attached to patient's chest"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "doctor",
+            "subject": "physician",
             "relation": "treating",
             "object": "patient",
             "grounding_score": 0.75
@@ -118,7 +126,13 @@
           {
             "subject": "patient",
             "relation": "receiving treatment from",
-            "object": "doctor",
+            "object": "physician",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "medical monitor",
+            "relation": "next to",
+            "object": "infusion pump",
             "grounding_score": 0.75
           }
         ]
@@ -132,17 +146,17 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor",
-              "appearance": "medical"
+              "appearance": "medical equipment and supplies"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "doctor",
+            "name": "physician",
             "attributes": {
-              "actions": "treating",
-              "position": "standing over patient"
+              "actions": "treating patient",
+              "position": "standing beside the bed"
             },
             "grounding_score": 0.85
           },
@@ -150,7 +164,7 @@
             "name": "patient",
             "attributes": {
               "actions": "receiving treatment",
-              "position": "lying on bed"
+              "position": "lying on the bed"
             },
             "grounding_score": 0.85
           }
@@ -169,16 +183,24 @@
           {
             "name": "medical monitor",
             "attributes": {
-              "usage": "monitoring patient",
-              "position": "near bed"
+              "usage": "monitoring patient's vital signs",
+              "position": "in the foreground"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "IV pole",
+            "name": "infusion pump",
             "attributes": {
-              "usage": "administering medication",
-              "position": "near bed"
+              "usage": "administering medication or fluids",
+              "position": "on the right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "electrodes",
+            "attributes": {
+              "usage": "monitoring patient's heart activity",
+              "position": "on the patient's chest"
             },
             "grounding_score": 0.85
           }
@@ -187,15 +209,15 @@
           {
             "name": "electrode",
             "attributes": {
-              "significance": "monitoring",
-              "appearance": "on patient's chest"
+              "significance": "monitoring heart activity",
+              "appearance": "attached to patient's chest"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "doctor",
+            "subject": "physician",
             "relation": "treating",
             "object": "patient",
             "grounding_score": 0.75
@@ -203,7 +225,13 @@
           {
             "subject": "patient",
             "relation": "receiving treatment from",
-            "object": "doctor",
+            "object": "physician",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "medical monitor",
+            "relation": "next to",
+            "object": "infusion pump",
             "grounding_score": 0.75
           }
         ]
@@ -224,11 +252,11 @@
     }
   },
   "metrics": {
-    "bleu": 0.13634937316626652,
-    "rouge": 0.22535211267605632,
-    "sent": 0.720354437828064,
-    "ent": 0.9956462979316711,
-    "clip_c": 0.5528576965087896
+    "bleu": 0.17335280879820478,
+    "rouge": 0.2686567164179105,
+    "sent": 0.7264536023139954,
+    "ent": 0.5522668957710266,
+    "clip_c": 0.5102049251866315
   },
   "reference_answer": "Yes the eyes are being checked properly. The doctor is using a torch to properly check the pupillary light reaction most probably"
 }

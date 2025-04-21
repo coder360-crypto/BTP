@@ -1,0 +1,208 @@
+{
+  "question": "Is the arrangment good for ICU?",
+  "answer": "Based on the provided context, there is not enough information to determine if the arrangement is good for ICU. \n\nThe visible elements in the image are a hospital room with a nurse, a patient, an IV pole, a hospital bed, and a green sheet. No specific information about ICU (Intensive Care Unit) arrangements or requirements is provided.",
+  "question_type": "general",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007520198822021484,
+    "roi_detection": 0,
+    "concept_extraction": 2.493576765060425,
+    "grounding_check": 5.316734313964844e-05,
+    "graph_construction": 0.2208249568939209,
+    "graph_traversal": 2.698148250579834,
+    "answer_synthesis": 1.7294011116027832,
+    "total": 7.150666952133179
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "icu"
+        ],
+        "other_medical": []
+      },
+      "question_type": "general",
+      "traversal_strategy": "reasoning_traversal",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          500,
+          470
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "typical hospital room with beds and medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "adjusting IV pole",
+              "position": "standing beside the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "IV administration",
+            "attributes": {
+              "technique": "adjusting IV pole",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "supporting IV bag",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving medical treatment",
+              "appearance": "lying on the bed with an IV"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "nurse",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "typical hospital room with beds and medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "adjusting IV pole",
+              "position": "standing beside the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "IV administration",
+            "attributes": {
+              "technique": "adjusting IV pole",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "supporting IV bag",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving medical treatment",
+              "appearance": "lying on the bed with an IV"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "nurse",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "reasoning_applied": true,
+        "graph_structure": {
+          "nodes_count": 1,
+          "edges_count": 0,
+          "node_types": [
+            "image"
+          ],
+          "relation_types": []
+        },
+        "image_caption": "Setting: hospital_room. People: nurse, patient. Activities: IV adjustment. Equipment: IV pole, hospital bed, green sheet",
+        "scene_elements": {
+          "image": [
+            {
+              "id": "image:covidindianhospital_099.jpeg",
+              "name": "covidindianhospital_099.jpeg",
+              "attributes": {
+                "id": "covidindianhospital_099.jpeg"
+              }
+            }
+          ]
+        },
+        "key_relationships": [],
+        "central_elements": [],
+        "query_focus": "general",
+        "graph_patterns": []
+      },
+      "traversal_strategy": "reasoning_traversal",
+      "image_caption": "Setting: hospital_room. People: nurse, patient. Activities: IV adjustment. Equipment: IV pole, hospital bed, green sheet"
+    }
+  },
+  "metrics": {
+    "bleu": 0.013784980126260983,
+    "rouge": 0.13793103448275862,
+    "sent": 0.5685338973999023,
+    "ent": 0.02466537058353424,
+    "clip_c": 0.511811250168318
+  },
+  "reference_answer": "No this is an inappropriate and inadequate set-up for intensive care, and is more suited for general ward where sick (but non-critical) patienty can be admitted and treated."
+}

@@ -1,0 +1,73 @@
+{
+  "question": "Is the boy suffering from sickness?",
+  "answer": "Error generating answer: Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m21.162s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.008579730987548828,
+    "roi_detection": 0,
+    "concept_extraction": 0.4007391929626465,
+    "grounding_check": 4.4345855712890625e-05,
+    "graph_construction": 0.2439579963684082,
+    "graph_traversal": 0.47850966453552246,
+    "answer_synthesis": 0.33243632316589355,
+    "total": 1.4655330181121826
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [],
+        "other_medical": [
+          "the boy",
+          "sickness"
+        ]
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          740,
+          520
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m22.206s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}"
+      },
+      "extraction_confidence": 0.0
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m22.206s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}"
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": []
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": null
+    }
+  },
+  "metrics": {
+    "bleu": 0.006300574902459145,
+    "rouge": 0.021978021978021976,
+    "sent": -0.12370778620243073,
+    "ent": 0.8580589890480042,
+    "clip_c": 0.0
+  },
+  "reference_answer": "No the child does not look sick, however, he has a likely injury in his right arm and is being examined by a doctor."
+}

@@ -1,17 +1,17 @@
 {
   "question": "Is the healthcare worker's PPE appropriate for the situation?",
-  "answer": "There is not enough information to determine if the healthcare worker's PPE is appropriate for the situation. \n\nThe image context does not mention personal protective equipment (PPE) or any specific medical procedures that would require certain types of PPE. Only a hospital room setting with people and equipment is described.",
+  "answer": "There is not enough information to determine if the healthcare worker's PPE is appropriate for the situation. The image context does not provide details about the healthcare worker's attire or any specific medical procedures being performed that would require certain PPE. What is visible in the image is a healthcare worker, a patient, and a hospital bed in a hospital room setting.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.007645130157470703,
+    "question_analysis": 0.00855398178100586,
     "roi_detection": 0,
-    "concept_extraction": 3.103097677230835,
-    "grounding_check": 5.650520324707031e-05,
-    "graph_construction": 0.218245267868042,
-    "graph_traversal": 2.34860897064209,
-    "answer_synthesis": 2.469517707824707,
-    "total": 8.148369789123535
+    "concept_extraction": 3.1470584869384766,
+    "grounding_check": 5.078315734863281e-05,
+    "graph_construction": 0.2173290252685547,
+    "graph_traversal": 2.0462801456451416,
+    "answer_synthesis": 2.5206096172332764,
+    "total": 7.941088676452637
   },
   "interim_results": {
     "question_analysis": {
@@ -178,7 +178,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient, healthcare_worker_2, patient_2. Equipment: hospital_bed"
+      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient. Equipment: hospital_bed"
     }
   }
 }

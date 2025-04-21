@@ -1,17 +1,17 @@
 {
   "question": "Is the vaccination process proper?",
-  "answer": "The context does not contain enough information to determine if the vaccination process is proper. \n\nWhat is visible in the image: A patient and a nurse are present in a vaccination room, and a vaccination is being administered using a syringe.",
+  "answer": "The context does not contain enough information to determine if the vaccination process is proper. \n\nWhat is visible in the image: A patient and a healthcare worker are present in a vaccination room, and the healthcare worker is administering a vaccination using a syringe. There is also a fan present in the room.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.008025407791137695,
+    "question_analysis": 0.0060384273529052734,
     "roi_detection": 0,
-    "concept_extraction": 3.131718873977661,
-    "grounding_check": 4.76837158203125e-05,
-    "graph_construction": 0.41728997230529785,
-    "graph_traversal": 2.2888107299804688,
-    "answer_synthesis": 1.4554345607757568,
-    "total": 7.30260443687439
+    "concept_extraction": 3.0854666233062744,
+    "grounding_check": 5.5789947509765625e-05,
+    "graph_construction": 0.23060059547424316,
+    "graph_traversal": 2.1599788665771484,
+    "answer_synthesis": 2.4834554195404053,
+    "total": 7.9663872718811035
   },
   "interim_results": {
     "question_analysis": {
@@ -209,7 +209,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: vaccination_room. People: patient, nurse. Activities: vaccination. Equipment: syringe"
+      "image_caption": "Setting: vaccination_room. People: patient, healthcare_worker. Activities: vaccination. Equipment: syringe, fan"
     }
   }
 }

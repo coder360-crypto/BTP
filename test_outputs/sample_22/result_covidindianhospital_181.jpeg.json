@@ -1,17 +1,17 @@
 {
   "question": "Is the personal protective equipment worn by the healthcare worker adequate?",
-  "answer": "There is not enough information to answer the question. \n\nWhat is visible in the image: A hospital room with a healthcare worker, a patient, and a hospital bed. No personal protective equipment or details about the healthcare worker's attire are mentioned.",
+  "answer": "The context does not contain enough information to determine if the personal protective equipment (PPE) worn by the healthcare worker is adequate. \n\nWhat is visible in the image: There is a hospital room with a bed and chair, and there are healthcare workers and patients present, with the mention of PPE.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.007807731628417969,
+    "question_analysis": 0.009130477905273438,
     "roi_detection": 0,
-    "concept_extraction": 3.420187473297119,
-    "grounding_check": 9.226799011230469e-05,
-    "graph_construction": 0.22522997856140137,
-    "graph_traversal": 2.2212090492248535,
-    "answer_synthesis": 2.419816732406616,
-    "total": 8.295506477355957
+    "concept_extraction": 3.21224308013916,
+    "grounding_check": 5.650520324707031e-05,
+    "graph_construction": 0.23849725723266602,
+    "graph_traversal": 2.358149766921997,
+    "answer_synthesis": 1.4646244049072266,
+    "total": 7.283796548843384
   },
   "interim_results": {
     "question_analysis": {
@@ -45,7 +45,7 @@
             "name": "hospital_room",
             "attributes": {
               "location": "indoor",
-              "appearance": "multiple beds"
+              "appearance": "multiple beds and chairs"
             },
             "grounding_score": 0.85
           }
@@ -54,16 +54,32 @@
           {
             "name": "healthcare_worker",
             "attributes": {
-              "actions": "standing",
-              "position": "near a bed"
+              "actions": "",
+              "position": "standing beside a bed"
             },
             "grounding_score": 0.85
           },
           {
             "name": "patient",
             "attributes": {
-              "actions": "sitting",
-              "position": "on a bed"
+              "actions": "",
+              "position": "sitting on a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker",
+            "attributes": {
+              "actions": "",
+              "position": "sitting in the background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "sitting on a bed in the background"
             },
             "grounding_score": 0.85
           }
@@ -71,7 +87,7 @@
         "procedures": [],
         "equipment": [
           {
-            "name": "bed",
+            "name": "hospital_bed",
             "attributes": {
               "usage": "patient care",
               "position": "center of the room"
@@ -84,7 +100,7 @@
             "name": "face_mask",
             "attributes": {
               "significance": "infection control",
-              "appearance": "on patient's face"
+              "appearance": "blue color"
             },
             "grounding_score": 0.8
           }
@@ -92,7 +108,7 @@
         "relationships": [
           {
             "subject": "healthcare_worker",
-            "relation": "interacting_with",
+            "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           }
@@ -107,7 +123,7 @@
             "name": "hospital_room",
             "attributes": {
               "location": "indoor",
-              "appearance": "multiple beds"
+              "appearance": "multiple beds and chairs"
             },
             "grounding_score": 0.85
           }
@@ -116,16 +132,32 @@
           {
             "name": "healthcare_worker",
             "attributes": {
-              "actions": "standing",
-              "position": "near a bed"
+              "actions": "",
+              "position": "standing beside a bed"
             },
             "grounding_score": 0.85
           },
           {
             "name": "patient",
             "attributes": {
-              "actions": "sitting",
-              "position": "on a bed"
+              "actions": "",
+              "position": "sitting on a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker",
+            "attributes": {
+              "actions": "",
+              "position": "sitting in the background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "sitting on a bed in the background"
             },
             "grounding_score": 0.85
           }
@@ -133,7 +165,7 @@
         "procedures": [],
         "equipment": [
           {
-            "name": "bed",
+            "name": "hospital_bed",
             "attributes": {
               "usage": "patient care",
               "position": "center of the room"
@@ -146,7 +178,7 @@
             "name": "face_mask",
             "attributes": {
               "significance": "infection control",
-              "appearance": "on patient's face"
+              "appearance": "blue color"
             },
             "grounding_score": 0.8
           }
@@ -154,7 +186,7 @@
         "relationships": [
           {
             "subject": "healthcare_worker",
-            "relation": "interacting_with",
+            "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           }
@@ -172,7 +204,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient, healthcare_worker, patient. Equipment: hospital_bed"
+      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient, healthcare_worker, patient, healthcare_worker. Equipment: bed, chair, ppe"
     }
   }
 }

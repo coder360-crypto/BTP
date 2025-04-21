@@ -1,17 +1,17 @@
 {
   "question": "Is the patient's use of the face mask appropriate?",
-  "answer": "There is not enough information to determine if the patient's use of the face mask is appropriate. The context does not mention a face mask being used by the patient or any relevant medical information. What is visible in the image is a hospital room with a patient and multiple healthcare workers, and a hospital bed.",
+  "answer": "The context does not contain enough information to determine if the patient's use of the face mask is appropriate. \n\nWhat is visible in the image: A hospital room setting with a patient, multiple healthcare workers, a bed, a chair, and personal protective equipment (ppe).",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.007712125778198242,
+    "question_analysis": 0.007992029190063477,
     "roi_detection": 0,
-    "concept_extraction": 2.9997220039367676,
-    "grounding_check": 9.34600830078125e-05,
-    "graph_construction": 0.21955013275146484,
-    "graph_traversal": 2.229844808578491,
-    "answer_synthesis": 2.5468223094940186,
-    "total": 8.004886865615845
+    "concept_extraction": 3.1449451446533203,
+    "grounding_check": 6.031990051269531e-05,
+    "graph_construction": 0.22272825241088867,
+    "graph_traversal": 2.343595504760742,
+    "answer_synthesis": 1.4924280643463135,
+    "total": 7.212902307510376
   },
   "interim_results": {
     "question_analysis": {
@@ -53,7 +53,7 @@
             "name": "hospital_room",
             "attributes": {
               "location": "indoor",
-              "appearance": "multiple beds"
+              "appearance": "multiple beds, people wearing masks"
             },
             "grounding_score": 0.85
           }
@@ -62,7 +62,7 @@
           {
             "name": "healthcare_worker",
             "attributes": {
-              "actions": "standing",
+              "actions": "standing, interacting",
               "position": "beside a bed"
             },
             "grounding_score": 0.85
@@ -89,10 +89,10 @@
         ],
         "clinical_elements": [
           {
-            "name": "face_mask",
+            "name": "personal_protective_equipment",
             "attributes": {
               "significance": "infection control",
-              "appearance": "blue color"
+              "appearance": "white with blue straps"
             },
             "grounding_score": 0.8
           }
@@ -100,7 +100,7 @@
         "relationships": [
           {
             "subject": "healthcare_worker",
-            "relation": "attending to",
+            "relation": "interacting_with",
             "object": "patient",
             "grounding_score": 0.75
           }
@@ -115,7 +115,7 @@
             "name": "hospital_room",
             "attributes": {
               "location": "indoor",
-              "appearance": "multiple beds"
+              "appearance": "multiple beds, people wearing masks"
             },
             "grounding_score": 0.85
           }
@@ -124,7 +124,7 @@
           {
             "name": "healthcare_worker",
             "attributes": {
-              "actions": "standing",
+              "actions": "standing, interacting",
               "position": "beside a bed"
             },
             "grounding_score": 0.85
@@ -151,10 +151,10 @@
         ],
         "clinical_elements": [
           {
-            "name": "face_mask",
+            "name": "personal_protective_equipment",
             "attributes": {
               "significance": "infection control",
-              "appearance": "blue color"
+              "appearance": "white with blue straps"
             },
             "grounding_score": 0.8
           }
@@ -162,7 +162,7 @@
         "relationships": [
           {
             "subject": "healthcare_worker",
-            "relation": "attending to",
+            "relation": "interacting_with",
             "object": "patient",
             "grounding_score": 0.75
           }
@@ -180,7 +180,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient, healthcare_worker, patient, healthcare_worker, patient. Equipment: hospital_bed"
+      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient, healthcare_worker, patient, healthcare_worker. Equipment: bed, chair, ppe"
     }
   }
 }

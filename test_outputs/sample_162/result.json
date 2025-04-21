@@ -1,0 +1,192 @@
+{
+  "question": "Is the nurse adequately equipped for administering an injection?",
+  "answer": "Based on the provided context, the healthcare provider (referred to as a nurse in the question, but not specifically identified as such in the context) appears to have a syringe, which is relevant equipment for administering an injection. \n\nTherefore, based on the information given, it seems the healthcare provider is adequately equipped for administering an injection, as a syringe is present.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007836341857910156,
+    "roi_detection": 0,
+    "concept_extraction": 2.659670114517212,
+    "grounding_check": 7.510185241699219e-05,
+    "graph_construction": 0.22683930397033691,
+    "graph_traversal": 2.509392023086548,
+    "answer_synthesis": 1.6934773921966553,
+    "total": 7.098743438720703
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "injection"
+        ],
+        "setting": [
+          "nurse"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          700,
+          525
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "Indoor setting",
+            "attributes": {
+              "location": "possibly a hospital or clinic",
+              "appearance": "wood-paneled walls and a large window"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "Healthcare provider",
+            "attributes": {
+              "actions": "administering an injection",
+              "position": "standing"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "Vaccination",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "Syringe",
+            "attributes": {
+              "usage": "administering a vaccine",
+              "position": "in the healthcare provider's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "Patient's arm",
+            "attributes": {
+              "significance": "receiving an injection",
+              "appearance": "exposed for vaccination"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "Healthcare provider",
+            "relation": "administering vaccine to",
+            "object": "Patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "Indoor setting",
+            "attributes": {
+              "location": "possibly a hospital or clinic",
+              "appearance": "wood-paneled walls and a large window"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "Healthcare provider",
+            "attributes": {
+              "actions": "administering an injection",
+              "position": "standing"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "Vaccination",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "Syringe",
+            "attributes": {
+              "usage": "administering a vaccine",
+              "position": "in the healthcare provider's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "Patient's arm",
+            "attributes": {
+              "significance": "receiving an injection",
+              "appearance": "exposed for vaccination"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "Healthcare provider",
+            "relation": "administering vaccine to",
+            "object": "Patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "ppe",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: Indoor setting. People: Healthcare provider. Activities: Vaccination. Equipment: Syringe"
+    }
+  },
+  "metrics": {
+    "bleu": 0.010507313797710938,
+    "rouge": 0.10810810810810811,
+    "sent": 0.5522421598434448,
+    "ent": 0.0016580168157815933,
+    "clip_c": 0.0
+  },
+  "reference_answer": "No the nurse should wear sterile gloves and head-cap before administering injection."
+}

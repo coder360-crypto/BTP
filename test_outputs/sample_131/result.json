@@ -1,0 +1,269 @@
+{
+  "question": "Is the location of the injection appropriate?",
+  "answer": "Based on the provided context, it appears that the injection is taking place in a \"vaccination_room\", which suggests a setting designed for administering vaccinations. \n\nHowever, without specific details on the patient's body location being injected, it is not possible to definitively state if the location of the injection is appropriate. \n\nWhat is visible in the image context: A vaccination room with a healthcare worker administering a vaccination (implied by the presence of a syringe and vaccination room) to a patient, with another healthcare worker present.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.0064563751220703125,
+    "roi_detection": 0,
+    "concept_extraction": 2.0294156074523926,
+    "grounding_check": 5.316734313964844e-05,
+    "graph_construction": 0.23380684852600098,
+    "graph_traversal": 4.545636415481567,
+    "answer_synthesis": 3.7536792755126953,
+    "total": 10.572664499282837
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "injection",
+          "appropriate"
+        ],
+        "setting": [],
+        "other_medical": [
+          "the location"
+        ]
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1200,
+          900
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "vaccination_room",
+            "attributes": {
+              "location": "hospital or clinic",
+              "appearance": "a room with tiled walls and signs in a foreign language"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker_1",
+            "attributes": {
+              "actions": "administering a vaccine",
+              "position": "left of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker_2",
+            "attributes": {
+              "actions": "recording information",
+              "position": "right of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "center"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccination",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering vaccine",
+              "position": "in healthcare worker 1's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "tablet",
+            "attributes": {
+              "usage": "recording information",
+              "position": "in healthcare worker 2's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "biohazard_bin",
+            "attributes": {
+              "usage": "disposing of medical waste",
+              "position": "on the floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "vaccine",
+            "attributes": {
+              "significance": "COVID-19 vaccine",
+              "appearance": "not clearly visible"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker_1",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare_worker_2",
+            "relation": "recording information for",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "vaccination_room",
+            "attributes": {
+              "location": "hospital or clinic",
+              "appearance": "a room with tiled walls and signs in a foreign language"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker_1",
+            "attributes": {
+              "actions": "administering a vaccine",
+              "position": "left of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker_2",
+            "attributes": {
+              "actions": "recording information",
+              "position": "right of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "center"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccination",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering vaccine",
+              "position": "in healthcare worker 1's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "tablet",
+            "attributes": {
+              "usage": "recording information",
+              "position": "in healthcare worker 2's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "biohazard_bin",
+            "attributes": {
+              "usage": "disposing of medical waste",
+              "position": "on the floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "vaccine",
+            "attributes": {
+              "significance": "COVID-19 vaccine",
+              "appearance": "not clearly visible"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker_1",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare_worker_2",
+            "relation": "recording information for",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: vaccination_room. People: healthcare_worker_1, healthcare_worker_2, patient. Activities: vaccination. Equipment: syringe, tablet, biohazard_bin"
+    }
+  },
+  "metrics": {
+    "bleu": 0.027678835224246585,
+    "rouge": 0.1308411214953271,
+    "sent": 0.34933382272720337,
+    "ent": 0.010260086506605148,
+    "clip_c": 0.0
+  },
+  "reference_answer": "The site of intramuscular injection on the deltoid muscle is not proper, as it should be a little higher up."
+}

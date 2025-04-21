@@ -1,0 +1,79 @@
+{
+  "question": "Is the site of intramuscular injection proper?",
+  "answer": "Error generating answer: Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m5.09s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.0068759918212890625,
+    "roi_detection": 0,
+    "concept_extraction": 0.6989188194274902,
+    "grounding_check": 8.535385131835938e-05,
+    "graph_construction": 0.2076737880706787,
+    "graph_traversal": 0.6386971473693848,
+    "answer_synthesis": 0.34375667572021484,
+    "total": 1.898212194442749
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "injection",
+          "proper"
+        ],
+        "setting": [],
+        "other_medical": [
+          "the site"
+        ]
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1000,
+          614
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m6.298s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}"
+      },
+      "extraction_confidence": 0.0
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m6.298s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}"
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": null
+    }
+  },
+  "metrics": {
+    "bleu": 0.006300574902459145,
+    "rouge": 0.024390243902439022,
+    "sent": 0.009141633287072182,
+    "ent": 0.7419371008872986,
+    "clip_c": 0.0
+  },
+  "reference_answer": "In this patient the site of intramuscular injection is proper, i.e., the deltoid muscle."
+}

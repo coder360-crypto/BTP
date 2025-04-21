@@ -1,0 +1,262 @@
+{
+  "question": "Is the injection being administered in the right place?",
+  "answer": "It is not possible to determine if the injection is being administered in the right place.\n\nVisible in the image: A hospital room setting with a doctor/nurse, patient, observer, and healthcare worker present, where an injection is being administered. There is a medical table and a blue chair. \n\nNo information is provided about the specific location of the injection on the patient's body.",
+  "question_type": "setting",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.008295059204101562,
+    "roi_detection": 0,
+    "concept_extraction": 3.56217622756958,
+    "grounding_check": 5.3882598876953125e-05,
+    "graph_construction": 0.23564434051513672,
+    "graph_traversal": 2.565540075302124,
+    "answer_synthesis": 1.7370245456695557,
+    "total": 8.109646797180176
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "injection"
+        ],
+        "setting": [],
+        "other_medical": [
+          "the right place"
+        ]
+      },
+      "question_type": "setting",
+      "traversal_strategy": "location_identification",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          435,
+          271
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical facility"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor/nurse",
+            "attributes": {
+              "actions": "administering injection",
+              "position": "right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving injection",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "observer",
+            "attributes": {
+              "actions": "",
+              "position": "left side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "",
+              "position": "left side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "injection",
+            "attributes": {
+              "technique": "",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical table",
+            "attributes": {
+              "usage": "",
+              "position": "front right side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "bandage or gauze",
+            "attributes": {
+              "significance": "",
+              "appearance": ""
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor/nurse",
+            "relation": "administering",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "observer",
+            "relation": "watching",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare worker",
+            "relation": "standing near",
+            "object": "observer",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical facility"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor/nurse",
+            "attributes": {
+              "actions": "administering injection",
+              "position": "right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving injection",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "observer",
+            "attributes": {
+              "actions": "",
+              "position": "left side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "",
+              "position": "left side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "injection",
+            "attributes": {
+              "technique": "",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical table",
+            "attributes": {
+              "usage": "",
+              "position": "front right side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "bandage or gauze",
+            "attributes": {
+              "significance": "",
+              "appearance": ""
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor/nurse",
+            "relation": "administering",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "observer",
+            "relation": "watching",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare worker",
+            "relation": "standing near",
+            "object": "observer",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital_room. People: doctor/nurse, patient, observer, healthcare worker. Activities: injection. Equipment: medical table, blue chair",
+        "caption_based": true
+      },
+      "traversal_strategy": "location_identification",
+      "image_caption": "Setting: hospital_room. People: doctor/nurse, patient, observer, healthcare worker. Activities: injection. Equipment: medical table, blue chair"
+    }
+  },
+  "metrics": {
+    "bleu": 0.03304624578058307,
+    "rouge": 0.15,
+    "sent": 0.49895933270454407,
+    "ent": 0.9770610928535461,
+    "clip_c": 0.0
+  },
+  "reference_answer": "Yes the site of intramuscular injection is proper, in the deltoid muscle near the shoulder"
+}

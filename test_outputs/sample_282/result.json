@@ -1,0 +1,94 @@
+{
+  "question": "Is the individual on life support?",
+  "answer": "Error generating answer: Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m7.39s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}",
+  "question_type": "general",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007928848266601562,
+    "roi_detection": 0,
+    "concept_extraction": 0.6739282608032227,
+    "grounding_check": 4.553794860839844e-05,
+    "graph_construction": 0.21312642097473145,
+    "graph_traversal": 0.6940739154815674,
+    "answer_synthesis": 0.33879780769348145,
+    "total": 1.9302208423614502
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [],
+        "other_medical": [
+          "life support"
+        ]
+      },
+      "question_type": "general",
+      "traversal_strategy": "reasoning_traversal",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1200,
+          630
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m8.641s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}"
+      },
+      "extraction_confidence": 0.0
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m8.641s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}"
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "reasoning_applied": true,
+        "graph_structure": {
+          "nodes_count": 1,
+          "edges_count": 0,
+          "node_types": [
+            "image"
+          ],
+          "relation_types": []
+        },
+        "image_caption": null,
+        "scene_elements": {
+          "image": [
+            {
+              "id": "image:headinjuriesinhospital309.jpeg",
+              "name": "headinjuriesinhospital309.jpeg",
+              "attributes": {
+                "id": "headinjuriesinhospital309.jpeg"
+              }
+            }
+          ]
+        },
+        "key_relationships": [],
+        "central_elements": [],
+        "query_focus": "general",
+        "graph_patterns": []
+      },
+      "traversal_strategy": "reasoning_traversal",
+      "image_caption": null
+    }
+  },
+  "metrics": {
+    "bleu": 0.01091291584795256,
+    "rouge": 0.05555555555555555,
+    "sent": -0.03725006431341171,
+    "ent": 0.40113720297813416,
+    "clip_c": 0.0
+  },
+  "reference_answer": "Yes the patient is extremely critical, on ventilator , is unconscious or sedated, and has also probably suffered a cervical spine (neck) injury, as suggested by the Philadelphia Collar in his neck (to stabilize his neck movements and to prevent further injury)"
+}

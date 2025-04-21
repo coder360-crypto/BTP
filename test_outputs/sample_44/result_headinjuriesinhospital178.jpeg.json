@@ -4,14 +4,14 @@
   "question_type": "patient_status",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.007809162139892578,
+    "question_analysis": 0.008069515228271484,
     "roi_detection": 0,
-    "concept_extraction": 3.1261043548583984,
-    "grounding_check": 5.626678466796875e-05,
-    "graph_construction": 0.21822071075439453,
-    "graph_traversal": 2.0961029529571533,
-    "answer_synthesis": 2.5133683681488037,
-    "total": 7.962723970413208
+    "concept_extraction": 3.0813519954681396,
+    "grounding_check": 4.9591064453125e-05,
+    "graph_construction": 0.2232203483581543,
+    "graph_traversal": 2.187366247177124,
+    "answer_synthesis": 2.5365498065948486,
+    "total": 8.037893295288086
   },
   "interim_results": {
     "question_analysis": {
@@ -96,7 +96,7 @@
             "name": "head wound",
             "attributes": {
               "significance": "apparent trauma",
-              "appearance": "bloodied and bandaged"
+              "appearance": "bleeding"
             },
             "grounding_score": 0.8
           }
@@ -166,7 +166,7 @@
             "name": "head wound",
             "attributes": {
               "significance": "apparent trauma",
-              "appearance": "bloodied and bandaged"
+              "appearance": "bleeding"
             },
             "grounding_score": 0.8
           }

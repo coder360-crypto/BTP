@@ -1,0 +1,226 @@
+{
+  "question": "Should luggage be kept on hospital beds meant for patients?",
+  "answer": "There is no information in the context about luggage being present or kept on hospital beds. The context only mentions a hospital room setting with a hospital bed, patients, a family member/visitor, and an IV pole, but does not provide details about luggage or its placement. Therefore, based on the provided context, it's not possible to answer the question about keeping luggage on hospital beds meant for patients. What is visible or mentioned includes a hospital room, patients, a family member/visitor, and a hospital bed with an IV pole.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.009433746337890625,
+    "roi_detection": 0,
+    "concept_extraction": 1.3993239402770996,
+    "grounding_check": 5.459785461425781e-05,
+    "graph_construction": 0.236724853515625,
+    "graph_traversal": 2.7153420448303223,
+    "answer_synthesis": 1.7279644012451172,
+    "total": 6.090042591094971
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "hospital"
+        ],
+        "other_medical": [
+          "luggage"
+        ]
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          650,
+          400
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "multiple beds, brown and white walls, posters on the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed",
+              "position": "on bed 55"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed",
+              "position": "on another bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "family member/visitor",
+            "attributes": {
+              "actions": "sitting or standing",
+              "position": "near the beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room, labeled 55"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near the patient's bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "IV bag",
+            "attributes": {
+              "significance": "likely administering medication or fluids",
+              "appearance": "hanging from IV pole"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient on bed 55",
+            "relation": "near",
+            "object": "IV pole",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "family members",
+            "relation": "near",
+            "object": "patients",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "multiple beds, brown and white walls, posters on the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed",
+              "position": "on bed 55"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed",
+              "position": "on another bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "family member/visitor",
+            "attributes": {
+              "actions": "sitting or standing",
+              "position": "near the beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room, labeled 55"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near the patient's bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "IV bag",
+            "attributes": {
+              "significance": "likely administering medication or fluids",
+              "appearance": "hanging from IV pole"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient on bed 55",
+            "relation": "near",
+            "object": "IV pole",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "family members",
+            "relation": "near",
+            "object": "patients",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "general_correctness",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: patient, patient, family member/visitor. Equipment: hospital bed, IV pole"
+    }
+  }
+}

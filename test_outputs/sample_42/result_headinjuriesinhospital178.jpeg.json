@@ -1,17 +1,17 @@
 {
   "question": "Has the patient sustained a severe wound?",
-  "answer": "Based on the provided context, it appears that the patient may have sustained a wound, as there is bloodstained gauze present. However, the severity of the wound is not explicitly stated.\n\nWhat is visible in the image: A patient, a healthcare provider, a hospital bed, and bloodstained gauze. \n\nNo further information is available to determine the severity of the wound.",
+  "answer": "Based on the provided context, there is no information to confirm that the patient has sustained a severe wound. \n\nWhat is visible in the image: A patient, a healthcare provider, and a hospital bed.",
   "question_type": "patient_status",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0064618587493896484,
+    "question_analysis": 0.006481647491455078,
     "roi_detection": 0,
-    "concept_extraction": 3.1725738048553467,
-    "grounding_check": 8.535385131835938e-05,
-    "graph_construction": 0.2138054370880127,
-    "graph_traversal": 2.1777145862579346,
-    "answer_synthesis": 2.524662971496582,
-    "total": 8.096449375152588
+    "concept_extraction": 3.185614585876465,
+    "grounding_check": 5.4836273193359375e-05,
+    "graph_construction": 0.2141733169555664,
+    "graph_traversal": 2.1511335372924805,
+    "answer_synthesis": 2.477145195007324,
+    "total": 8.035759925842285
   },
   "interim_results": {
     "question_analysis": {
@@ -96,7 +96,7 @@
             "name": "head wound",
             "attributes": {
               "significance": "apparent trauma",
-              "appearance": "bleeding"
+              "appearance": "bleeding and bandaged"
             },
             "grounding_score": 0.8
           }
@@ -166,7 +166,7 @@
             "name": "head wound",
             "attributes": {
               "significance": "apparent trauma",
-              "appearance": "bleeding"
+              "appearance": "bleeding and bandaged"
             },
             "grounding_score": 0.8
           }
@@ -186,11 +186,11 @@
         "found": false,
         "nodes": [],
         "edges": [],
-        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze",
+        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed",
         "caption_based": true
       },
       "traversal_strategy": "condition_assessment",
-      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze"
+      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed"
     }
   }
 }

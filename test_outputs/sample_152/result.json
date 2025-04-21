@@ -1,0 +1,244 @@
+{
+  "question": "Is the nurse properly dressed?",
+  "answer": "There is not enough information to determine if the nurse is properly dressed. The image caption does not provide details about the attire of the healthcare provider. What is visible in the image is a hospital room setting with a healthcare provider, two patients, beds, and medical equipment.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.0063936710357666016,
+    "roi_detection": 0,
+    "concept_extraction": 3.7754969596862793,
+    "grounding_check": 6.198883056640625e-05,
+    "graph_construction": 0.2469043731689453,
+    "graph_traversal": 2.9228687286376953,
+    "answer_synthesis": 1.6916484832763672,
+    "total": 8.644988059997559
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "nurse"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          619,
+          412
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "deteriorated"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "standing",
+              "position": "near window"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient1",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient2",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "against wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical equipment",
+            "attributes": {
+              "usage": "monitoring",
+              "position": "on wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "bed sheet",
+            "attributes": {
+              "significance": "covering patient",
+              "appearance": "wrinkled"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "standing near",
+            "object": "window",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient1",
+            "relation": "lying on",
+            "object": "bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient2",
+            "relation": "lying on",
+            "object": "bed",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "deteriorated"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "standing",
+              "position": "near window"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient1",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient2",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "against wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical equipment",
+            "attributes": {
+              "usage": "monitoring",
+              "position": "on wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "bed sheet",
+            "attributes": {
+              "significance": "covering patient",
+              "appearance": "wrinkled"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "standing near",
+            "object": "window",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient1",
+            "relation": "lying on",
+            "object": "bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient2",
+            "relation": "lying on",
+            "object": "bed",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: healthcare provider, patient, patient. Equipment: bed, bed, medical equipment"
+    }
+  },
+  "metrics": {
+    "bleu": 0.0835490248545321,
+    "rouge": 0.21212121212121213,
+    "sent": 0.6812732815742493,
+    "ent": 0.663777768611908,
+    "clip_c": 0.5146408755852033
+  },
+  "reference_answer": "Yes the nurse is properly dressed with due protective precautions to prevent transmission of cross-infections between patients."
+}

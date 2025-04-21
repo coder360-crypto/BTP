@@ -4,14 +4,14 @@
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0077016353607177734,
+    "question_analysis": 0.008821487426757812,
     "roi_detection": 0,
-    "concept_extraction": 3.2405009269714355,
-    "grounding_check": 6.151199340820312e-05,
-    "graph_construction": 0.22668695449829102,
-    "graph_traversal": 2.3017146587371826,
-    "answer_synthesis": 1.5180778503417969,
-    "total": 7.299452781677246
+    "concept_extraction": 3.3342511653900146,
+    "grounding_check": 6.4849853515625e-05,
+    "graph_construction": 0.25696420669555664,
+    "graph_traversal": 2.4150898456573486,
+    "answer_synthesis": 1.4562771320343018,
+    "total": 7.472854375839233
   },
   "interim_results": {
     "question_analysis": {
@@ -132,9 +132,9 @@
             "grounding_score": 0.75
           },
           {
-            "subject": "physician",
-            "relation": "viewing",
-            "object": "monitor",
+            "subject": "healthcare worker 2",
+            "relation": "assisting",
+            "object": "healthcare worker 3",
             "grounding_score": 0.75
           }
         ]
@@ -233,9 +233,9 @@
             "grounding_score": 0.75
           },
           {
-            "subject": "physician",
-            "relation": "viewing",
-            "object": "monitor",
+            "subject": "healthcare worker 2",
+            "relation": "assisting",
+            "object": "healthcare worker 3",
             "grounding_score": 0.75
           }
         ]

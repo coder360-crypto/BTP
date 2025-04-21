@@ -1,17 +1,17 @@
 {
   "question": "Is the patient wearing the face mask properly?",
-  "answer": "There is no information in the provided context to determine if the patient is wearing a face mask or if it is being worn properly. The context only mentions the setting and the people and equipment present, but does not specify what the patient is wearing.",
+  "answer": "There is no information provided about the patient wearing a face mask. The context only mentions the setting, people present, and equipment, but does not specify if the patient is wearing a face mask or not. Therefore, it is not possible to determine if the patient is wearing a face mask properly.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.008612394332885742,
+    "question_analysis": 0.008572101593017578,
     "roi_detection": 0,
-    "concept_extraction": 0.8717679977416992,
-    "grounding_check": 0.00010204315185546875,
-    "graph_construction": 0.23472142219543457,
-    "graph_traversal": 0.9469494819641113,
-    "answer_synthesis": 2.518695831298828,
-    "total": 4.582659006118774
+    "concept_extraction": 0.9508123397827148,
+    "grounding_check": 7.677078247070312e-05,
+    "graph_construction": 0.23950815200805664,
+    "graph_traversal": 0.8825533390045166,
+    "answer_synthesis": 1.486340045928955,
+    "total": 3.5695793628692627
   },
   "interim_results": {
     "question_analysis": {
@@ -178,7 +178,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient, healthcare_worker, patient. Equipment: hospital_bed"
+      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient. Equipment: hospital_bed"
     }
   }
 }

@@ -1,17 +1,17 @@
 {
   "question": "Does the patient need to protrude her tongue for collection of naso-pharyngeal swab?",
-  "answer": "No information is provided in the context that indicates the patient needs to protrude her tongue for the collection of a naso-pharyngeal swab. What is visible or described in the image is a nasal swab test, but specific actions required of the patient, such as protruding her tongue, are not mentioned. \n\nTherefore, based on the provided context, the necessity for the patient to protrude her tongue for the collection of a naso-pharyngeal swab cannot be confirmed. Typically, for a naso-pharyngeal swab, the patient may be asked to tilt their head back and the healthcare worker may need to insert the swab into the nostril, but protruding the tongue is not a standard requirement described in the context.",
+  "answer": "No information is provided in the context that indicates the patient needs to protrude her tongue for collection of a naso-pharyngeal swab. \n\nWhat is visible in the image: A healthcare worker, a patient, and a swab test are present in an outdoor medical facility. The healthcare worker and patient are likely wearing protective gear. \n\nNo information is provided about the specific actions of the patient, such as protruding her tongue.",
   "question_type": "general",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.009286880493164062,
+    "question_analysis": 0.010461568832397461,
     "roi_detection": 0,
-    "concept_extraction": 3.458005666732788,
-    "grounding_check": 5.650520324707031e-05,
-    "graph_construction": 0.22112369537353516,
-    "graph_traversal": 2.6295979022979736,
-    "answer_synthesis": 1.6456401348114014,
-    "total": 7.965738534927368
+    "concept_extraction": 3.5340805053710938,
+    "grounding_check": 6.29425048828125e-05,
+    "graph_construction": 0.2218456268310547,
+    "graph_traversal": 2.556795835494995,
+    "answer_synthesis": 1.582758903503418,
+    "total": 7.90799617767334
   },
   "interim_results": {
     "question_analysis": {
@@ -50,37 +50,37 @@
       "raw_concepts": {
         "scene_setting": [
           {
-            "name": "outdoor setting",
+            "name": "Outdoor Medical Facility",
             "attributes": {
-              "location": "probable hospital or testing site",
-              "appearance": "tiled floor, yellow walls, and metal grating on windows"
+              "location": "outdoor area with tiled floor",
+              "appearance": "yellow walls with grey stone accents and metal grating on windows"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "healthcare worker",
+            "name": "Healthcare Worker",
             "attributes": {
               "actions": "performing a procedure",
-              "position": "standing"
+              "position": "standing, wearing protective gear"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "patient",
+            "name": "Patient",
             "attributes": {
-              "actions": "reacting to procedure",
-              "position": "seated"
+              "actions": "sitting, reacting",
+              "position": "seated, hands raised"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "nasal swabbing",
+            "name": "Nasal Swab Test",
             "attributes": {
-              "technique": "nasal swab",
+              "technique": "inserting swab into patient's nostril",
               "stage": "in progress"
             },
             "grounding_score": 0.8
@@ -88,17 +88,17 @@
         ],
         "equipment": [
           {
-            "name": "personal protective equipment",
+            "name": "Protective Gear",
             "attributes": {
-              "usage": "protective gear",
+              "usage": "personal protective equipment",
               "position": "worn by healthcare worker"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "swab",
+            "name": "Swab",
             "attributes": {
-              "usage": "for sample collection",
+              "usage": "medical tool for sampling",
               "position": "held by healthcare worker"
             },
             "grounding_score": 0.85
@@ -106,19 +106,19 @@
         ],
         "clinical_elements": [
           {
-            "name": "patient's mouth",
+            "name": "Patient's Reaction",
             "attributes": {
-              "significance": "open for procedure",
-              "appearance": "open"
+              "significance": "indicative of discomfort or distress",
+              "appearance": "hands raised, mouth open"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "healthcare worker",
+            "subject": "Healthcare Worker",
             "relation": "interacting with",
-            "object": "patient",
+            "object": "Patient",
             "grounding_score": 0.75
           }
         ]
@@ -129,37 +129,37 @@
       "grounded_concepts": {
         "scene_setting": [
           {
-            "name": "outdoor setting",
+            "name": "Outdoor Medical Facility",
             "attributes": {
-              "location": "probable hospital or testing site",
-              "appearance": "tiled floor, yellow walls, and metal grating on windows"
+              "location": "outdoor area with tiled floor",
+              "appearance": "yellow walls with grey stone accents and metal grating on windows"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "healthcare worker",
+            "name": "Healthcare Worker",
             "attributes": {
               "actions": "performing a procedure",
-              "position": "standing"
+              "position": "standing, wearing protective gear"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "patient",
+            "name": "Patient",
             "attributes": {
-              "actions": "reacting to procedure",
-              "position": "seated"
+              "actions": "sitting, reacting",
+              "position": "seated, hands raised"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "nasal swabbing",
+            "name": "Nasal Swab Test",
             "attributes": {
-              "technique": "nasal swab",
+              "technique": "inserting swab into patient's nostril",
               "stage": "in progress"
             },
             "grounding_score": 0.8
@@ -167,17 +167,17 @@
         ],
         "equipment": [
           {
-            "name": "personal protective equipment",
+            "name": "Protective Gear",
             "attributes": {
-              "usage": "protective gear",
+              "usage": "personal protective equipment",
               "position": "worn by healthcare worker"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "swab",
+            "name": "Swab",
             "attributes": {
-              "usage": "for sample collection",
+              "usage": "medical tool for sampling",
               "position": "held by healthcare worker"
             },
             "grounding_score": 0.85
@@ -185,19 +185,19 @@
         ],
         "clinical_elements": [
           {
-            "name": "patient's mouth",
+            "name": "Patient's Reaction",
             "attributes": {
-              "significance": "open for procedure",
-              "appearance": "open"
+              "significance": "indicative of discomfort or distress",
+              "appearance": "hands raised, mouth open"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "healthcare worker",
+            "subject": "Healthcare Worker",
             "relation": "interacting with",
-            "object": "patient",
+            "object": "Patient",
             "grounding_score": 0.75
           }
         ]
@@ -214,7 +214,7 @@
           ],
           "relation_types": []
         },
-        "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Nasal Swab Test. Equipment: Protective Gear, Swab",
+        "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Swab Test. Equipment: Protective Gear, Swab",
         "scene_elements": {
           "image": [
             {
@@ -232,14 +232,14 @@
         "graph_patterns": []
       },
       "traversal_strategy": "reasoning_traversal",
-      "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Nasal Swab Test. Equipment: Protective Gear, Swab"
+      "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Swab Test. Equipment: Protective Gear, Swab"
     }
   },
   "metrics": {
-    "bleu": 0.023875131902754195,
-    "rouge": 0.15151515151515152,
-    "sent": 0.8084940910339355,
-    "ent": 0.012586559168994427,
+    "bleu": 0.04514599728677662,
+    "rouge": 0.1927710843373494,
+    "sent": 0.7734152674674988,
+    "ent": 0.05845347419381142,
     "clip_c": 0.0
   },
   "reference_answer": "No tongue protrusion is not required for collection of naso-pharyngeal swab."

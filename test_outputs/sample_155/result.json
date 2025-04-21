@@ -1,0 +1,250 @@
+{
+  "question": "Is the nurse wearing the correct attire?",
+  "answer": "There is not enough information to answer the question. The context does not describe the nurse's attire. It only mentions the setting, people, activities, and equipment present in the image.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007210493087768555,
+    "roi_detection": 0,
+    "concept_extraction": 3.857121229171753,
+    "grounding_check": 4.9114227294921875e-05,
+    "graph_construction": 0.22588253021240234,
+    "graph_traversal": 2.133373737335205,
+    "answer_synthesis": 1.637824296951294,
+    "total": 7.862797498703003
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "correct"
+        ],
+        "setting": [
+          "nurse"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          619,
+          412
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "dull and worn-out"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "standing",
+              "position": "near the window"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on the upper bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down with arm raised",
+              "position": "on the lower bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "against the wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "in the foreground"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical equipment",
+            "attributes": {
+              "usage": "monitoring or treatment",
+              "position": "on the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "intravenous line",
+            "attributes": {
+              "significance": "possible medication or fluid administration",
+              "appearance": "connected to patient's arm"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient on the upper bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient on the lower bed",
+            "relation": "receiving treatment",
+            "object": "intravenous line",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "dull and worn-out"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "standing",
+              "position": "near the window"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on the upper bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down with arm raised",
+              "position": "on the lower bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "against the wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "in the foreground"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical equipment",
+            "attributes": {
+              "usage": "monitoring or treatment",
+              "position": "on the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "intravenous line",
+            "attributes": {
+              "significance": "possible medication or fluid administration",
+              "appearance": "connected to patient's arm"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient on the upper bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient on the lower bed",
+            "relation": "receiving treatment",
+            "object": "intravenous line",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: healthcare provider, patient, patient. Activities: observation, intravenous therapy. Equipment: hospital beds, IV pole, medical supplies"
+    }
+  },
+  "metrics": {
+    "bleu": 0.018768450577475608,
+    "rouge": 0.08163265306122448,
+    "sent": 0.6707262992858887,
+    "ent": 0.9559374451637268,
+    "clip_c": 0.4828432427462457
+  },
+  "reference_answer": "Yes the nurse is properly dressed with due protective precautions to prevent transmission of cross-infections between patients."
+}

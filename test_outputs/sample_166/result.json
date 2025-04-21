@@ -1,0 +1,192 @@
+{
+  "question": "Is the medical staff member correctly wearing the mask?",
+  "answer": "There is not enough information to answer the question. The context does not mention a mask or describe the medical staff member's attire. It only mentions a nurse administering an IV.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00847172737121582,
+    "roi_detection": 0,
+    "concept_extraction": 3.5805256366729736,
+    "grounding_check": 8.368492126464844e-05,
+    "graph_construction": 0.23222684860229492,
+    "graph_traversal": 2.4672563076019287,
+    "answer_synthesis": 2.634578227996826,
+    "total": 8.924550294876099
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [
+          "mask"
+        ],
+        "procedure": [],
+        "setting": [
+          "staff"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          500,
+          470
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "typical hospital room with beds and medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "adjusting IV pole",
+              "position": "standing beside the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "IV administration",
+            "attributes": {
+              "technique": "adjusting IV pole",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "supporting IV bag",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving medical treatment",
+              "appearance": "lying on the bed with an IV"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "nurse",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "typical hospital room with beds and medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "adjusting IV pole",
+              "position": "standing beside the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "IV administration",
+            "attributes": {
+              "technique": "adjusting IV pole",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "supporting IV bag",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving medical treatment",
+              "appearance": "lying on the bed with an IV"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "nurse",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: nurse. Activities: IV administration. Equipment: IV pole"
+    }
+  },
+  "metrics": {
+    "bleu": 0.05912513797743964,
+    "rouge": 0.2127659574468085,
+    "sent": 0.6771580576896667,
+    "ent": 0.5334815382957458,
+    "clip_c": 0.4787262870195718
+  },
+  "reference_answer": "No the nurse is not wearing the mask properly, as the nostrils are not covered."
+}

@@ -1,0 +1,242 @@
+{
+  "question": "Is the patient wearing mask properly?",
+  "answer": "There is no information provided to determine if the patient is wearing a mask properly. The context only mentions that oxygen masks and oxygen tanks are present, but it does not provide details on how the patient is wearing the mask. \n\nWhat is visible in the image: patients, oxygen tanks, oxygen masks, and hospital beds.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.011429548263549805,
+    "roi_detection": 0,
+    "concept_extraction": 3.349027156829834,
+    "grounding_check": 7.009506225585938e-05,
+    "graph_construction": 0.22900700569152832,
+    "graph_traversal": 2.072951555252075,
+    "answer_synthesis": 1.7214045524597168,
+    "total": 7.386286973953247
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [
+          "mask"
+        ],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          900,
+          450
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "simple, possibly in a developing country"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting on a bed with an oxygen mask",
+              "position": "left side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting on a chair with a hand covering face",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting on a bed with an oxygen mask",
+              "position": "right side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "oxygen tanks",
+            "attributes": {
+              "usage": "providing oxygen to patients",
+              "position": "behind the patients"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "oxygen masks",
+            "attributes": {
+              "usage": "delivering oxygen to patients",
+              "position": "on the faces of patients"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "for patient care",
+              "position": "on either side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "oxygen therapy",
+            "attributes": {
+              "significance": "patients are receiving oxygen",
+              "appearance": "oxygen masks and tanks"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patients",
+            "relation": "are receiving care",
+            "object": "hospital room",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "oxygen masks",
+            "relation": "are connected to",
+            "object": "oxygen tanks",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "simple, possibly in a developing country"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting on a bed with an oxygen mask",
+              "position": "left side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting on a chair with a hand covering face",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting on a bed with an oxygen mask",
+              "position": "right side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "oxygen tanks",
+            "attributes": {
+              "usage": "providing oxygen to patients",
+              "position": "behind the patients"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "oxygen masks",
+            "attributes": {
+              "usage": "delivering oxygen to patients",
+              "position": "on the faces of patients"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "for patient care",
+              "position": "on either side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "oxygen therapy",
+            "attributes": {
+              "significance": "patients are receiving oxygen",
+              "appearance": "oxygen masks and tanks"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patients",
+            "relation": "are receiving care",
+            "object": "hospital room",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "oxygen masks",
+            "relation": "are connected to",
+            "object": "oxygen tanks",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: patient, patient, patient. Equipment: oxygen tanks, oxygen masks, hospital beds"
+    }
+  }
+}

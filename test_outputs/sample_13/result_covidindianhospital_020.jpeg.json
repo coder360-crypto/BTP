@@ -1,17 +1,17 @@
 {
   "question": "Are the healthcare workers equipped with proper PPE?",
-  "answer": "Based on the provided context, yes, the healthcare workers are equipped with proper PPE, as it is mentioned that Personal Protective Equipment (PPE) is present and presumably being used by the healthcare workers.",
+  "answer": "Based on the provided context, yes, the healthcare workers are equipped with proper PPE. The context explicitly mentions that the equipment includes Personal Protective Equipment (PPE).",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.007826089859008789,
+    "question_analysis": 0.008533239364624023,
     "roi_detection": 0,
-    "concept_extraction": 2.18509840965271,
-    "grounding_check": 4.601478576660156e-05,
-    "graph_construction": 0.23853182792663574,
-    "graph_traversal": 2.051910638809204,
-    "answer_synthesis": 0.400554895401001,
-    "total": 4.885641813278198
+    "concept_extraction": 2.3393781185150146,
+    "grounding_check": 6.222724914550781e-05,
+    "graph_construction": 0.236860990524292,
+    "graph_traversal": 2.0978891849517822,
+    "answer_synthesis": 0.36727404594421387,
+    "total": 5.051530122756958
   },
   "interim_results": {
     "question_analysis": {
@@ -58,58 +58,58 @@
           {
             "name": "Healthcare Worker 1",
             "attributes": {
-              "actions": "Collecting nasal swab sample",
-              "position": "Standing next to patient on the left"
+              "actions": "Collecting swab sample",
+              "position": "Standing next to seated patient on the left"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Healthcare Worker 2",
             "attributes": {
-              "actions": "Collecting nasal swab sample",
-              "position": "Standing next to patient in the middle"
+              "actions": "Collecting swab sample",
+              "position": "Standing next to seated patient in the middle"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Healthcare Worker 3",
             "attributes": {
-              "actions": "Preparing or holding equipment",
-              "position": "Standing next to patient on the right"
+              "actions": "Preparing or handling equipment",
+              "position": "Standing next to seated patient on the right"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Patient 1",
             "attributes": {
-              "actions": "Receiving nasal swab test",
-              "position": "Sitting on the left"
+              "actions": "Receiving swab test",
+              "position": "Seated on the left"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Patient 2",
             "attributes": {
-              "actions": "Receiving nasal swab test",
-              "position": "Sitting in the middle"
+              "actions": "Receiving swab test",
+              "position": "Seated in the middle"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Patient 3",
             "attributes": {
-              "actions": "Receiving nasal swab test",
-              "position": "Sitting on the right"
+              "actions": "Receiving swab test",
+              "position": "Seated on the right"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "Nasal swab testing",
+            "name": "Swab testing",
             "attributes": {
               "technique": "Nasopharyngeal swabbing",
-              "stage": "Sample collection"
+              "stage": "Active sampling"
             },
             "grounding_score": 0.8
           }
@@ -126,8 +126,8 @@
           {
             "name": "Swab collection tools",
             "attributes": {
-              "usage": "Collecting nasal swab samples",
-              "position": "Held by healthcare workers"
+              "usage": "Collecting samples from patients",
+              "position": "Handled by healthcare workers"
             },
             "grounding_score": 0.85
           },
@@ -140,10 +140,18 @@
             "grounding_score": 0.85
           },
           {
+            "name": "Table",
+            "attributes": {
+              "usage": "Holding supplies",
+              "position": "Behind seated patients"
+            },
+            "grounding_score": 0.85
+          },
+          {
             "name": "Hand sanitizer or disinfectant",
             "attributes": {
               "usage": "Disinfecting hands or surfaces",
-              "position": "On the table behind the patients"
+              "position": "On the table behind seated patients"
             },
             "grounding_score": 0.85
           }
@@ -205,58 +213,58 @@
           {
             "name": "Healthcare Worker 1",
             "attributes": {
-              "actions": "Collecting nasal swab sample",
-              "position": "Standing next to patient on the left"
+              "actions": "Collecting swab sample",
+              "position": "Standing next to seated patient on the left"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Healthcare Worker 2",
             "attributes": {
-              "actions": "Collecting nasal swab sample",
-              "position": "Standing next to patient in the middle"
+              "actions": "Collecting swab sample",
+              "position": "Standing next to seated patient in the middle"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Healthcare Worker 3",
             "attributes": {
-              "actions": "Preparing or holding equipment",
-              "position": "Standing next to patient on the right"
+              "actions": "Preparing or handling equipment",
+              "position": "Standing next to seated patient on the right"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Patient 1",
             "attributes": {
-              "actions": "Receiving nasal swab test",
-              "position": "Sitting on the left"
+              "actions": "Receiving swab test",
+              "position": "Seated on the left"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Patient 2",
             "attributes": {
-              "actions": "Receiving nasal swab test",
-              "position": "Sitting in the middle"
+              "actions": "Receiving swab test",
+              "position": "Seated in the middle"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Patient 3",
             "attributes": {
-              "actions": "Receiving nasal swab test",
-              "position": "Sitting on the right"
+              "actions": "Receiving swab test",
+              "position": "Seated on the right"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "Nasal swab testing",
+            "name": "Swab testing",
             "attributes": {
               "technique": "Nasopharyngeal swabbing",
-              "stage": "Sample collection"
+              "stage": "Active sampling"
             },
             "grounding_score": 0.8
           }
@@ -273,8 +281,8 @@
           {
             "name": "Swab collection tools",
             "attributes": {
-              "usage": "Collecting nasal swab samples",
-              "position": "Held by healthcare workers"
+              "usage": "Collecting samples from patients",
+              "position": "Handled by healthcare workers"
             },
             "grounding_score": 0.85
           },
@@ -287,10 +295,18 @@
             "grounding_score": 0.85
           },
           {
+            "name": "Table",
+            "attributes": {
+              "usage": "Holding supplies",
+              "position": "Behind seated patients"
+            },
+            "grounding_score": 0.85
+          },
+          {
             "name": "Hand sanitizer or disinfectant",
             "attributes": {
               "usage": "Disinfecting hands or surfaces",
-              "position": "On the table behind the patients"
+              "position": "On the table behind seated patients"
             },
             "grounding_score": 0.85
           }

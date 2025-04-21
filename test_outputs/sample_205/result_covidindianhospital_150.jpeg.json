@@ -1,0 +1,274 @@
+{
+  "question": "Is the condition of the patient serious?",
+  "answer": "The context does not contain enough information to determine the seriousness of the patient's condition. \n\nWhat is visible in the image is a hospital room setting with multiple healthcare providers attending to a patient, as indicated by the activity of patient care, and there are medical equipment present such as a monitor, medical equipment panel, and a hospital bed.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00839853286743164,
+    "roi_detection": 0,
+    "concept_extraction": 2.98232364654541,
+    "grounding_check": 8.893013000488281e-05,
+    "graph_construction": 0.23971080780029297,
+    "graph_traversal": 1.6577966213226318,
+    "answer_synthesis": 1.6897351741790771,
+    "total": 6.580607891082764
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": [
+          "the condition"
+        ]
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1260,
+          720
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "hospital",
+              "appearance": "intensive care or isolation room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker_1",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "left side of the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker_2",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "center, leaning over the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker_3",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "right side of the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient_assessment_or_treatment",
+            "attributes": {
+              "technique": "",
+              "stage": ""
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical_bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "monitoring_equipment",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "right side of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "ultrasound_machine",
+            "attributes": {
+              "usage": "diagnostic imaging",
+              "position": "left side of the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "personal_protective_equipment",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "white hazmat suits"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_workers",
+            "relation": "surrounding",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "medical_bed",
+            "relation": "positioned",
+            "object": "center of the room",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "hospital",
+              "appearance": "intensive care or isolation room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker_1",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "left side of the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker_2",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "center, leaning over the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker_3",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "right side of the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient_assessment_or_treatment",
+            "attributes": {
+              "technique": "",
+              "stage": ""
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical_bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "monitoring_equipment",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "right side of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "ultrasound_machine",
+            "attributes": {
+              "usage": "diagnostic imaging",
+              "position": "left side of the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "personal_protective_equipment",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "white hazmat suits"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_workers",
+            "relation": "surrounding",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "medical_bed",
+            "relation": "positioned",
+            "object": "center of the room",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital room. People: healthcare provider, healthcare provider, healthcare provider. Activities: patient care. Equipment: medical monitor, medical equipment panel, hospital bed",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital room. People: healthcare provider, healthcare provider, healthcare provider. Activities: patient care. Equipment: medical monitor, medical equipment panel, hospital bed"
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "question": "Is the patient's left limb raised properly?",
+  "answer": "The context does not contain information about the position of the patient's left limb or what constitutes a \"properly\" raised limb in a medical context. \n\nWhat is visible in the image: A hospital room with a patient, a hospital bed, a cast, and a blue blanket.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.009323596954345703,
+    "roi_detection": 0,
+    "concept_extraction": 3.2027523517608643,
+    "grounding_check": 9.274482727050781e-05,
+    "graph_construction": 0.23810982704162598,
+    "graph_traversal": 1.5151581764221191,
+    "answer_synthesis": 1.6687023639678955,
+    "total": 6.636846542358398
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [
+          "limb"
+        ],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1200,
+          675
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "private room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "resting",
+              "position": "on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "cast",
+            "attributes": {
+              "usage": "immobilization",
+              "position": "on patient's leg"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "leg cast",
+            "attributes": {
+              "significance": "immobilization",
+              "appearance": "white cast"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "on",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "private room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "resting",
+              "position": "on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "cast",
+            "attributes": {
+              "usage": "immobilization",
+              "position": "on patient's leg"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "leg cast",
+            "attributes": {
+              "significance": "immobilization",
+              "appearance": "white cast"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "on",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: patient. Equipment: hospital bed, cast, blue blanket"
+    }
+  },
+  "metrics": {
+    "bleu": 0.04210656762134433,
+    "rouge": 0.14035087719298245,
+    "sent": 0.5357028841972351,
+    "ent": 0.9857383966445923,
+    "clip_c": 0.5825142541731866
+  },
+  "reference_answer": "Yes the left limb elevation of the patiemt is proper"
+}

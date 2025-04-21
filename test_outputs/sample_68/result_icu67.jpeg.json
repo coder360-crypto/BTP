@@ -4,14 +4,14 @@
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006689310073852539,
+    "question_analysis": 0.006396055221557617,
     "roi_detection": 0,
-    "concept_extraction": 3.7864205837249756,
-    "grounding_check": 4.887580871582031e-05,
-    "graph_construction": 0.21144914627075195,
-    "graph_traversal": 2.6242809295654297,
-    "answer_synthesis": 1.464292287826538,
-    "total": 8.110404014587402
+    "concept_extraction": 3.77586030960083,
+    "grounding_check": 4.7206878662109375e-05,
+    "graph_construction": 0.22344470024108887,
+    "graph_traversal": 2.9474334716796875,
+    "answer_synthesis": 1.486525058746338,
+    "total": 8.449238777160645
   },
   "interim_results": {
     "question_analysis": {
@@ -51,7 +51,7 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor",
-              "appearance": "blurry"
+              "appearance": "blurred"
             },
             "grounding_score": 0.85
           }
@@ -99,8 +99,14 @@
         "relationships": [
           {
             "subject": "infusion pump",
-            "relation": "next to",
+            "relation": "connected to",
             "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving",
+            "object": "infusion",
             "grounding_score": 0.75
           }
         ]
@@ -114,7 +120,7 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor",
-              "appearance": "blurry"
+              "appearance": "blurred"
             },
             "grounding_score": 0.85
           }
@@ -162,8 +168,14 @@
         "relationships": [
           {
             "subject": "infusion pump",
-            "relation": "next to",
+            "relation": "connected to",
             "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving",
+            "object": "infusion",
             "grounding_score": 0.75
           }
         ]

@@ -1,17 +1,17 @@
 {
   "question": "Is the sample collection technique appropriate?",
-  "answer": "The context does not contain information about the specifics of the sample collection technique. What is visible in the image is a COVID-19 testing site with healthcare workers and patients, and the use of swab collection tools. However, it is not possible to assess the appropriateness of the sample collection technique based on the provided context.",
+  "answer": "The context does not contain information about the specifics of the sample collection technique. What is visible in the image is a COVID-19 testing site with healthcare workers and patients, and equipment such as swab collection tools and personal protective equipment (PPE).",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006103038787841797,
+    "question_analysis": 0.006270647048950195,
     "roi_detection": 0,
-    "concept_extraction": 2.02799916267395,
-    "grounding_check": 5.888938903808594e-05,
-    "graph_construction": 0.23653745651245117,
-    "graph_traversal": 2.058887243270874,
-    "answer_synthesis": 0.6166174411773682,
-    "total": 4.94773530960083
+    "concept_extraction": 2.1449801921844482,
+    "grounding_check": 5.316734313964844e-05,
+    "graph_construction": 0.23503541946411133,
+    "graph_traversal": 2.205408811569214,
+    "answer_synthesis": 0.4502129554748535,
+    "total": 5.043606281280518
   },
   "interim_results": {
     "question_analysis": {
@@ -20,10 +20,10 @@
         "clinical_findings": [],
         "equipment": [],
         "procedure": [
+          "sample",
           "technique",
-          "collection",
           "appropriate",
-          "sample"
+          "collection"
         ],
         "setting": [],
         "other_medical": []

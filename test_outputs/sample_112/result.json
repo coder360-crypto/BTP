@@ -1,0 +1,252 @@
+{
+  "question": "Is the trauma patient properly / appropriately lying on the strecher?",
+  "answer": "The context does not contain information about the patient's position on the stretcher or what would constitute a proper or appropriate position. \n\nWhat is visible in the image: A patient on a stretcher or gurney in a trauma bay or emergency area with a healthcare provider, assistant or bystander present.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007985830307006836,
+    "roi_detection": 0,
+    "concept_extraction": 3.058640241622925,
+    "grounding_check": 5.698204040527344e-05,
+    "graph_construction": 0.23012542724609375,
+    "graph_traversal": 3.17668080329895,
+    "answer_synthesis": 1.6983673572540283,
+    "total": 8.174717664718628
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "trauma"
+        ],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1200,
+          800
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "trauma bay or emergency area",
+            "attributes": {
+              "location": "likely a hospital or medical facility",
+              "appearance": "a stretcher or gurney is present"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "putting on gloves",
+              "position": "standing beside the stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "assistant or bystander",
+            "attributes": {
+              "actions": "standing beside the stretcher",
+              "position": "near the patient's feet"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on the stretcher",
+              "position": "on the stretcher"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "preparation for patient care",
+            "attributes": {
+              "technique": "putting on gloves",
+              "stage": "initial assessment or preparation"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "stretcher or gurney",
+            "attributes": {
+              "usage": "transporting or examining the patient",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "gloves",
+            "attributes": {
+              "usage": "personal protective equipment",
+              "position": "being put on by the healthcare provider"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient's head",
+            "attributes": {
+              "significance": "possible injury or concern",
+              "appearance": "a white substance ( possibly a dressing or bandage) is visible on the patient's head"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "assistant or bystander",
+            "relation": "assisting",
+            "object": "healthcare provider or patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "trauma bay or emergency area",
+            "attributes": {
+              "location": "likely a hospital or medical facility",
+              "appearance": "a stretcher or gurney is present"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "putting on gloves",
+              "position": "standing beside the stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "assistant or bystander",
+            "attributes": {
+              "actions": "standing beside the stretcher",
+              "position": "near the patient's feet"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on the stretcher",
+              "position": "on the stretcher"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "preparation for patient care",
+            "attributes": {
+              "technique": "putting on gloves",
+              "stage": "initial assessment or preparation"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "stretcher or gurney",
+            "attributes": {
+              "usage": "transporting or examining the patient",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "gloves",
+            "attributes": {
+              "usage": "personal protective equipment",
+              "position": "being put on by the healthcare provider"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient's head",
+            "attributes": {
+              "significance": "possible injury or concern",
+              "appearance": "a white substance ( possibly a dressing or bandage) is visible on the patient's head"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "assistant or bystander",
+            "relation": "assisting",
+            "object": "healthcare provider or patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: trauma bay or emergency area. People: healthcare provider, assistant or bystander, patient. Activities: preparation for patient care. Equipment: stretcher or gurney, gloves"
+    }
+  },
+  "metrics": {
+    "bleu": 0.015747002247912974,
+    "rouge": 0.17721518987341772,
+    "sent": 0.5987120866775513,
+    "ent": 0.9097784161567688,
+    "clip_c": 0.49960768043280424
+  },
+  "reference_answer": "No the patient is not placed appropriately as his injured and bandaged head is partly exceeding the stretcher. Trauma patiemts - head and neck immobilisation is of prime importance"
+}

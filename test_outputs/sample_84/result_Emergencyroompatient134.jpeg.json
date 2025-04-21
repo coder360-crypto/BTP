@@ -4,14 +4,14 @@
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.008321285247802734,
+    "question_analysis": 0.008522987365722656,
     "roi_detection": 0,
-    "concept_extraction": 3.3489561080932617,
-    "grounding_check": 6.747245788574219e-05,
-    "graph_construction": 0.2226119041442871,
-    "graph_traversal": 2.280407190322876,
-    "answer_synthesis": 1.5228471755981445,
-    "total": 7.384167194366455
+    "concept_extraction": 3.2931277751922607,
+    "grounding_check": 4.982948303222656e-05,
+    "graph_construction": 0.22217869758605957,
+    "graph_traversal": 2.2806384563446045,
+    "answer_synthesis": 1.50166916847229,
+    "total": 7.307118892669678
   },
   "interim_results": {
     "question_analysis": {
@@ -125,7 +125,7 @@
           {
             "name": "vital signs",
             "attributes": {
-              "significance": "monitoring patient status",
+              "significance": "monitoring patient's condition",
               "appearance": "displayed on monitor"
             },
             "grounding_score": 0.8
@@ -139,9 +139,9 @@
             "grounding_score": 0.75
           },
           {
-            "subject": "healthcare worker 2",
-            "relation": "assisting",
-            "object": "healthcare worker 3",
+            "subject": "physician",
+            "relation": "viewing",
+            "object": "monitor",
             "grounding_score": 0.75
           }
         ]
@@ -226,7 +226,7 @@
           {
             "name": "vital signs",
             "attributes": {
-              "significance": "monitoring patient status",
+              "significance": "monitoring patient's condition",
               "appearance": "displayed on monitor"
             },
             "grounding_score": 0.8
@@ -240,9 +240,9 @@
             "grounding_score": 0.75
           },
           {
-            "subject": "healthcare worker 2",
-            "relation": "assisting",
-            "object": "healthcare worker 3",
+            "subject": "physician",
+            "relation": "viewing",
+            "object": "monitor",
             "grounding_score": 0.75
           }
         ]

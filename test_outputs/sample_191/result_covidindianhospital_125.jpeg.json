@@ -1,0 +1,239 @@
+{
+  "question": "Is the injection technique accurate?",
+  "answer": "The context does not contain information about the accuracy of the injection technique. \n\nWhat is visible in the image: A doctor and a nurse are present in a hospital room with a mother, and an injection is being administered using a syringe.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.005864858627319336,
+    "roi_detection": 0,
+    "concept_extraction": 3.4084854125976562,
+    "grounding_check": 5.1021575927734375e-05,
+    "graph_construction": 0.23563241958618164,
+    "graph_traversal": 2.433838367462158,
+    "answer_synthesis": 1.6876308917999268,
+    "total": 7.772261142730713
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "injection",
+          "technique"
+        ],
+        "setting": [],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          320,
+          240
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "clinical"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "administering injection",
+              "position": "left"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "assisting",
+              "position": "center"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "mother",
+            "attributes": {
+              "actions": "holding baby",
+              "position": "right"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "injection",
+            "attributes": {
+              "technique": "intramuscular",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering medication",
+              "position": "doctor's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "baby",
+            "attributes": {
+              "significance": "patient",
+              "appearance": "infant"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "treating",
+            "object": "baby",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "mother",
+            "relation": "accompanying",
+            "object": "baby",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse",
+            "relation": "assisting",
+            "object": "doctor",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "clinical"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "administering injection",
+              "position": "left"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "assisting",
+              "position": "center"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "mother",
+            "attributes": {
+              "actions": "holding baby",
+              "position": "right"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "injection",
+            "attributes": {
+              "technique": "intramuscular",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering medication",
+              "position": "doctor's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "baby",
+            "attributes": {
+              "significance": "patient",
+              "appearance": "infant"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "treating",
+            "object": "baby",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "mother",
+            "relation": "accompanying",
+            "object": "baby",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse",
+            "relation": "assisting",
+            "object": "doctor",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital_room. People: doctor, nurse, mother. Activities: injection. Equipment: syringe"
+    }
+  }
+}

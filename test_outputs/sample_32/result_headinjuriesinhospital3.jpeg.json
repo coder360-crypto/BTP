@@ -1,17 +1,17 @@
 {
   "question": "Is this patient's dress proper?",
-  "answer": "The context does not contain information about the patient's dress. What is visible in the image is a patient in an ambulance, with a stretcher and medical equipment such as gauze or mesh being used to bandage the patient. There is no information about the patient's attire being proper or improper.",
+  "answer": "The context does not contain information about the patient's dress. What is visible in the image is a patient in an ambulance, with a bystander or healthcare provider, and medical equipment such as a stretcher and gauze or mesh. There is no information about the patient's attire being proper or not.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006056547164916992,
+    "question_analysis": 0.007500410079956055,
     "roi_detection": 0,
-    "concept_extraction": 3.9552688598632812,
-    "grounding_check": 4.8160552978515625e-05,
-    "graph_construction": 0.2248375415802002,
-    "graph_traversal": 2.9948012828826904,
-    "answer_synthesis": 1.5741760730743408,
-    "total": 8.758406162261963
+    "concept_extraction": 3.9722061157226562,
+    "grounding_check": 6.771087646484375e-05,
+    "graph_construction": 0.23318123817443848,
+    "graph_traversal": 2.9575281143188477,
+    "answer_synthesis": 1.615149974822998,
+    "total": 8.788372993469238
   },
   "interim_results": {
     "question_analysis": {
@@ -92,18 +92,18 @@
             "grounding_score": 0.85
           },
           {
-            "name": "orange stretcher or divider",
-            "attributes": {
-              "usage": "divider or additional storage",
-              "position": "side of ambulance"
-            },
-            "grounding_score": 0.85
-          },
-          {
             "name": "gauze or mesh",
             "attributes": {
               "usage": "covering patient's head",
               "position": "on patient's head"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "orange stretcher or divider",
+            "attributes": {
+              "usage": "divider or additional storage",
+              "position": "side of ambulance"
             },
             "grounding_score": 0.85
           }
@@ -112,16 +112,16 @@
           {
             "name": "blood",
             "attributes": {
-              "significance": "indicative of injury or trauma",
+              "significance": "indicative of injury",
               "appearance": "visible on patient's clothing and bandage"
             },
             "grounding_score": 0.8
           },
           {
-            "name": "bandage",
+            "name": "bandaged head",
             "attributes": {
-              "significance": "covering injury",
-              "appearance": "on patient's head"
+              "significance": "indicative of head injury",
+              "appearance": "wrapped in gauze or mesh"
             },
             "grounding_score": 0.8
           }
@@ -129,14 +129,14 @@
         "relationships": [
           {
             "subject": "patient",
-            "relation": "receiving care or observation from",
-            "object": "bystander or healthcare provider",
+            "relation": "receiving care from",
+            "object": "healthcare providers (not clearly visible)",
             "grounding_score": 0.75
           },
           {
-            "subject": "patient",
-            "relation": "placed on",
-            "object": "stretcher",
+            "subject": "bystander or healthcare provider",
+            "relation": "accompanying",
+            "object": "patient",
             "grounding_score": 0.75
           }
         ]
@@ -193,18 +193,18 @@
             "grounding_score": 0.85
           },
           {
-            "name": "orange stretcher or divider",
-            "attributes": {
-              "usage": "divider or additional storage",
-              "position": "side of ambulance"
-            },
-            "grounding_score": 0.85
-          },
-          {
             "name": "gauze or mesh",
             "attributes": {
               "usage": "covering patient's head",
               "position": "on patient's head"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "orange stretcher or divider",
+            "attributes": {
+              "usage": "divider or additional storage",
+              "position": "side of ambulance"
             },
             "grounding_score": 0.85
           }
@@ -213,16 +213,16 @@
           {
             "name": "blood",
             "attributes": {
-              "significance": "indicative of injury or trauma",
+              "significance": "indicative of injury",
               "appearance": "visible on patient's clothing and bandage"
             },
             "grounding_score": 0.8
           },
           {
-            "name": "bandage",
+            "name": "bandaged head",
             "attributes": {
-              "significance": "covering injury",
-              "appearance": "on patient's head"
+              "significance": "indicative of head injury",
+              "appearance": "wrapped in gauze or mesh"
             },
             "grounding_score": 0.8
           }
@@ -230,14 +230,14 @@
         "relationships": [
           {
             "subject": "patient",
-            "relation": "receiving care or observation from",
-            "object": "bystander or healthcare provider",
+            "relation": "receiving care from",
+            "object": "healthcare providers (not clearly visible)",
             "grounding_score": 0.75
           },
           {
-            "subject": "patient",
-            "relation": "placed on",
-            "object": "stretcher",
+            "subject": "bystander or healthcare provider",
+            "relation": "accompanying",
+            "object": "patient",
             "grounding_score": 0.75
           }
         ]

@@ -1,17 +1,17 @@
 {
   "question": "Is the vaccination procedure being conducted appropriately?",
-  "answer": "The context does not contain the information needed to answer whether the vaccination procedure is being conducted appropriately. \n\nWhat is visible in the image: A vaccination is being administered to a patient by a healthcare worker using a syringe in a vaccination room.",
+  "answer": "The context does not contain information about whether the vaccination procedure is being conducted appropriately. \n\nWhat is visible in the image: A vaccination is being administered in a room (vaccination_room) by a healthcare worker to a patient. The equipment visible includes a syringe and a fan.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0067179203033447266,
+    "question_analysis": 0.0073163509368896484,
     "roi_detection": 0,
-    "concept_extraction": 3.08882737159729,
-    "grounding_check": 4.673004150390625e-05,
-    "graph_construction": 0.22052717208862305,
-    "graph_traversal": 1.9950473308563232,
-    "answer_synthesis": 2.515894651412964,
-    "total": 7.827897787094116
+    "concept_extraction": 3.2814478874206543,
+    "grounding_check": 5.245208740234375e-05,
+    "graph_construction": 0.22193050384521484,
+    "graph_traversal": 2.1874475479125977,
+    "answer_synthesis": 1.7632849216461182,
+    "total": 7.462354898452759
   },
   "interim_results": {
     "question_analysis": {
@@ -20,8 +20,8 @@
         "clinical_findings": [],
         "equipment": [],
         "procedure": [
-          "procedure",
-          "vaccination"
+          "vaccination",
+          "procedure"
         ],
         "setting": [],
         "other_medical": []
@@ -76,7 +76,7 @@
             "name": "vaccination",
             "attributes": {
               "technique": "intramuscular injection",
-              "stage": "in progress"
+              "stage": "ongoing"
             },
             "grounding_score": 0.8
           }
@@ -107,6 +107,14 @@
               "appearance": "on both individuals"
             },
             "grounding_score": 0.8
+          },
+          {
+            "name": "gloves",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "on healthcare worker"
+            },
+            "grounding_score": 0.8
           }
         ],
         "relationships": [
@@ -114,6 +122,12 @@
             "subject": "healthcare_worker",
             "relation": "administering vaccine to",
             "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving vaccine from",
+            "object": "healthcare_worker",
             "grounding_score": 0.75
           }
         ]
@@ -155,7 +169,7 @@
             "name": "vaccination",
             "attributes": {
               "technique": "intramuscular injection",
-              "stage": "in progress"
+              "stage": "ongoing"
             },
             "grounding_score": 0.8
           }
@@ -186,6 +200,14 @@
               "appearance": "on both individuals"
             },
             "grounding_score": 0.8
+          },
+          {
+            "name": "gloves",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "on healthcare worker"
+            },
+            "grounding_score": 0.8
           }
         ],
         "relationships": [
@@ -193,6 +215,12 @@
             "subject": "healthcare_worker",
             "relation": "administering vaccine to",
             "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving vaccine from",
+            "object": "healthcare_worker",
             "grounding_score": 0.75
           }
         ]
@@ -209,7 +237,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: vaccination_room. People: patient, healthcare_worker. Activities: vaccination. Equipment: syringe"
+      "image_caption": "Setting: vaccination_room. People: patient, healthcare_worker. Activities: vaccination. Equipment: syringe, fan"
     }
   }
 }

@@ -1,17 +1,17 @@
 {
   "question": "What activity is taking place in this image?",
-  "answer": "Based on the provided context, the activity taking place in this image is swab testing. This is occurring at a COVID-19 testing site.",
+  "answer": "Based on the provided context, the activity taking place in this image is swab testing. This is occurring at a COVID-19 testing site. \n\nVisible in the image are healthcare workers and patients, with the healthcare workers presumably conducting the swab testing on the patients.",
   "question_type": "descriptive",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.00821995735168457,
+    "question_analysis": 0.0074481964111328125,
     "roi_detection": 0,
-    "concept_extraction": 2.3754067420959473,
-    "grounding_check": 5.602836608886719e-05,
-    "graph_construction": 0.23970603942871094,
-    "graph_traversal": 1.5831658840179443,
-    "answer_synthesis": 0.403475284576416,
-    "total": 4.611721992492676
+    "concept_extraction": 2.2880306243896484,
+    "grounding_check": 5.3882598876953125e-05,
+    "graph_construction": 0.23978638648986816,
+    "graph_traversal": 2.145359992980957,
+    "answer_synthesis": 0.39080309867858887,
+    "total": 5.073042154312134
   },
   "interim_results": {
     "question_analysis": {
@@ -361,7 +361,7 @@
           ],
           "relation_types": []
         },
-        "image_caption": "Setting: COVID-19 testing site. People: Healthcare worker, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools, Blue chairs",
+        "image_caption": "Setting: COVID-19 testing site. People: Healthcare worker, Healthcare worker, Healthcare worker, Patient, Patient, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools, Blue chairs, Table, Hand sanitizer or disinfectant",
         "scene_elements": {
           "image": [
             {
@@ -379,15 +379,15 @@
         "graph_patterns": []
       },
       "traversal_strategy": "reasoning_traversal",
-      "image_caption": "Setting: COVID-19 testing site. People: Healthcare worker, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools, Blue chairs"
+      "image_caption": "Setting: COVID-19 testing site. People: Healthcare worker, Healthcare worker, Healthcare worker, Patient, Patient, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools, Blue chairs, Table, Hand sanitizer or disinfectant"
     }
   },
   "metrics": {
-    "bleu": 0.02851769004197565,
-    "rouge": 0.15,
-    "sent": 0.44268321990966797,
-    "ent": 0.004285733215510845,
-    "clip_c": 0.45727550514579124
+    "bleu": 0.014644002893963715,
+    "rouge": 0.09836065573770493,
+    "sent": 0.557121992111206,
+    "ent": 0.012959694489836693,
+    "clip_c": 0.5076845079054838
   },
   "reference_answer": "This picture depicts a hospital, where mass testing for a respiratory illness is being undertaken simultaneously."
 }

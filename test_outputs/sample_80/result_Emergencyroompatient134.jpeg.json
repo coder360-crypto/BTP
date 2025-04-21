@@ -1,17 +1,17 @@
 {
   "question": "Is this ICU set-up?",
-  "answer": "Based on the provided context, there is not enough information to confirm if this is an ICU (Intensive Care Unit) set-up. \n\nWhat is visible in the image: A hospital room with a patient, a physician, and two healthcare workers, where monitoring activities are taking place. The equipment visible includes a monitor and a hospital bed.",
+  "answer": "Based on the provided context, there is not enough information to determine if this is an ICU (Intensive Care Unit) set-up. \n\nWhat is visible in the image: A hospital room with a patient, a physician, and two healthcare workers, where monitoring activities are taking place. The equipment visible includes a monitor and a hospital bed.",
   "question_type": "general",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006083011627197266,
+    "question_analysis": 0.006886959075927734,
     "roi_detection": 0,
-    "concept_extraction": 3.4209742546081543,
-    "grounding_check": 5.269050598144531e-05,
-    "graph_construction": 0.22689342498779297,
-    "graph_traversal": 8.44811463356018,
-    "answer_synthesis": 0.4420742988586426,
-    "total": 12.545142650604248
+    "concept_extraction": 3.352668285369873,
+    "grounding_check": 5.745887756347656e-05,
+    "graph_construction": 0.23047471046447754,
+    "graph_traversal": 2.2160305976867676,
+    "answer_synthesis": 1.5397272109985352,
+    "total": 7.346857786178589
   },
   "interim_results": {
     "question_analysis": {
@@ -49,7 +49,7 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor",
-              "appearance": "medical facility"
+              "appearance": "medical setting with beds and equipment"
             },
             "grounding_score": 0.85
           }
@@ -72,10 +72,18 @@
             "grounding_score": 0.85
           },
           {
-            "name": "healthcare worker",
+            "name": "healthcare worker 2",
             "attributes": {
               "actions": "",
-              "position": "in background"
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 3",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
             },
             "grounding_score": 0.85
           }
@@ -84,7 +92,7 @@
           {
             "name": "monitoring",
             "attributes": {
-              "technique": "viewing vital signs",
+              "technique": "viewing vital signs on monitor",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -95,7 +103,7 @@
             "name": "monitor",
             "attributes": {
               "usage": "displaying vital signs",
-              "position": "above bed"
+              "position": "mounted on wall"
             },
             "grounding_score": 0.85
           },
@@ -112,8 +120,8 @@
           {
             "name": "vital signs",
             "attributes": {
-              "significance": "monitoring patient status",
-              "appearance": "on monitor"
+              "significance": "monitoring patient's condition",
+              "appearance": "displayed on monitor"
             },
             "grounding_score": 0.8
           }
@@ -126,9 +134,9 @@
             "grounding_score": 0.75
           },
           {
-            "subject": "monitor",
-            "relation": "displaying data for",
-            "object": "patient",
+            "subject": "physician",
+            "relation": "viewing",
+            "object": "monitor",
             "grounding_score": 0.75
           }
         ]
@@ -142,7 +150,7 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor",
-              "appearance": "medical facility"
+              "appearance": "medical setting with beds and equipment"
             },
             "grounding_score": 0.85
           }
@@ -165,10 +173,18 @@
             "grounding_score": 0.85
           },
           {
-            "name": "healthcare worker",
+            "name": "healthcare worker 2",
             "attributes": {
               "actions": "",
-              "position": "in background"
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 3",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
             },
             "grounding_score": 0.85
           }
@@ -177,7 +193,7 @@
           {
             "name": "monitoring",
             "attributes": {
-              "technique": "viewing vital signs",
+              "technique": "viewing vital signs on monitor",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -188,7 +204,7 @@
             "name": "monitor",
             "attributes": {
               "usage": "displaying vital signs",
-              "position": "above bed"
+              "position": "mounted on wall"
             },
             "grounding_score": 0.85
           },
@@ -205,8 +221,8 @@
           {
             "name": "vital signs",
             "attributes": {
-              "significance": "monitoring patient status",
-              "appearance": "on monitor"
+              "significance": "monitoring patient's condition",
+              "appearance": "displayed on monitor"
             },
             "grounding_score": 0.8
           }
@@ -219,9 +235,9 @@
             "grounding_score": 0.75
           },
           {
-            "subject": "monitor",
-            "relation": "displaying data for",
-            "object": "patient",
+            "subject": "physician",
+            "relation": "viewing",
+            "object": "monitor",
             "grounding_score": 0.75
           }
         ]

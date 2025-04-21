@@ -1,17 +1,17 @@
 {
   "question": "Is the position of the patient's head appropriate?",
-  "answer": "The context does not contain information about the position of the patient's head. It mentions a nasal swab test, but does not provide details about the patient's head position. \n\nWhat is visible in the image context: An outdoor medical facility with a healthcare worker and a patient, where a nasal swab test is being conducted, and both are wearing protective gear.",
+  "answer": "The context does not contain information about the position of the patient's head. \n\nVisible in the image are an outdoor medical facility, a healthcare worker, a patient, protective gear, and a swab, but no specific details about the patient's head position are provided.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006986141204833984,
+    "question_analysis": 0.0070400238037109375,
     "roi_detection": 0,
-    "concept_extraction": 3.462315082550049,
-    "grounding_check": 5.435943603515625e-05,
-    "graph_construction": 0.21424579620361328,
-    "graph_traversal": 2.5200304985046387,
-    "answer_synthesis": 1.590679407119751,
-    "total": 7.79629111289978
+    "concept_extraction": 2.476252317428589,
+    "grounding_check": 4.863739013671875e-05,
+    "graph_construction": 0.21358489990234375,
+    "graph_traversal": 2.41499924659729,
+    "answer_synthesis": 1.4750170707702637,
+    "total": 6.58887505531311
   },
   "interim_results": {
     "question_analysis": {
@@ -214,15 +214,15 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Nasal Swab Test. Equipment: Protective Gear, Swab"
+      "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Swab Test. Equipment: Protective Gear, Swab"
     }
   },
   "metrics": {
-    "bleu": 0.039796633061462444,
-    "rouge": 0.14814814814814814,
-    "sent": 0.6524991989135742,
-    "ent": 0.08421972393989563,
-    "clip_c": 0.5098239184467911
+    "bleu": 0.04636023136133921,
+    "rouge": 0.15873015873015872,
+    "sent": 0.6143341064453125,
+    "ent": 0.3241685926914215,
+    "clip_c": 0.5124422547424504
   },
   "reference_answer": "Yes, the patient's head is tilted slightly backwards, which is appropriate position for collecting naso-pharyngeal swabs."
 }

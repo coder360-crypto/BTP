@@ -1,17 +1,17 @@
 {
   "question": "Is the injury serious?",
-  "answer": "Based on the provided context, I can only state what is visible in the image without speculating about the seriousness of the injury. \n\nThe context indicates that there is a patient and a healthcare provider in a hospital setting, and the healthcare provider is bandaging the patient. The patient appears to have head injuries, as indicated by the image caption \"headinjuriesinhospital178.jpeg\". \n\nHowever, I do not have enough information to determine if the injury is serious.",
+  "answer": "Based on the provided context, I can only state what is visible in the image without speculating. \n\nThe image appears to show a patient with head injuries in a hospital setting, on a hospital bed with a healthcare provider. \n\nThere is no information in the context to determine the seriousness of the injury.",
   "question_type": "general",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0055463314056396484,
+    "question_analysis": 0.005307912826538086,
     "roi_detection": 0,
-    "concept_extraction": 3.082998037338257,
-    "grounding_check": 4.8160552978515625e-05,
-    "graph_construction": 0.21219825744628906,
-    "graph_traversal": 2.0983169078826904,
-    "answer_synthesis": 2.5641274452209473,
-    "total": 7.964443922042847
+    "concept_extraction": 3.1046736240386963,
+    "grounding_check": 0.00011229515075683594,
+    "graph_construction": 0.2103569507598877,
+    "graph_traversal": 2.1412436962127686,
+    "answer_synthesis": 2.551562786102295,
+    "total": 8.0144202709198
   },
   "interim_results": {
     "question_analysis": {
@@ -174,7 +174,7 @@
           ],
           "relation_types": []
         },
-        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Activities: bandaging. Equipment: hospital bed, gauze",
+        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed",
         "scene_elements": {
           "image": [
             {
@@ -192,7 +192,7 @@
         "graph_patterns": []
       },
       "traversal_strategy": "reasoning_traversal",
-      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Activities: bandaging. Equipment: hospital bed, gauze"
+      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed"
     }
   }
 }

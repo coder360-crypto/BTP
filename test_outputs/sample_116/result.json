@@ -1,0 +1,250 @@
+{
+  "question": "Is the patient critical?",
+  "answer": "The context does not contain the information needed to determine if the patient is critical. \n\nWhat is visible in the image is a scene set in a trauma bay or emergency area with a patient on a stretcher or gurney, a healthcare provider, and either an assistant or bystander, with preparation for patient care underway.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00530242919921875,
+    "roi_detection": 0,
+    "concept_extraction": 3.2071311473846436,
+    "grounding_check": 5.364418029785156e-05,
+    "graph_construction": 0.23199987411499023,
+    "graph_traversal": 3.081103801727295,
+    "answer_synthesis": 1.7571032047271729,
+    "total": 8.285331726074219
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1200,
+          800
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "trauma bay or emergency area",
+            "attributes": {
+              "location": "likely a hospital or medical facility",
+              "appearance": "a stretcher or gurney is present"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "putting on gloves",
+              "position": "standing beside the stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "assistant or bystander",
+            "attributes": {
+              "actions": "standing beside the stretcher",
+              "position": "near the patient's feet"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on the stretcher",
+              "position": "on the stretcher"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "preparation for patient care",
+            "attributes": {
+              "technique": "putting on gloves",
+              "stage": "initial assessment or preparation"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "stretcher or gurney",
+            "attributes": {
+              "usage": "supporting the patient",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "gloves",
+            "attributes": {
+              "usage": "personal protective equipment",
+              "position": "being put on by the healthcare provider"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient's head",
+            "attributes": {
+              "significance": "possible injury or concern",
+              "appearance": "a white substance ( possibly a medical dressing or bandage) is visible on the patient's head"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "assistant or bystander",
+            "relation": "supporting",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "trauma bay or emergency area",
+            "attributes": {
+              "location": "likely a hospital or medical facility",
+              "appearance": "a stretcher or gurney is present"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "putting on gloves",
+              "position": "standing beside the stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "assistant or bystander",
+            "attributes": {
+              "actions": "standing beside the stretcher",
+              "position": "near the patient's feet"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on the stretcher",
+              "position": "on the stretcher"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "preparation for patient care",
+            "attributes": {
+              "technique": "putting on gloves",
+              "stage": "initial assessment or preparation"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "stretcher or gurney",
+            "attributes": {
+              "usage": "supporting the patient",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "gloves",
+            "attributes": {
+              "usage": "personal protective equipment",
+              "position": "being put on by the healthcare provider"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient's head",
+            "attributes": {
+              "significance": "possible injury or concern",
+              "appearance": "a white substance ( possibly a medical dressing or bandage) is visible on the patient's head"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "assistant or bystander",
+            "relation": "supporting",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: trauma bay or emergency area. People: healthcare provider, assistant or bystander, patient. Activities: preparation for patient care. Equipment: stretcher or gurney, gloves",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: trauma bay or emergency area. People: healthcare provider, assistant or bystander, patient. Activities: preparation for patient care. Equipment: stretcher or gurney, gloves"
+    }
+  },
+  "metrics": {
+    "bleu": 0.026035001566959298,
+    "rouge": 0.1081081081081081,
+    "sent": 0.3057194948196411,
+    "ent": 0.20533695816993713,
+    "clip_c": 0.4803936269013459
+  },
+  "reference_answer": "Although, the patiemt has head injury, but in the picture, he seems to be conscious alert and clinically stable."
+}

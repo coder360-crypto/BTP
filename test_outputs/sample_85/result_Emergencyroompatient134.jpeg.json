@@ -1,17 +1,17 @@
 {
   "question": "Is the patient's bed adjusted to the correct elevation and position?",
-  "answer": "The context does not contain information about the elevation and position of the patient's bed. What is visible in the image is a hospital room with a patient on a hospital bed, a physician, and two healthcare workers, with monitoring equipment present.",
+  "answer": "The context does not contain information about the elevation and position of the patient's bed. What is visible in the image is a hospital room with a patient on a hospital bed, a physician, and multiple healthcare workers, with monitoring equipment present.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.00847315788269043,
+    "question_analysis": 0.008335351943969727,
     "roi_detection": 0,
-    "concept_extraction": 3.274306058883667,
-    "grounding_check": 4.887580871582031e-05,
-    "graph_construction": 0.2286214828491211,
-    "graph_traversal": 2.1639013290405273,
-    "answer_synthesis": 1.5470077991485596,
-    "total": 7.2232420444488525
+    "concept_extraction": 3.271221876144409,
+    "grounding_check": 5.078315734863281e-05,
+    "graph_construction": 0.22527050971984863,
+    "graph_traversal": 2.230168342590332,
+    "answer_synthesis": 1.5347237586975098,
+    "total": 7.270735502243042
   },
   "interim_results": {
     "question_analysis": {
@@ -25,8 +25,8 @@
           "correct"
         ],
         "setting": [
-          "bed",
-          "patient"
+          "patient",
+          "bed"
         ],
         "other_medical": [
           "position"
@@ -53,15 +53,15 @@
           {
             "name": "hospital room",
             "attributes": {
-              "location": "indoor hospital setting",
-              "appearance": "multiple hospital beds"
+              "location": "indoor",
+              "appearance": "medical setting with beds and equipment"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "healthcare provider",
+            "name": "physician",
             "attributes": {
               "actions": "viewing monitor",
               "position": "standing beside bed"
@@ -77,10 +77,18 @@
             "grounding_score": 0.85
           },
           {
-            "name": "healthcare providers",
+            "name": "healthcare worker 2",
             "attributes": {
               "actions": "",
-              "position": "standing or sitting near another bed"
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 3",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
             },
             "grounding_score": 0.85
           }
@@ -89,7 +97,7 @@
           {
             "name": "monitoring",
             "attributes": {
-              "technique": "viewing vital signs on a monitor",
+              "technique": "viewing vital signs on monitor",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -97,26 +105,18 @@
         ],
         "equipment": [
           {
-            "name": "hospital bed",
-            "attributes": {
-              "usage": "patient care",
-              "position": "center of the room"
-            },
-            "grounding_score": 0.85
-          },
-          {
             "name": "monitor",
             "attributes": {
               "usage": "displaying vital signs",
-              "position": "mounted on a wall or pole"
+              "position": "mounted on wall"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "personal protective equipment",
+            "name": "hospital bed",
             "attributes": {
-              "usage": "infection control",
-              "position": "on healthcare providers"
+              "usage": "patient care",
+              "position": "center of room"
             },
             "grounding_score": 0.85
           }
@@ -126,22 +126,22 @@
             "name": "vital signs",
             "attributes": {
               "significance": "monitoring patient's condition",
-              "appearance": "displayed on a monitor"
+              "appearance": "displayed on monitor"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "healthcare provider",
+            "subject": "physician",
             "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "healthcare providers",
-            "relation": "interacting with",
-            "object": "each other",
+            "subject": "healthcare worker 2",
+            "relation": "assisting",
+            "object": "healthcare worker 3",
             "grounding_score": 0.75
           }
         ]
@@ -154,15 +154,15 @@
           {
             "name": "hospital room",
             "attributes": {
-              "location": "indoor hospital setting",
-              "appearance": "multiple hospital beds"
+              "location": "indoor",
+              "appearance": "medical setting with beds and equipment"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "healthcare provider",
+            "name": "physician",
             "attributes": {
               "actions": "viewing monitor",
               "position": "standing beside bed"
@@ -178,10 +178,18 @@
             "grounding_score": 0.85
           },
           {
-            "name": "healthcare providers",
+            "name": "healthcare worker 2",
             "attributes": {
               "actions": "",
-              "position": "standing or sitting near another bed"
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 3",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
             },
             "grounding_score": 0.85
           }
@@ -190,7 +198,7 @@
           {
             "name": "monitoring",
             "attributes": {
-              "technique": "viewing vital signs on a monitor",
+              "technique": "viewing vital signs on monitor",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -198,26 +206,18 @@
         ],
         "equipment": [
           {
-            "name": "hospital bed",
-            "attributes": {
-              "usage": "patient care",
-              "position": "center of the room"
-            },
-            "grounding_score": 0.85
-          },
-          {
             "name": "monitor",
             "attributes": {
               "usage": "displaying vital signs",
-              "position": "mounted on a wall or pole"
+              "position": "mounted on wall"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "personal protective equipment",
+            "name": "hospital bed",
             "attributes": {
-              "usage": "infection control",
-              "position": "on healthcare providers"
+              "usage": "patient care",
+              "position": "center of room"
             },
             "grounding_score": 0.85
           }
@@ -227,22 +227,22 @@
             "name": "vital signs",
             "attributes": {
               "significance": "monitoring patient's condition",
-              "appearance": "displayed on a monitor"
+              "appearance": "displayed on monitor"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "healthcare provider",
+            "subject": "physician",
             "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "healthcare providers",
-            "relation": "interacting with",
-            "object": "each other",
+            "subject": "healthcare worker 2",
+            "relation": "assisting",
+            "object": "healthcare worker 3",
             "grounding_score": 0.75
           }
         ]

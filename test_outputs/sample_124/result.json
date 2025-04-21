@@ -1,0 +1,268 @@
+{
+  "question": "Is the perosnal protection worn by healthcare proper?",
+  "answer": "Based on the provided context, it is not possible to determine if the personal protection worn by healthcare workers is proper. \n\nThe context mentions a vaccination room with healthcare workers and a patient, but it does not provide information about the personal protective equipment (PPE) being worn. \n\nWhat is visible in the image context: A vaccination room with healthcare workers, a patient, a syringe, a tablet, and a biohazard bin.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007432699203491211,
+    "roi_detection": 0,
+    "concept_extraction": 3.3700296878814697,
+    "grounding_check": 5.8650970458984375e-05,
+    "graph_construction": 0.26532483100891113,
+    "graph_traversal": 1.9324071407318115,
+    "answer_synthesis": 1.7722837924957275,
+    "total": 7.351018905639648
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "proper"
+        ],
+        "setting": [],
+        "other_medical": [
+          "healthcare"
+        ]
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1200,
+          900
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "vaccination_room",
+            "attributes": {
+              "location": "hospital or clinic",
+              "appearance": "a room with tiled walls and signs in a foreign language"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker_1",
+            "attributes": {
+              "actions": "administering a vaccine",
+              "position": "left of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker_2",
+            "attributes": {
+              "actions": "recording information",
+              "position": "right of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "center"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccination",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering vaccine",
+              "position": "in healthcare worker 1's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "tablet",
+            "attributes": {
+              "usage": "recording information",
+              "position": "in healthcare worker 2's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "biohazard_bin",
+            "attributes": {
+              "usage": "disposing of medical waste",
+              "position": "on the floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "vaccine",
+            "attributes": {
+              "significance": "COVID-19 vaccine",
+              "appearance": "not clearly visible"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker_1",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare_worker_2",
+            "relation": "recording information for",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "vaccination_room",
+            "attributes": {
+              "location": "hospital or clinic",
+              "appearance": "a room with tiled walls and signs in a foreign language"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker_1",
+            "attributes": {
+              "actions": "administering a vaccine",
+              "position": "left of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker_2",
+            "attributes": {
+              "actions": "recording information",
+              "position": "right of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "center"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccination",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering vaccine",
+              "position": "in healthcare worker 1's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "tablet",
+            "attributes": {
+              "usage": "recording information",
+              "position": "in healthcare worker 2's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "biohazard_bin",
+            "attributes": {
+              "usage": "disposing of medical waste",
+              "position": "on the floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "vaccine",
+            "attributes": {
+              "significance": "COVID-19 vaccine",
+              "appearance": "not clearly visible"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker_1",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare_worker_2",
+            "relation": "recording information for",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: vaccination_room. People: healthcare_worker_1, healthcare_worker_2, patient. Activities: vaccination. Equipment: syringe, tablet, biohazard_bin"
+    }
+  },
+  "metrics": {
+    "bleu": 0.01021934082171398,
+    "rouge": 0.11904761904761904,
+    "sent": 0.4155818223953247,
+    "ent": 0.12031383812427521,
+    "clip_c": 0.0
+  },
+  "reference_answer": "No the nurse has not worn the mask properly as the nostrils are exposed."
+}

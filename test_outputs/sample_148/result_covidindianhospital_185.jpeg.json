@@ -1,0 +1,284 @@
+{
+  "question": "Is the nurse properly dresssed?",
+  "answer": "The context does not contain information about the nurse's attire. \n\nVisible in the image are a hospital room setting, a doctor, two nurses, hospital beds, IV poles, and medical equipment.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.0070438385009765625,
+    "roi_detection": 0,
+    "concept_extraction": 3.1544134616851807,
+    "grounding_check": 6.4849853515625e-05,
+    "graph_construction": 0.2386491298675537,
+    "graph_traversal": 1.8297679424285889,
+    "answer_synthesis": 1.640531301498413,
+    "total": 6.872211217880249
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "nurse"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          900,
+          600
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital ward",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "multiple beds, medical equipment, and staff"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "attending to a patient",
+              "position": "standing beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "holding a clipboard",
+              "position": "standing near a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "",
+              "position": "standing near a bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "rows of beds"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV poles",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near beds"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical equipment",
+            "attributes": {
+              "usage": "",
+              "position": "near beds and on walls"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patients",
+            "attributes": {
+              "significance": "receiving medical care",
+              "appearance": "lying on beds, some with blankets"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "gloves",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "latex or nitrile"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "masks",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "surgical masks"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse",
+            "relation": "near",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "beds",
+            "relation": "arranged in",
+            "object": "rows",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital ward",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "multiple beds, medical equipment, and staff"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "attending to a patient",
+              "position": "standing beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "holding a clipboard",
+              "position": "standing near a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "",
+              "position": "standing near a bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "rows of beds"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV poles",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near beds"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical equipment",
+            "attributes": {
+              "usage": "",
+              "position": "near beds and on walls"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patients",
+            "attributes": {
+              "significance": "receiving medical care",
+              "appearance": "lying on beds, some with blankets"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "gloves",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "latex or nitrile"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "masks",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "surgical masks"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse",
+            "relation": "near",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "beds",
+            "relation": "arranged in",
+            "object": "rows",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: doctor, nurse, nurse. Equipment: hospital beds, IV poles, medical equipment"
+    }
+  }
+}

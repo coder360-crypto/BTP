@@ -1,0 +1,186 @@
+{
+  "question": "Does the baby appear to be ill?",
+  "answer": "The context does not provide information about the baby's health status. It only mentions a patient and a hospital room setting with medical equipment. There is no specific mention of a baby. \n\nWhat is visible in the image context: A hospital room setting with a patient, a medical bed, tubes, and wires.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007162332534790039,
+    "roi_detection": 0,
+    "concept_extraction": 3.223195791244507,
+    "grounding_check": 7.462501525878906e-05,
+    "graph_construction": 0.2283334732055664,
+    "graph_traversal": 2.893378734588623,
+    "answer_synthesis": 1.6930756568908691,
+    "total": 8.04608678817749
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [],
+        "other_medical": [
+          "the baby"
+        ]
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          420,
+          315
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on a hospital bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": ""
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical tubes and wires",
+            "attributes": {
+              "usage": "monitoring and treatment",
+              "position": "attached to the patient"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "nasal cannula or oxygen mask",
+            "attributes": {
+              "significance": "respiratory support",
+              "appearance": "on the patient's face"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "on",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on a hospital bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": ""
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical tubes and wires",
+            "attributes": {
+              "usage": "monitoring and treatment",
+              "position": "attached to the patient"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "nasal cannula or oxygen mask",
+            "attributes": {
+              "significance": "respiratory support",
+              "appearance": "on the patient's face"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "on",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital room. People: patient. Equipment: medical bed, tubes and wires",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital room. People: patient. Equipment: medical bed, tubes and wires"
+    }
+  },
+  "metrics": {
+    "bleu": 0.015131650165315381,
+    "rouge": 0.13698630136986303,
+    "sent": 0.6452133059501648,
+    "ent": 0.012229321524500847,
+    "clip_c": 0.4901139738043923
+  },
+  "reference_answer": "Yes the baby is sick, as he has multiple tubes and catheters in place, and is continuously monitored using ECG."
+}

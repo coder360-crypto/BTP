@@ -1,0 +1,244 @@
+{
+  "question": "Is appropriate PPE being used by the nurse?",
+  "answer": "There is not enough information to determine if appropriate PPE is being used by the nurse. \n\nThe image caption does not mention personal protective equipment (PPE) or describe what the nurse is wearing. What is visible in the image is a hospital ward setting with a doctor and two nurses, hospital beds, IV poles, and medical equipment.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.008751392364501953,
+    "roi_detection": 0,
+    "concept_extraction": 4.03242826461792,
+    "grounding_check": 4.9114227294921875e-05,
+    "graph_construction": 0.23483514785766602,
+    "graph_traversal": 3.2221343517303467,
+    "answer_synthesis": 1.7242722511291504,
+    "total": 9.224448919296265
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [
+          "ppe"
+        ],
+        "procedure": [
+          "appropriate"
+        ],
+        "setting": [
+          "nurse"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          900,
+          600
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "a large room with multiple hospital beds, white walls, and blue curtains"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "attending to a patient",
+              "position": "standing beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "holding a clipboard",
+              "position": "standing near a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "",
+              "position": "standing near a bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "rows of beds in the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV poles",
+            "attributes": {
+              "usage": "administering medication or fluids",
+              "position": "near the beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patients",
+            "attributes": {
+              "significance": "receiving medical care",
+              "appearance": "lying on beds, some with blankets or sheets"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "medical masks",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "worn by healthcare workers"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse",
+            "relation": "near",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "a large room with multiple hospital beds, white walls, and blue curtains"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "attending to a patient",
+              "position": "standing beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "holding a clipboard",
+              "position": "standing near a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "",
+              "position": "standing near a bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "rows of beds in the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV poles",
+            "attributes": {
+              "usage": "administering medication or fluids",
+              "position": "near the beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patients",
+            "attributes": {
+              "significance": "receiving medical care",
+              "appearance": "lying on beds, some with blankets or sheets"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "medical masks",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "worn by healthcare workers"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse",
+            "relation": "near",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital ward. People: doctor, nurse, nurse. Equipment: hospital beds, IV poles, medical equipment"
+    }
+  }
+}

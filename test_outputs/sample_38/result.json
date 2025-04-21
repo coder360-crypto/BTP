@@ -1,17 +1,17 @@
 {
   "question": "Has the patient sustained a life-threatening injury?",
-  "answer": "Based on the provided context, I can only describe what is visible in the image without speculating. \n\nThe patient is in a trauma bay on a hospital bed with bloodstained sheets, and there are head injuries visible. However, the context does not contain information about the severity of the injuries or if they are life-threatening. \n\nTherefore, I cannot determine if the patient has sustained a life-threatening injury.",
+  "answer": "Based on the provided context, it is not possible to determine if the patient has sustained a life-threatening injury. \n\nThe visible elements in the image are a patient, a healthcare provider, a hospital bed, and bloodstained gauze.",
   "question_type": "general",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.007503509521484375,
+    "question_analysis": 0.007878303527832031,
     "roi_detection": 0,
-    "concept_extraction": 3.0990710258483887,
-    "grounding_check": 5.626678466796875e-05,
-    "graph_construction": 0.22415876388549805,
-    "graph_traversal": 2.2202486991882324,
-    "answer_synthesis": 2.5863451957702637,
-    "total": 8.138470888137817
+    "concept_extraction": 3.2039339542388916,
+    "grounding_check": 6.127357482910156e-05,
+    "graph_construction": 0.21488213539123535,
+    "graph_traversal": 2.1954524517059326,
+    "answer_synthesis": 2.483485460281372,
+    "total": 8.106812000274658
   },
   "interim_results": {
     "question_analysis": {
@@ -192,7 +192,7 @@
           ],
           "relation_types": []
         },
-        "image_caption": "Setting: trauma_bay. People: patient, healthcare_provider. Equipment: hospital_bed, bloodstained_sheets",
+        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze",
         "scene_elements": {
           "image": [
             {
@@ -210,15 +210,15 @@
         "graph_patterns": []
       },
       "traversal_strategy": "reasoning_traversal",
-      "image_caption": "Setting: trauma_bay. People: patient, healthcare_provider. Equipment: hospital_bed, bloodstained_sheets"
+      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze"
     }
   },
   "metrics": {
-    "bleu": 0.03908841887840082,
-    "rouge": 0.13793103448275862,
-    "sent": 0.6241092681884766,
-    "ent": 0.20260874927043915,
-    "clip_c": 0.0
+    "bleu": 0.060429317944023564,
+    "rouge": 0.21428571428571427,
+    "sent": 0.5718984603881836,
+    "ent": 0.27291014790534973,
+    "clip_c": 0.5126160278488844
   },
   "reference_answer": "The patient has had a very serious head injury major trauma, and most likely comatosed or passed away."
 }

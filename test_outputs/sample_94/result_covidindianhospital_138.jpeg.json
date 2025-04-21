@@ -4,14 +4,14 @@
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006995201110839844,
+    "question_analysis": 0.009307384490966797,
     "roi_detection": 0,
-    "concept_extraction": 3.9273226261138916,
-    "grounding_check": 7.43865966796875e-05,
-    "graph_construction": 0.23402810096740723,
-    "graph_traversal": 2.925485849380493,
-    "answer_synthesis": 1.5325398445129395,
-    "total": 8.628468036651611
+    "concept_extraction": 4.097089767456055,
+    "grounding_check": 5.4836273193359375e-05,
+    "graph_construction": 0.23694133758544922,
+    "graph_traversal": 1.992455244064331,
+    "answer_synthesis": 1.6688988208770752,
+    "total": 8.00708293914795
   },
   "interim_results": {
     "question_analysis": {

@@ -1,0 +1,200 @@
+{
+  "question": "How would you describe the patient's health status?",
+  "answer": "The context does not contain specific information about the patient's health status. \n\nWhat is visible in the image: A hospital room setting with a nurse administering an IV, and an IV pole is present.",
+  "question_type": "descriptive",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00818634033203125,
+    "roi_detection": 0,
+    "concept_extraction": 3.449448585510254,
+    "grounding_check": 5.1021575927734375e-05,
+    "graph_construction": 0.22299432754516602,
+    "graph_traversal": 2.510956287384033,
+    "answer_synthesis": 2.6304385662078857,
+    "total": 8.82345199584961
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "descriptive",
+      "traversal_strategy": "reasoning_traversal",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          500,
+          470
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "typical hospital room with beds and medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "adjusting IV pole",
+              "position": "standing beside the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "IV administration",
+            "attributes": {
+              "technique": "adjusting IV pole",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "supporting IV bag",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "IV line",
+            "attributes": {
+              "significance": "administering medication or fluids",
+              "appearance": "attached to patient's arm"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "nurse",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "typical hospital room with beds and medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "adjusting IV pole",
+              "position": "standing beside the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "IV administration",
+            "attributes": {
+              "technique": "adjusting IV pole",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "supporting IV bag",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "IV line",
+            "attributes": {
+              "significance": "administering medication or fluids",
+              "appearance": "attached to patient's arm"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "nurse",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "reasoning_applied": true,
+        "graph_structure": {
+          "nodes_count": 1,
+          "edges_count": 0,
+          "node_types": [
+            "image"
+          ],
+          "relation_types": []
+        },
+        "image_caption": "Setting: hospital room. People: nurse. Activities: IV administration. Equipment: IV pole",
+        "scene_elements": {
+          "image": [
+            {
+              "id": "image:covidindianhospital_099.jpeg",
+              "name": "covidindianhospital_099.jpeg",
+              "attributes": {
+                "id": "covidindianhospital_099.jpeg"
+              }
+            }
+          ]
+        },
+        "key_relationships": [],
+        "central_elements": [],
+        "query_focus": "procedure",
+        "graph_patterns": []
+      },
+      "traversal_strategy": "reasoning_traversal",
+      "image_caption": "Setting: hospital room. People: nurse. Activities: IV administration. Equipment: IV pole"
+    }
+  }
+}

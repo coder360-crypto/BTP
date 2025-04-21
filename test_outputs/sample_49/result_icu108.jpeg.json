@@ -4,14 +4,14 @@
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.005888700485229492,
+    "question_analysis": 0.007306575775146484,
     "roi_detection": 0,
-    "concept_extraction": 3.8917975425720215,
-    "grounding_check": 7.796287536621094e-05,
-    "graph_construction": 0.23042511940002441,
-    "graph_traversal": 2.8420698642730713,
-    "answer_synthesis": 1.4145219326019287,
-    "total": 8.387701749801636
+    "concept_extraction": 3.952333688735962,
+    "grounding_check": 7.390975952148438e-05,
+    "graph_construction": 0.2303786277770996,
+    "graph_traversal": 2.9340567588806152,
+    "answer_synthesis": 1.4527583122253418,
+    "total": 8.579857349395752
   },
   "interim_results": {
     "question_analysis": {
@@ -118,7 +118,7 @@
           {
             "name": "electrodes",
             "attributes": {
-              "significance": "monitoring patient vital signs",
+              "significance": "monitoring patient heart activity",
               "appearance": "attached to the patient's chest"
             },
             "grounding_score": 0.8
@@ -133,8 +133,8 @@
           },
           {
             "subject": "healthcare provider 1",
-            "relation": "near",
-            "object": "healthcare provider 2",
+            "relation": "standing near",
+            "object": "hospital bed",
             "grounding_score": 0.75
           }
         ]
@@ -219,7 +219,7 @@
           {
             "name": "electrodes",
             "attributes": {
-              "significance": "monitoring patient vital signs",
+              "significance": "monitoring patient heart activity",
               "appearance": "attached to the patient's chest"
             },
             "grounding_score": 0.8
@@ -234,8 +234,8 @@
           },
           {
             "subject": "healthcare provider 1",
-            "relation": "near",
-            "object": "healthcare provider 2",
+            "relation": "standing near",
+            "object": "hospital bed",
             "grounding_score": 0.75
           }
         ]

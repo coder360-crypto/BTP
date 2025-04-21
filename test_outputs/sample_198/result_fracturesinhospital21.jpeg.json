@@ -1,0 +1,214 @@
+{
+  "question": "Is the elevation of the patient's left limb done accurately?",
+  "answer": "There is not enough information to answer the question about the accuracy of the elevation of the patient's left limb. \n\nWhat is visible in the image: A hospital room with a patient, a hospital bed, and a cast.",
+  "question_type": "general",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.009202241897583008,
+    "roi_detection": 0,
+    "concept_extraction": 3.183957576751709,
+    "grounding_check": 5.245208740234375e-05,
+    "graph_construction": 0.23943614959716797,
+    "graph_traversal": 3.028515100479126,
+    "answer_synthesis": 1.632399320602417,
+    "total": 8.096062898635864
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [
+          "limb"
+        ],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": [
+          "the elevation"
+        ]
+      },
+      "question_type": "general",
+      "traversal_strategy": "reasoning_traversal",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1200,
+          675
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "beige walls, brown and white floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "cast",
+            "attributes": {
+              "usage": "immobilization",
+              "position": "on patient's leg"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "cast on leg",
+            "attributes": {
+              "significance": "possible fracture treatment",
+              "appearance": "white, bulky"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "on",
+            "object": "bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "cast",
+            "relation": "on",
+            "object": "patient's leg",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "beige walls, brown and white floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "cast",
+            "attributes": {
+              "usage": "immobilization",
+              "position": "on patient's leg"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "cast on leg",
+            "attributes": {
+              "significance": "possible fracture treatment",
+              "appearance": "white, bulky"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "on",
+            "object": "bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "cast",
+            "relation": "on",
+            "object": "patient's leg",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "reasoning_applied": true,
+        "graph_structure": {
+          "nodes_count": 1,
+          "edges_count": 0,
+          "node_types": [
+            "image"
+          ],
+          "relation_types": []
+        },
+        "image_caption": "Setting: hospital room. People: patient. Equipment: hospital bed, cast",
+        "scene_elements": {
+          "image": [
+            {
+              "id": "image:fracturesinhospital21.jpeg",
+              "name": "fracturesinhospital21.jpeg",
+              "attributes": {
+                "id": "fracturesinhospital21.jpeg"
+              }
+            }
+          ]
+        },
+        "key_relationships": [],
+        "central_elements": [],
+        "query_focus": "patient",
+        "graph_patterns": []
+      },
+      "traversal_strategy": "reasoning_traversal",
+      "image_caption": "Setting: hospital room. People: patient. Equipment: hospital bed, cast"
+    }
+  }
+}

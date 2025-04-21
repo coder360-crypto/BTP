@@ -1,17 +1,17 @@
 {
   "question": "Is the medication properly aligned with the syringe pumps?",
-  "answer": "There is not enough information to answer the question. The context does not mention medication or syringe pumps. \n\nWhat is visible in the image: A hospital room with a healthcare provider1, healthcare provider2, an IV pole, a hospital bed, and a medical monitor.",
+  "answer": "There is not enough information to answer the question. The context does not mention medication, syringe pumps, or their alignment. \n\nVisible in the image are a hospital room with a healthcare provider1, healthcare provider2, a patient (implied, but not explicitly mentioned), an IV pole, a hospital bed, and a medical monitor.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.008931636810302734,
+    "question_analysis": 0.008938312530517578,
     "roi_detection": 0,
-    "concept_extraction": 3.8186488151550293,
-    "grounding_check": 5.7697296142578125e-05,
-    "graph_construction": 0.2268683910369873,
-    "graph_traversal": 2.91967511177063,
-    "answer_synthesis": 1.4684088230133057,
-    "total": 8.44554352760315
+    "concept_extraction": 3.940150499343872,
+    "grounding_check": 5.125999450683594e-05,
+    "graph_construction": 0.22313809394836426,
+    "graph_traversal": 2.8838951587677,
+    "answer_synthesis": 1.5083537101745605,
+    "total": 8.567916870117188
   },
   "interim_results": {
     "question_analysis": {
@@ -48,35 +48,35 @@
           {
             "name": "hospital room",
             "attributes": {
-              "location": "indoor",
-              "appearance": "medical equipment and monitoring devices"
+              "location": "indoor hospital setting",
+              "appearance": "medical equipment and hospital beds"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "physician",
+            "name": "healthcare provider 1",
             "attributes": {
-              "actions": "performing procedure",
-              "position": "standing over patient"
+              "actions": "standing, holding a paper",
+              "position": "left side of the room"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "nurse or healthcare worker",
+            "name": "healthcare provider 2",
             "attributes": {
-              "actions": "observing or holding a chart",
-              "position": "standing near the head of the bed"
+              "actions": "attending to a patient",
+              "position": "beside the patient bed"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "defibrillation or ECG",
+            "name": "patient care",
             "attributes": {
-              "technique": "using electrode pads",
+              "technique": "using medical equipment",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -84,43 +84,59 @@
         ],
         "equipment": [
           {
-            "name": "defibrillator or ECG machine",
+            "name": "IV pole",
             "attributes": {
-              "usage": "monitoring or treating patient",
-              "position": "near the bed"
+              "usage": "administering medication or fluids",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "IV pole",
+            "name": "hospital bed",
             "attributes": {
-              "usage": "administering medication or fluids",
-              "position": "near the head of the bed"
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient vital signs",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "electrode pads",
+            "name": "patient",
             "attributes": {
-              "significance": "for defibrillation or ECG",
-              "appearance": "on patient's chest"
+              "significance": "receiving medical care",
+              "appearance": "lying on a hospital bed"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "electrodes",
+            "attributes": {
+              "significance": "monitoring patient vital signs",
+              "appearance": "attached to the patient's chest"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "physician",
-            "relation": "treating",
+            "subject": "healthcare provider 2",
+            "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "nurse or healthcare worker",
-            "relation": "assisting",
-            "object": "physician or observing patient",
+            "subject": "healthcare provider 1",
+            "relation": "near",
+            "object": "healthcare provider 2",
             "grounding_score": 0.75
           }
         ]
@@ -133,35 +149,35 @@
           {
             "name": "hospital room",
             "attributes": {
-              "location": "indoor",
-              "appearance": "medical equipment and monitoring devices"
+              "location": "indoor hospital setting",
+              "appearance": "medical equipment and hospital beds"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "physician",
+            "name": "healthcare provider 1",
             "attributes": {
-              "actions": "performing procedure",
-              "position": "standing over patient"
+              "actions": "standing, holding a paper",
+              "position": "left side of the room"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "nurse or healthcare worker",
+            "name": "healthcare provider 2",
             "attributes": {
-              "actions": "observing or holding a chart",
-              "position": "standing near the head of the bed"
+              "actions": "attending to a patient",
+              "position": "beside the patient bed"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "defibrillation or ECG",
+            "name": "patient care",
             "attributes": {
-              "technique": "using electrode pads",
+              "technique": "using medical equipment",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -169,43 +185,59 @@
         ],
         "equipment": [
           {
-            "name": "defibrillator or ECG machine",
+            "name": "IV pole",
             "attributes": {
-              "usage": "monitoring or treating patient",
-              "position": "near the bed"
+              "usage": "administering medication or fluids",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "IV pole",
+            "name": "hospital bed",
             "attributes": {
-              "usage": "administering medication or fluids",
-              "position": "near the head of the bed"
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient vital signs",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "electrode pads",
+            "name": "patient",
             "attributes": {
-              "significance": "for defibrillation or ECG",
-              "appearance": "on patient's chest"
+              "significance": "receiving medical care",
+              "appearance": "lying on a hospital bed"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "electrodes",
+            "attributes": {
+              "significance": "monitoring patient vital signs",
+              "appearance": "attached to the patient's chest"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "physician",
-            "relation": "treating",
+            "subject": "healthcare provider 2",
+            "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "nurse or healthcare worker",
-            "relation": "assisting",
-            "object": "physician or observing patient",
+            "subject": "healthcare provider 1",
+            "relation": "near",
+            "object": "healthcare provider 2",
             "grounding_score": 0.75
           }
         ]
@@ -226,11 +258,11 @@
     }
   },
   "metrics": {
-    "bleu": 0.014991206826276322,
-    "rouge": 0.1509433962264151,
-    "sent": 0.6042822599411011,
-    "ent": 0.9923680424690247,
-    "clip_c": 0.5405988210714803
+    "bleu": 0.014088513779227763,
+    "rouge": 0.13114754098360654,
+    "sent": 0.548317551612854,
+    "ent": 0.9790511131286621,
+    "clip_c": 0.5332539357838261
   },
   "reference_answer": "Yes the medicines are properly attached to the syringe pumps"
 }

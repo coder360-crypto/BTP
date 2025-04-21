@@ -1,17 +1,17 @@
 {
   "question": "Is the patient's condition severe?",
-  "answer": "The presence of bloodstained gauze suggests that the patient may have experienced some bleeding or trauma. However, based only on the provided context, it is not possible to definitively determine the severity of the patient's condition.\n\nWhat is visible in the image: A patient, a healthcare provider, a hospital bed, and bloodstained gauze.",
+  "answer": "The context does not contain enough information to determine the severity of the patient's condition. \n\nWhat is visible in the image is a hospital bed with a patient and a healthcare provider present.",
   "question_type": "patient_status",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006597757339477539,
+    "question_analysis": 0.006229877471923828,
     "roi_detection": 0,
-    "concept_extraction": 3.1427338123321533,
-    "grounding_check": 5.53131103515625e-05,
-    "graph_construction": 0.21379399299621582,
-    "graph_traversal": 2.272512435913086,
-    "answer_synthesis": 2.5188729763031006,
-    "total": 8.15573763847351
+    "concept_extraction": 3.263044834136963,
+    "grounding_check": 4.982948303222656e-05,
+    "graph_construction": 0.21117496490478516,
+    "graph_traversal": 2.1817595958709717,
+    "answer_synthesis": 2.4682180881500244,
+    "total": 8.13158655166626
   },
   "interim_results": {
     "question_analysis": {
@@ -184,11 +184,11 @@
         "found": false,
         "nodes": [],
         "edges": [],
-        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze",
+        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed",
         "caption_based": true
       },
       "traversal_strategy": "condition_assessment",
-      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze"
+      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed"
     }
   }
 }

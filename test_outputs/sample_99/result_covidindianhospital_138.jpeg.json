@@ -1,17 +1,17 @@
 {
   "question": "Is the vaccination administered in a proper manner?",
-  "answer": "It is not possible to determine if the vaccination is administered in a proper manner.\n\nVisible in the image are a doctor, nurse, patient, and a second patient, with a medical cart and syringe present, and vaccine administration taking place. However, the specific details of the administration procedure are not provided.",
+  "answer": "It is not possible to determine if the vaccination is administered in a proper manner.\n\nVisible in the image: A doctor, a nurse, a patient, a second patient, a medical cart, and a syringe are present in a hospital room, and vaccine administration is taking place.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0070896148681640625,
+    "question_analysis": 0.008591175079345703,
     "roi_detection": 0,
-    "concept_extraction": 3.9836795330047607,
-    "grounding_check": 7.43865966796875e-05,
-    "graph_construction": 0.23468708992004395,
-    "graph_traversal": 3.193681240081787,
-    "answer_synthesis": 1.4611358642578125,
-    "total": 8.882405996322632
+    "concept_extraction": 3.4344725608825684,
+    "grounding_check": 4.6253204345703125e-05,
+    "graph_construction": 0.2323906421661377,
+    "graph_traversal": 1.903087854385376,
+    "answer_synthesis": 1.6551878452301025,
+    "total": 7.235813617706299
   },
   "interim_results": {
     "question_analysis": {

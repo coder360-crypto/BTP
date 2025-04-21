@@ -1,0 +1,255 @@
+{
+  "question": "Are the proper protocols being followed during the injection?",
+  "answer": "It is not possible to determine if the proper protocols are being followed during the injection. \n\nVisible in the image: A doctor/nurse administering an injection to a patient in a hospital room setting with a medical table and a blue chair present, and an observer.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.009749174118041992,
+    "roi_detection": 0,
+    "concept_extraction": 3.6532609462738037,
+    "grounding_check": 5.1021575927734375e-05,
+    "graph_construction": 0.23699569702148438,
+    "graph_traversal": 2.6076109409332275,
+    "answer_synthesis": 1.6519858837127686,
+    "total": 8.160510063171387
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "injection",
+          "proper"
+        ],
+        "setting": [],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          435,
+          271
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical facility"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor/nurse",
+            "attributes": {
+              "actions": "administering injection",
+              "position": "right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving injection",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "observer",
+            "attributes": {
+              "actions": "",
+              "position": "left side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "injection",
+            "attributes": {
+              "technique": "intramuscular",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical table",
+            "attributes": {
+              "usage": "supporting medical supplies",
+              "position": "right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "blue chair",
+            "attributes": {
+              "usage": "seating",
+              "position": "behind the patient"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "bandage/ medical supplies",
+            "attributes": {
+              "significance": "for medical treatment",
+              "appearance": "on the table"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor/nurse",
+            "relation": "administering",
+            "object": "injection",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving",
+            "object": "injection",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "observer",
+            "relation": "watching",
+            "object": "procedure",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical facility"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor/nurse",
+            "attributes": {
+              "actions": "administering injection",
+              "position": "right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving injection",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "observer",
+            "attributes": {
+              "actions": "",
+              "position": "left side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "injection",
+            "attributes": {
+              "technique": "intramuscular",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical table",
+            "attributes": {
+              "usage": "supporting medical supplies",
+              "position": "right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "blue chair",
+            "attributes": {
+              "usage": "seating",
+              "position": "behind the patient"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "bandage/ medical supplies",
+            "attributes": {
+              "significance": "for medical treatment",
+              "appearance": "on the table"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor/nurse",
+            "relation": "administering",
+            "object": "injection",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving",
+            "object": "injection",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "observer",
+            "relation": "watching",
+            "object": "procedure",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital_room. People: doctor/nurse, patient, observer. Activities: injection. Equipment: medical table, blue chair"
+    }
+  }
+}

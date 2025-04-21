@@ -1,17 +1,17 @@
 {
   "question": "Is the technique of vaccination proper?",
-  "answer": "The context does not contain information about the technique of vaccination. What is visible in the image is a hospital room setting with a doctor, nurse, and two patients, and vaccine administration is taking place with the use of a medical cart and a syringe.",
+  "answer": "The context does not contain information about the technique of vaccination. It only mentions that vaccine administration is taking place, but does not provide details about the method or technique used. \n\nWhat is visible in the image: A doctor, a nurse, two patients, a medical cart, and a syringe are present in a hospital room, and vaccine administration is taking place.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0061283111572265625,
+    "question_analysis": 0.007122516632080078,
     "roi_detection": 0,
-    "concept_extraction": 1.8299219608306885,
-    "grounding_check": 5.245208740234375e-05,
-    "graph_construction": 0.2346324920654297,
-    "graph_traversal": 1.7629635334014893,
-    "answer_synthesis": 1.5242509841918945,
-    "total": 5.360073804855347
+    "concept_extraction": 3.3203792572021484,
+    "grounding_check": 5.030632019042969e-05,
+    "graph_construction": 0.23194384574890137,
+    "graph_traversal": 1.9512519836425781,
+    "answer_synthesis": 1.7325847148895264,
+    "total": 7.245635509490967
   },
   "interim_results": {
     "question_analysis": {
@@ -21,8 +21,8 @@
         "equipment": [],
         "procedure": [
           "vaccination",
-          "technique",
-          "proper"
+          "proper",
+          "technique"
         ],
         "setting": [],
         "other_medical": []

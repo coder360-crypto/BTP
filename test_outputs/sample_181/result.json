@@ -1,0 +1,235 @@
+{
+  "question": "Is the injection site appropriate?",
+  "answer": "The context does not contain information about the injection site or its appropriateness. What is visible in the image is a hospital room setting with a doctor, patient, and observer present, and vaccine administration is taking place. However, no specific details about the injection site are provided.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.005895376205444336,
+    "roi_detection": 0,
+    "concept_extraction": 3.473160743713379,
+    "grounding_check": 5.054473876953125e-05,
+    "graph_construction": 0.2319326400756836,
+    "graph_traversal": 2.576035499572754,
+    "answer_synthesis": 1.656510591506958,
+    "total": 7.944453001022339
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "injection",
+          "appropriate"
+        ],
+        "setting": [],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          435,
+          271
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical facility"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "administering a vaccine",
+              "position": "right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving a vaccine",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "observer",
+            "attributes": {
+              "actions": "",
+              "position": "left side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccine_administration",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical_table",
+            "attributes": {
+              "usage": "supporting medical supplies",
+              "position": "in front of the doctor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "needle",
+            "attributes": {
+              "significance": "used for vaccine administration",
+              "appearance": "visible in the doctor's hand"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "observer",
+            "relation": "watching",
+            "object": "vaccine administration",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical facility"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "administering a vaccine",
+              "position": "right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving a vaccine",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "observer",
+            "attributes": {
+              "actions": "",
+              "position": "left side of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccine_administration",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical_table",
+            "attributes": {
+              "usage": "supporting medical supplies",
+              "position": "in front of the doctor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "needle",
+            "attributes": {
+              "significance": "used for vaccine administration",
+              "appearance": "visible in the doctor's hand"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "observer",
+            "relation": "watching",
+            "object": "vaccine administration",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital_room. People: doctor, patient, observer. Activities: vaccine_administration. Equipment: medical_table, blue_chair"
+    }
+  },
+  "metrics": {
+    "bleu": 0.03614150409050507,
+    "rouge": 0.1935483870967742,
+    "sent": 0.4129416048526764,
+    "ent": 0.1298743337392807,
+    "clip_c": 0.5701365742091186
+  },
+  "reference_answer": "Yes the site of intramuscular injection is proper, in the deltoid muscle near the shoulder"
+}

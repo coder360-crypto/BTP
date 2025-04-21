@@ -1,17 +1,17 @@
 {
   "question": "Is the healthcare worker wearing proper PPE?",
-  "answer": "There is not enough information to determine if the healthcare worker is wearing proper PPE. The image context does not mention personal protective equipment (PPE) or describe the attire of the healthcare worker.",
+  "answer": "The context does not contain information about the healthcare worker's attire or personal protective equipment (PPE). What is visible in the image includes a hospital room with a healthcare provider1, healthcare provider2, engaged in patient care, with an IV pole, hospital bed, and medical monitor present.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.00681757926940918,
+    "question_analysis": 0.0073392391204833984,
     "roi_detection": 0,
-    "concept_extraction": 3.6825335025787354,
-    "grounding_check": 4.696846008300781e-05,
-    "graph_construction": 0.23576855659484863,
-    "graph_traversal": 2.9538962841033936,
-    "answer_synthesis": 1.43587064743042,
-    "total": 8.318994998931885
+    "concept_extraction": 3.9489905834198,
+    "grounding_check": 6.723403930664062e-05,
+    "graph_construction": 0.22952675819396973,
+    "graph_traversal": 2.933722496032715,
+    "answer_synthesis": 1.518007755279541,
+    "total": 8.640586376190186
   },
   "interim_results": {
     "question_analysis": {
@@ -49,34 +49,34 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor hospital setting",
-              "appearance": "medical equipment and hospital furniture"
+              "appearance": "medical equipment and hospital beds"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "physician",
+            "name": "healthcare provider 1",
             "attributes": {
-              "actions": "attending to patient",
-              "position": "standing over patient"
+              "actions": "standing, holding a paper",
+              "position": "left side of the room"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "nurse or healthcare worker",
+            "name": "healthcare provider 2",
             "attributes": {
-              "actions": "observing or reviewing information",
-              "position": "standing near the background"
+              "actions": "attending to a patient",
+              "position": "beside the patient bed"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "patient examination or treatment",
+            "name": "patient care",
             "attributes": {
-              "technique": "manual examination or intervention",
+              "technique": "using medical equipment",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -86,49 +86,57 @@
           {
             "name": "IV pole",
             "attributes": {
-              "usage": "supporting intravenous fluids",
-              "position": "near the bed"
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "medical monitor",
-            "attributes": {
-              "usage": "displaying patient data",
-              "position": "on the bed or nearby"
+              "usage": "administering medication or fluids",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           },
           {
             "name": "hospital bed",
             "attributes": {
-              "usage": "supporting patient",
-              "position": "central to the scene"
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient vital signs",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "electrode pads",
+            "name": "patient",
             "attributes": {
-              "significance": "monitoring or therapeutic",
-              "appearance": "adhesive pads on patient's chest"
+              "significance": "receiving medical care",
+              "appearance": "lying on a hospital bed"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "electrodes",
+            "attributes": {
+              "significance": "monitoring patient vital signs",
+              "appearance": "attached to the patient's chest"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "physician",
+            "subject": "healthcare provider 2",
             "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "nurse or healthcare worker",
+            "subject": "healthcare provider 1",
             "relation": "near",
-            "object": "physician",
+            "object": "healthcare provider 2",
             "grounding_score": 0.75
           }
         ]
@@ -142,34 +150,34 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor hospital setting",
-              "appearance": "medical equipment and hospital furniture"
+              "appearance": "medical equipment and hospital beds"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "physician",
+            "name": "healthcare provider 1",
             "attributes": {
-              "actions": "attending to patient",
-              "position": "standing over patient"
+              "actions": "standing, holding a paper",
+              "position": "left side of the room"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "nurse or healthcare worker",
+            "name": "healthcare provider 2",
             "attributes": {
-              "actions": "observing or reviewing information",
-              "position": "standing near the background"
+              "actions": "attending to a patient",
+              "position": "beside the patient bed"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "patient examination or treatment",
+            "name": "patient care",
             "attributes": {
-              "technique": "manual examination or intervention",
+              "technique": "using medical equipment",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -179,49 +187,57 @@
           {
             "name": "IV pole",
             "attributes": {
-              "usage": "supporting intravenous fluids",
-              "position": "near the bed"
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "medical monitor",
-            "attributes": {
-              "usage": "displaying patient data",
-              "position": "on the bed or nearby"
+              "usage": "administering medication or fluids",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           },
           {
             "name": "hospital bed",
             "attributes": {
-              "usage": "supporting patient",
-              "position": "central to the scene"
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient vital signs",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "electrode pads",
+            "name": "patient",
             "attributes": {
-              "significance": "monitoring or therapeutic",
-              "appearance": "adhesive pads on patient's chest"
+              "significance": "receiving medical care",
+              "appearance": "lying on a hospital bed"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "electrodes",
+            "attributes": {
+              "significance": "monitoring patient vital signs",
+              "appearance": "attached to the patient's chest"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "physician",
+            "subject": "healthcare provider 2",
             "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "nurse or healthcare worker",
+            "subject": "healthcare provider 1",
             "relation": "near",
-            "object": "physician",
+            "object": "healthcare provider 2",
             "grounding_score": 0.75
           }
         ]
@@ -238,7 +254,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: hospital room. People: Physician, Nurse or Healthcare Worker. Activities: patient examination or treatment. Equipment: IV pole, Patient monitoring system, Hospital bed"
+      "image_caption": "Setting: hospital room. People: healthcare provider 1, healthcare provider 2. Activities: patient care. Equipment: IV pole, hospital bed, medical monitor"
     }
   }
 }

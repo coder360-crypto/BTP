@@ -1,17 +1,17 @@
 {
   "question": "Is the eye examination being conducted properly?",
-  "answer": "There is not enough information to determine if the eye examination is being conducted properly. \n\nWhat is visible in the image: A hospital room with a physician, a patient, a medical monitor, an infusion pump, and electrodes. A medical examination is taking place.",
+  "answer": "There is not enough information to determine if the eye examination is being conducted properly. \n\nThe context only mentions a medical examination in general and does not provide specifics about the examination being conducted on the eye. \n\nVisible in the image: A hospital room with a physician, patient, medical monitor, infusion pump, and oxygen tank.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.00821828842163086,
+    "question_analysis": 0.00900411605834961,
     "roi_detection": 0,
-    "concept_extraction": 3.671128988265991,
-    "grounding_check": 5.435943603515625e-05,
-    "graph_construction": 0.2365407943725586,
-    "graph_traversal": 6.674910068511963,
-    "answer_synthesis": 1.7194950580596924,
-    "total": 12.312588214874268
+    "concept_extraction": 3.5884974002838135,
+    "grounding_check": 7.486343383789062e-05,
+    "graph_construction": 0.3141660690307617,
+    "graph_traversal": 2.515225887298584,
+    "answer_synthesis": 1.5214385986328125,
+    "total": 7.950622081756592
   },
   "interim_results": {
     "question_analysis": {
@@ -100,20 +100,20 @@
             "grounding_score": 0.85
           },
           {
-            "name": "oxygen tank",
+            "name": "electrodes",
             "attributes": {
-              "usage": "providing oxygen",
-              "position": "in the background"
+              "usage": "monitoring patient's heart activity",
+              "position": "on the patient's chest"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "electrocardiogram (ECG) lead",
+            "name": "electrode",
             "attributes": {
               "significance": "monitoring heart activity",
-              "appearance": "attached to the patient's chest"
+              "appearance": "attached to patient's chest"
             },
             "grounding_score": 0.8
           }
@@ -199,20 +199,20 @@
             "grounding_score": 0.85
           },
           {
-            "name": "oxygen tank",
+            "name": "electrodes",
             "attributes": {
-              "usage": "providing oxygen",
-              "position": "in the background"
+              "usage": "monitoring patient's heart activity",
+              "position": "on the patient's chest"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "electrocardiogram (ECG) lead",
+            "name": "electrode",
             "attributes": {
               "significance": "monitoring heart activity",
-              "appearance": "attached to the patient's chest"
+              "appearance": "attached to patient's chest"
             },
             "grounding_score": 0.8
           }
@@ -250,15 +250,15 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: hospital room. People: physician, patient. Activities: medical examination. Equipment: medical monitor, infusion pump, electrodes"
+      "image_caption": "Setting: hospital room. People: physician, patient. Activities: medical examination. Equipment: medical monitor, infusion pump, oxygen tank"
     }
   },
   "metrics": {
-    "bleu": 0.01983150255753051,
-    "rouge": 0.18461538461538457,
-    "sent": 0.6959308385848999,
-    "ent": 0.03854366019368172,
-    "clip_c": 0.5419257478272277
+    "bleu": 0.03293196153505764,
+    "rouge": 0.18181818181818182,
+    "sent": 0.6854348182678223,
+    "ent": 0.953892707824707,
+    "clip_c": 0.5563869611260458
   },
   "reference_answer": "Yes the eyes are being checked properly. The doctor is using a torch to properly check the pupillary light reaction most probably"
 }

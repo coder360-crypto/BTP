@@ -1,17 +1,17 @@
 {
   "question": "Is the patient's condition severe?",
-  "answer": "The presence of bloodstained gauze suggests that the patient may have experienced some bleeding or trauma. However, based only on the provided context, it is not possible to definitively determine the severity of the patient's condition.\n\nWhat is visible in the image: A patient, a healthcare provider, a hospital bed, and bloodstained gauze.",
+  "answer": "The context does not contain enough information to determine the severity of the patient's condition. \n\nWhat is visible in the image is a hospital bed with a patient and a healthcare provider present.",
   "question_type": "patient_status",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006597757339477539,
+    "question_analysis": 0.006229877471923828,
     "roi_detection": 0,
-    "concept_extraction": 3.1427338123321533,
-    "grounding_check": 5.53131103515625e-05,
-    "graph_construction": 0.21379399299621582,
-    "graph_traversal": 2.272512435913086,
-    "answer_synthesis": 2.5188729763031006,
-    "total": 8.15573763847351
+    "concept_extraction": 3.263044834136963,
+    "grounding_check": 4.982948303222656e-05,
+    "graph_construction": 0.21117496490478516,
+    "graph_traversal": 2.1817595958709717,
+    "answer_synthesis": 2.4682180881500244,
+    "total": 8.13158655166626
   },
   "interim_results": {
     "question_analysis": {
@@ -184,19 +184,19 @@
         "found": false,
         "nodes": [],
         "edges": [],
-        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze",
+        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed",
         "caption_based": true
       },
       "traversal_strategy": "condition_assessment",
-      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze"
+      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed"
     }
   },
   "metrics": {
-    "bleu": 0.02703286317318529,
-    "rouge": 0.1111111111111111,
-    "sent": 0.40882664918899536,
-    "ent": 0.0035265639889985323,
-    "clip_c": 0.49776110161287856
+    "bleu": 0.019650777458628154,
+    "rouge": 0.15384615384615383,
+    "sent": 0.45146381855010986,
+    "ent": 0.05123969539999962,
+    "clip_c": 0.4809860780896245
   },
   "reference_answer": "The patient has had a very serious head injury major trauma, and most likely comatosed or passed away."
 }

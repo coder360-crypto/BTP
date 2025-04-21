@@ -1,17 +1,17 @@
 {
   "question": "Is the picture depicting an ICU environment?",
-  "answer": "Based on the provided context, there is no information that specifically indicates the picture is depicting an ICU (Intensive Care Unit) environment. The context only mentions a \"hospital room\" with a patient, healthcare providers, monitoring activities, and equipment such as a monitor and hospital beds. \n\nWhat is visible in the image, based on the context, is a hospital room setting with a patient and healthcare providers, where monitoring is taking place, and there is medical equipment present. \n\nTherefore, the question cannot be definitively answered based on the provided context.",
+  "answer": "Based on the provided context, there is no information that specifically indicates the picture is depicting an ICU (Intensive Care Unit) environment. The context only mentions a \"hospital room\" with a patient, healthcare workers, and monitoring equipment, but it does not provide details specific to an ICU setting.\n\nWhat is visible in the image: A hospital room with a physician, a patient, and two healthcare workers, with activities including monitoring. The equipment visible includes a monitor and a hospital bed.",
   "question_type": "descriptive",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0077702999114990234,
+    "question_analysis": 0.008033037185668945,
     "roi_detection": 0,
-    "concept_extraction": 3.263272285461426,
-    "grounding_check": 9.250640869140625e-05,
-    "graph_construction": 0.22337031364440918,
-    "graph_traversal": 2.3953261375427246,
-    "answer_synthesis": 1.630554437637329,
-    "total": 7.521327018737793
+    "concept_extraction": 3.273371696472168,
+    "grounding_check": 4.863739013671875e-05,
+    "graph_construction": 0.22296595573425293,
+    "graph_traversal": 2.2390382289886475,
+    "answer_synthesis": 1.58286452293396,
+    "total": 7.3272459506988525
   },
   "interim_results": {
     "question_analysis": {
@@ -252,7 +252,7 @@
           ],
           "relation_types": []
         },
-        "image_caption": "Setting: hospital room. People: healthcare provider, patient, healthcare providers. Activities: monitoring. Equipment: monitor, hospital beds",
+        "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker 2, healthcare worker 3. Activities: monitoring. Equipment: monitor, hospital bed",
         "scene_elements": {
           "image": [
             {
@@ -270,14 +270,14 @@
         "graph_patterns": []
       },
       "traversal_strategy": "reasoning_traversal",
-      "image_caption": "Setting: hospital room. People: healthcare provider, patient, healthcare providers. Activities: monitoring. Equipment: monitor, hospital beds"
+      "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker 2, healthcare worker 3. Activities: monitoring. Equipment: monitor, hospital bed"
     }
   },
   "metrics": {
-    "bleu": 0.018928118432385975,
-    "rouge": 0.1320754716981132,
-    "sent": 0.6872334480285645,
-    "ent": 0.03006097488105297,
+    "bleu": 0.019515692725192414,
+    "rouge": 0.14432989690721648,
+    "sent": 0.7034369111061096,
+    "ent": 0.008014826104044914,
     "clip_c": 0.0
   },
   "reference_answer": "Yes this is an ICU set-up as there are multiple monitors to mitor the patient continuously."

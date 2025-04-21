@@ -1,0 +1,214 @@
+{
+  "question": "Is the patient in a critical state?",
+  "answer": "The context does not contain enough information to determine if the patient is in a critical state. \n\nWhat is visible in the image is a hospital room setting with a patient, and medical equipment such as a fetal monitor, an IV pole, and a hospital bed. The patient is being monitored.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007883310317993164,
+    "roi_detection": 0,
+    "concept_extraction": 3.506085157394409,
+    "grounding_check": 8.344650268554688e-05,
+    "graph_construction": 0.22336173057556152,
+    "graph_traversal": 2.507260322570801,
+    "answer_synthesis": 1.7485976219177246,
+    "total": 7.994501829147339
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          600,
+          450
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "dimly lit"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed, holding fetal monitor",
+              "position": "on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "fetal monitoring",
+            "attributes": {
+              "technique": "using fetal monitor",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "fetal monitor",
+            "attributes": {
+              "usage": "monitoring fetal heart rate",
+              "position": "on patient's abdomen"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "administering medication or fluids",
+              "position": "near patient's head"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "pregnant abdomen",
+            "attributes": {
+              "significance": "indicative of pregnancy",
+              "appearance": "prominent"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving care",
+            "object": "hospital room",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "dimly lit"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed, holding fetal monitor",
+              "position": "on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "fetal monitoring",
+            "attributes": {
+              "technique": "using fetal monitor",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "fetal monitor",
+            "attributes": {
+              "usage": "monitoring fetal heart rate",
+              "position": "on patient's abdomen"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "administering medication or fluids",
+              "position": "near patient's head"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "pregnant abdomen",
+            "attributes": {
+              "significance": "indicative of pregnancy",
+              "appearance": "prominent"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving care",
+            "object": "hospital room",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital room. People: patient. Activities: monitoring. Equipment: fetal monitor, IV pole, hospital bed",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital room. People: patient. Activities: monitoring. Equipment: fetal monitor, IV pole, hospital bed"
+    }
+  }
+}

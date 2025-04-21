@@ -1,17 +1,17 @@
 {
   "question": "Have the medicines been attached properly?",
-  "answer": "There is no information in the context about medicines or their attachment. The context mentions an IV pole, but does not provide details about its use or whether anything is attached to it properly. What is visible in the image is an IV pole, but it is not specified if medicines or any other items are attached to it.",
+  "answer": "There is no information in the context about medicines being attached. The context mentions an IV pole, but it does not provide details about whether medicines have been attached to it or not. What is visible in the image is an IV pole, but it is not specified if it has any medicines attached.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006713151931762695,
+    "question_analysis": 0.0064809322357177734,
     "roi_detection": 0,
-    "concept_extraction": 3.8246021270751953,
-    "grounding_check": 5.054473876953125e-05,
-    "graph_construction": 0.22084569931030273,
-    "graph_traversal": 2.7725725173950195,
-    "answer_synthesis": 1.5271203517913818,
-    "total": 8.354915142059326
+    "concept_extraction": 3.963533878326416,
+    "grounding_check": 6.937980651855469e-05,
+    "graph_construction": 0.21779274940490723,
+    "graph_traversal": 2.9799575805664062,
+    "answer_synthesis": 1.513408899307251,
+    "total": 8.684251308441162
   },
   "interim_results": {
     "question_analysis": {
@@ -252,7 +252,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: hospital room. People: physician, nurse or healthcare worker. Activities: patient examination or treatment. Equipment: IV pole, medical monitor, hospital bed"
+      "image_caption": "Setting: hospital room. People: healthcare provider 1, healthcare provider 2. Activities: patient care. Equipment: IV pole, hospital bed, medical monitor"
     }
   }
 }

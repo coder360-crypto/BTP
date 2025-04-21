@@ -1,17 +1,17 @@
 {
   "question": "Is the patient unwell?",
-  "answer": "Based on the provided context, it is not possible to determine if the patient is unwell. \n\nWhat is visible in the image: A hospital room with a healthcare provider, a patient, a hospital bed, a medical monitor, an IV pole, a stool, and a medical cart.",
+  "answer": "Based on the provided context, it is not possible to determine if the patient is unwell. \n\nThe context only provides information about the setting (hospital room), the people present (healthcare provider and patient), and the equipment available (hospital bed, infusion pole, medical monitor, medication cart). \n\nWhat is visible in the image is a hospital room with a patient, a healthcare provider, a hospital bed, an infusion pole, a medical monitor, and a medication cart.",
   "question_type": "general",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.005266666412353516,
+    "question_analysis": 0.0066375732421875,
     "roi_detection": 0,
-    "concept_extraction": 3.9984514713287354,
-    "grounding_check": 6.0558319091796875e-05,
-    "graph_construction": 0.2365410327911377,
-    "graph_traversal": 3.354375123977661,
-    "answer_synthesis": 1.5165011882781982,
-    "total": 9.113416194915771
+    "concept_extraction": 3.821946382522583,
+    "grounding_check": 5.626678466796875e-05,
+    "graph_construction": 0.2339038848876953,
+    "graph_traversal": 2.7874889373779297,
+    "answer_synthesis": 1.5824098587036133,
+    "total": 8.434768915176392
   },
   "interim_results": {
     "question_analysis": {
@@ -56,7 +56,7 @@
           {
             "name": "healthcare provider",
             "attributes": {
-              "actions": "kneeled beside the bed",
+              "actions": "kneeling beside the bed",
               "position": "beside the bed"
             },
             "grounding_score": 0.85
@@ -81,65 +81,51 @@
             "grounding_score": 0.85
           },
           {
-            "name": "medical monitor",
+            "name": "infusion pole",
             "attributes": {
-              "usage": "patient monitoring",
-              "position": "on the wall above the bed"
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "IV pole",
-            "attributes": {
-              "usage": "medication administration",
+              "usage": "medication or fluid administration",
               "position": "beside the bed"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "stool",
+            "name": "medical monitor",
             "attributes": {
-              "usage": "seating",
-              "position": "to the right of the man"
+              "usage": "patient vital sign monitoring",
+              "position": "on the wall"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "medical cart",
+            "name": "medication cart",
             "attributes": {
               "usage": "storage of medical supplies",
-              "position": "against the wall to the right"
+              "position": "against the wall"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "face mask",
+            "name": "oxygen mask",
             "attributes": {
-              "significance": "infection control",
-              "appearance": "on the man's face"
+              "significance": "oxygen therapy",
+              "appearance": "on the patient's face"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "man",
+            "subject": "healthcare provider",
             "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
             "subject": "patient",
-            "relation": "lying on",
-            "object": "bed",
-            "grounding_score": 0.75
-          },
-          {
-            "subject": "medical monitor",
-            "relation": "mounted on",
-            "object": "wall",
+            "relation": "receiving care in",
+            "object": "hospital bed",
             "grounding_score": 0.75
           }
         ]
@@ -162,7 +148,7 @@
           {
             "name": "healthcare provider",
             "attributes": {
-              "actions": "kneeled beside the bed",
+              "actions": "kneeling beside the bed",
               "position": "beside the bed"
             },
             "grounding_score": 0.85
@@ -187,65 +173,51 @@
             "grounding_score": 0.85
           },
           {
-            "name": "medical monitor",
+            "name": "infusion pole",
             "attributes": {
-              "usage": "patient monitoring",
-              "position": "on the wall above the bed"
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "IV pole",
-            "attributes": {
-              "usage": "medication administration",
+              "usage": "medication or fluid administration",
               "position": "beside the bed"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "stool",
+            "name": "medical monitor",
             "attributes": {
-              "usage": "seating",
-              "position": "to the right of the man"
+              "usage": "patient vital sign monitoring",
+              "position": "on the wall"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "medical cart",
+            "name": "medication cart",
             "attributes": {
               "usage": "storage of medical supplies",
-              "position": "against the wall to the right"
+              "position": "against the wall"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "face mask",
+            "name": "oxygen mask",
             "attributes": {
-              "significance": "infection control",
-              "appearance": "on the man's face"
+              "significance": "oxygen therapy",
+              "appearance": "on the patient's face"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "man",
+            "subject": "healthcare provider",
             "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
             "subject": "patient",
-            "relation": "lying on",
-            "object": "bed",
-            "grounding_score": 0.75
-          },
-          {
-            "subject": "medical monitor",
-            "relation": "mounted on",
-            "object": "wall",
+            "relation": "receiving care in",
+            "object": "hospital bed",
             "grounding_score": 0.75
           }
         ]
@@ -262,7 +234,7 @@
           ],
           "relation_types": []
         },
-        "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, medical monitor, IV pole, stool, medical cart",
+        "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, infusion pole, medical monitor, medication cart",
         "scene_elements": {
           "image": [
             {
@@ -280,15 +252,15 @@
         "graph_patterns": []
       },
       "traversal_strategy": "reasoning_traversal",
-      "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, medical monitor, IV pole, stool, medical cart"
+      "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, infusion pole, medical monitor, medication cart"
     }
   },
   "metrics": {
-    "bleu": 0.061209553149706775,
-    "rouge": 0.1764705882352941,
-    "sent": 0.5747276544570923,
-    "ent": 0.06811671704053879,
-    "clip_c": 0.5333930085336965
+    "bleu": 0.037790460994590734,
+    "rouge": 0.16666666666666669,
+    "sent": 0.5253990888595581,
+    "ent": 0.003848917316645384,
+    "clip_c": 0.0
   },
   "reference_answer": "Yes the patient is sick, and is critical as she is being monitored using a multi-parametric monitor, although she looks comfortable."
 }

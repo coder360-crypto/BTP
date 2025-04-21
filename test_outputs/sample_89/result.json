@@ -1,17 +1,17 @@
 {
   "question": "Is the doctor examining the patient's eyes correctly?",
-  "answer": "There is not enough information to determine if the doctor is examining the patient's eyes correctly. \n\nThe context only mentions a medical examination is taking place, but it does not specify what part of the patient's body is being examined or how the examination is being performed.",
+  "answer": "There is not enough information to answer the question. The context does not specify what the doctor is doing or how the doctor is examining the patient. It only mentions that a medical examination is taking place.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0071866512298583984,
+    "question_analysis": 0.010838747024536133,
     "roi_detection": 0,
-    "concept_extraction": 3.543409585952759,
-    "grounding_check": 6.437301635742188e-05,
-    "graph_construction": 0.23309969902038574,
-    "graph_traversal": 2.488182544708252,
-    "answer_synthesis": 1.5235354900360107,
-    "total": 7.797604084014893
+    "concept_extraction": 4.0796709060668945,
+    "grounding_check": 8.106231689453125e-05,
+    "graph_construction": 0.23677444458007812,
+    "graph_traversal": 1.561547040939331,
+    "answer_synthesis": 1.4472105503082275,
+    "total": 7.338926076889038
   },
   "interim_results": {
     "question_analysis": {
@@ -23,8 +23,8 @@
         "equipment": [],
         "procedure": [],
         "setting": [
-          "doctor",
-          "patient"
+          "patient",
+          "doctor"
         ],
         "other_medical": []
       },
@@ -101,20 +101,20 @@
             "grounding_score": 0.85
           },
           {
-            "name": "oxygen tank",
+            "name": "electrodes",
             "attributes": {
-              "usage": "providing oxygen",
-              "position": "in the background"
+              "usage": "monitoring patient's heart activity",
+              "position": "on the patient's chest"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "ECG electrode",
+            "name": "electrode",
             "attributes": {
               "significance": "monitoring heart activity",
-              "appearance": "on the patient's chest"
+              "appearance": "attached to patient's chest"
             },
             "grounding_score": 0.8
           }
@@ -200,20 +200,20 @@
             "grounding_score": 0.85
           },
           {
-            "name": "oxygen tank",
+            "name": "electrodes",
             "attributes": {
-              "usage": "providing oxygen",
-              "position": "in the background"
+              "usage": "monitoring patient's heart activity",
+              "position": "on the patient's chest"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "ECG electrode",
+            "name": "electrode",
             "attributes": {
               "significance": "monitoring heart activity",
-              "appearance": "on the patient's chest"
+              "appearance": "attached to patient's chest"
             },
             "grounding_score": 0.8
           }
@@ -255,11 +255,11 @@
     }
   },
   "metrics": {
-    "bleu": 0.06351663120509611,
-    "rouge": 0.1408450704225352,
-    "sent": 0.6870214939117432,
-    "ent": 0.6308695673942566,
-    "clip_c": 0.5173873896710857
+    "bleu": 0.07150093323902734,
+    "rouge": 0.16949152542372883,
+    "sent": 0.41128987073898315,
+    "ent": 0.8394827842712402,
+    "clip_c": 0.5217023790879167
   },
   "reference_answer": "Yes the eyes are being checked properly. The doctor is using a torch to properly check the pupillary light reaction most probably"
 }

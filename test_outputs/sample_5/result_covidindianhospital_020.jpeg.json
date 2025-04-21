@@ -1,17 +1,17 @@
 {
   "question": "Is the setup suitable?",
-  "answer": "The context does not provide information to assess if the setup is suitable. \n\nWhat is visible in the image is a COVID-19 testing site with healthcare workers and patients, where swab testing is being conducted. The equipment visible includes Personal Protective Equipment (PPE), swab collection tools, and blue chairs.",
+  "answer": "The context does not provide information to assess if the setup is suitable. \n\nWhat is visible in the image: \n- A COVID-19 testing site \n- Multiple healthcare workers and patients \n- Swab testing activity \n- Equipment such as PPE, swab collection tools, blue chairs, a table, and hand sanitizer or disinfectant. \n\nNo further information is available to evaluate the suitability of the setup.",
   "question_type": "equipment",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.00661158561706543,
+    "question_analysis": 0.006728649139404297,
     "roi_detection": 0,
-    "concept_extraction": 2.2244365215301514,
-    "grounding_check": 6.079673767089844e-05,
-    "graph_construction": 0.24762630462646484,
-    "graph_traversal": 2.019057035446167,
-    "answer_synthesis": 0.3875916004180908,
-    "total": 4.886984825134277
+    "concept_extraction": 2.061396837234497,
+    "grounding_check": 6.318092346191406e-05,
+    "graph_construction": 0.23934483528137207,
+    "graph_traversal": 2.1008307933807373,
+    "answer_synthesis": 0.5463700294494629,
+    "total": 4.956242084503174
   },
   "interim_results": {
     "question_analysis": {
@@ -354,11 +354,11 @@
         "found": false,
         "nodes": [],
         "edges": [],
-        "image_caption": "Setting: COVID-19 testing site. People: Healthcare worker, Healthcare worker, Healthcare worker, Patient, Patient, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools, Blue chairs",
+        "image_caption": "Setting: COVID-19 testing site. People: Healthcare worker, Healthcare worker, Healthcare worker, Patient, Patient, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools, Blue chairs, Table, Hand sanitizer or disinfectant",
         "caption_based": true
       },
       "traversal_strategy": "equipment_verification",
-      "image_caption": "Setting: COVID-19 testing site. People: Healthcare worker, Healthcare worker, Healthcare worker, Patient, Patient, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools, Blue chairs"
+      "image_caption": "Setting: COVID-19 testing site. People: Healthcare worker, Healthcare worker, Healthcare worker, Patient, Patient, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools, Blue chairs, Table, Hand sanitizer or disinfectant"
     }
   }
 }

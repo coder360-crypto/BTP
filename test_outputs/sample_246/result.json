@@ -1,0 +1,73 @@
+{
+  "question": "What medical equipment is visible in the photograph?",
+  "answer": "Error generating answer: Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m9.444s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}",
+  "question_type": "equipment",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007849693298339844,
+    "roi_detection": 0,
+    "concept_extraction": 0.6139464378356934,
+    "grounding_check": 4.267692565917969e-05,
+    "graph_construction": 0.20558500289916992,
+    "graph_traversal": 0.6083164215087891,
+    "answer_synthesis": 0.3521544933319092,
+    "total": 1.7895567417144775
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [],
+        "other_medical": [
+          "what medical equipment",
+          "the photograph"
+        ]
+      },
+      "question_type": "equipment",
+      "traversal_strategy": "equipment_verification",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          750,
+          498
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m10.594s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}"
+      },
+      "extraction_confidence": 0.0
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m10.594s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}"
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": []
+      },
+      "traversal_strategy": "equipment_verification",
+      "image_caption": null
+    }
+  },
+  "metrics": {
+    "bleu": 0.008910358477805264,
+    "rouge": 0.024390243902439022,
+    "sent": -0.04501882940530777,
+    "ent": 0.6347249746322632,
+    "clip_c": 0.0
+  },
+  "reference_answer": "It is a device used for artificial ventilation for patients with damaged lungs, called Ventilator."
+}

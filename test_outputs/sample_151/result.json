@@ -1,0 +1,235 @@
+{
+  "question": "Is the nurse's clothing proper for the ward environment?",
+  "answer": "The context does not provide information about the nurse's clothing. What is visible in the image is a hospital room setting with a doctor and two nurses engaged in patient care, with hospital beds and IV poles present.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.008880138397216797,
+    "roi_detection": 0,
+    "concept_extraction": 2.742281198501587,
+    "grounding_check": 4.9591064453125e-05,
+    "graph_construction": 0.2332134246826172,
+    "graph_traversal": 3.0134928226470947,
+    "answer_synthesis": 1.642425775527954,
+    "total": 7.64213490486145
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "proper"
+        ],
+        "setting": [
+          "ward",
+          "nurse"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          900,
+          600
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "hospital ward"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "observing or taking notes",
+              "position": "near a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "attending to another patient",
+              "position": "near another bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital_beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "rows"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV_pole",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "intravenous_lines",
+            "attributes": {
+              "significance": "medical treatment",
+              "appearance": "attached to patients' arms"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "attending to",
+            "object": "patient on the left bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse",
+            "relation": "near",
+            "object": "patient on the middle bed",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "hospital ward"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "observing or taking notes",
+              "position": "near a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "attending to another patient",
+              "position": "near another bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital_beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "rows"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV_pole",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "intravenous_lines",
+            "attributes": {
+              "significance": "medical treatment",
+              "appearance": "attached to patients' arms"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "attending to",
+            "object": "patient on the left bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse",
+            "relation": "near",
+            "object": "patient on the middle bed",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: doctor, nurse, nurse. Activities: patient care. Equipment: hospital beds, IV poles"
+    }
+  },
+  "metrics": {
+    "bleu": 0.041561025510444785,
+    "rouge": 0.17543859649122806,
+    "sent": 0.6087329387664795,
+    "ent": 0.9921145439147949,
+    "clip_c": 0.5227474406128516
+  },
+  "reference_answer": "Yes the nurse is properly dressed, and is using minimal PPE in the ward, to prevent cross-infections."
+}

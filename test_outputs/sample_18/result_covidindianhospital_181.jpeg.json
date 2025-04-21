@@ -1,17 +1,17 @@
 {
   "question": "Is the face mask being worn correctly by the patient?",
-  "answer": "There is not enough information to answer the question. The context does not mention a face mask being worn by the patient.",
+  "answer": "There is not enough information to answer the question. The context does not mention a face mask being worn by the patient. \n\nWhat is visible in the image: A hospital room with a patient and healthcare workers, and a hospital bed.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.007319211959838867,
+    "question_analysis": 0.007213115692138672,
     "roi_detection": 0,
-    "concept_extraction": 1.0068528652191162,
-    "grounding_check": 4.9114227294921875e-05,
-    "graph_construction": 0.2153928279876709,
-    "graph_traversal": 2.1367204189300537,
-    "answer_synthesis": 2.465916156768799,
-    "total": 5.833294630050659
+    "concept_extraction": 3.196281671524048,
+    "grounding_check": 6.651878356933594e-05,
+    "graph_construction": 0.21604418754577637,
+    "graph_traversal": 2.1293771266937256,
+    "answer_synthesis": 2.5536446571350098,
+    "total": 8.103731155395508
   },
   "interim_results": {
     "question_analysis": {
@@ -210,7 +210,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient. Equipment: hospital_bed"
+      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient, healthcare_worker, patient. Equipment: hospital_bed"
     }
   }
 }

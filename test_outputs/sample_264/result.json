@@ -1,0 +1,250 @@
+{
+  "question": "Is the endo-tracheal tube properly inserted?",
+  "answer": "Error generating answer: Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m23.95s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00954127311706543,
+    "roi_detection": 0,
+    "concept_extraction": 62.52465796470642,
+    "grounding_check": 5.269050598144531e-05,
+    "graph_construction": 0.23932361602783203,
+    "graph_traversal": 0.7882390022277832,
+    "answer_synthesis": 0.35763001441955566,
+    "total": 63.92317485809326
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [
+          "tube"
+        ],
+        "procedure": [],
+        "setting": [],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1500,
+          844
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "intubation",
+            "attributes": {
+              "technique": "endotracheal tube",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "ventilator",
+            "attributes": {
+              "usage": "assisted breathing",
+              "position": "near bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "monitor",
+            "attributes": {
+              "usage": "vital signs monitoring",
+              "position": "near bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "endotracheal tube",
+            "attributes": {
+              "significance": "airway management",
+              "appearance": "secured to patient's face"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "hospital gown",
+            "attributes": {
+              "significance": "patient attire",
+              "appearance": "light blue with pattern"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "connected to",
+            "object": "ventilator",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "has",
+            "object": "endotracheal tube",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "intubation",
+            "attributes": {
+              "technique": "endotracheal tube",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "ventilator",
+            "attributes": {
+              "usage": "assisted breathing",
+              "position": "near bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "monitor",
+            "attributes": {
+              "usage": "vital signs monitoring",
+              "position": "near bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "endotracheal tube",
+            "attributes": {
+              "significance": "airway management",
+              "appearance": "secured to patient's face"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "hospital gown",
+            "attributes": {
+              "significance": "patient attire",
+              "appearance": "light blue with pattern"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "connected to",
+            "object": "ventilator",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "has",
+            "object": "endotracheal tube",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": null
+    }
+  },
+  "metrics": {
+    "bleu": 0,
+    "rouge": 0.0,
+    "sent": 0.04314533248543739,
+    "ent": 0.7728411555290222,
+    "clip_c": 0.0
+  },
+  "reference_answer": "Yes the endotracheal tube is properly inserted."
+}

@@ -1,17 +1,17 @@
 {
   "question": "Are the vaccination measures proper?",
-  "answer": "The context does not contain information about the vaccination measures being proper or not. \n\nWhat is visible in the image: A healthcare worker, a patient, and a syringe are present in a vaccination room, and a vaccination activity is taking place.",
+  "answer": "The context does not contain information about the vaccination measures being proper or not. \n\nWhat is visible in the image: A vaccination room with a patient, a healthcare worker, a syringe, and a fan.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.005924701690673828,
+    "question_analysis": 0.006639957427978516,
     "roi_detection": 0,
-    "concept_extraction": 3.261798620223999,
-    "grounding_check": 5.650520324707031e-05,
-    "graph_construction": 0.2125239372253418,
-    "graph_traversal": 2.053619861602783,
-    "answer_synthesis": 2.483441114425659,
-    "total": 8.0181725025177
+    "concept_extraction": 3.163177728652954,
+    "grounding_check": 5.14984130859375e-05,
+    "graph_construction": 0.2175910472869873,
+    "graph_traversal": 2.162344217300415,
+    "answer_synthesis": 2.4306325912475586,
+    "total": 7.981315612792969
   },
   "interim_results": {
     "question_analysis": {
@@ -76,7 +76,7 @@
             "name": "vaccination",
             "attributes": {
               "technique": "intramuscular injection",
-              "stage": "in progress"
+              "stage": "ongoing"
             },
             "grounding_score": 0.8
           }
@@ -89,14 +89,6 @@
               "position": "in healthcare worker's hand"
             },
             "grounding_score": 0.85
-          },
-          {
-            "name": "fan",
-            "attributes": {
-              "usage": "air circulation",
-              "position": "behind patient"
-            },
-            "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
@@ -104,7 +96,7 @@
             "name": "face_mask",
             "attributes": {
               "significance": "infection control",
-              "appearance": "on both individuals"
+              "appearance": "on both patient and healthcare worker"
             },
             "grounding_score": 0.8
           }
@@ -112,7 +104,7 @@
         "relationships": [
           {
             "subject": "healthcare_worker",
-            "relation": "administering vaccine to",
+            "relation": "treating",
             "object": "patient",
             "grounding_score": 0.75
           }
@@ -155,7 +147,7 @@
             "name": "vaccination",
             "attributes": {
               "technique": "intramuscular injection",
-              "stage": "in progress"
+              "stage": "ongoing"
             },
             "grounding_score": 0.8
           }
@@ -168,14 +160,6 @@
               "position": "in healthcare worker's hand"
             },
             "grounding_score": 0.85
-          },
-          {
-            "name": "fan",
-            "attributes": {
-              "usage": "air circulation",
-              "position": "behind patient"
-            },
-            "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
@@ -183,7 +167,7 @@
             "name": "face_mask",
             "attributes": {
               "significance": "infection control",
-              "appearance": "on both individuals"
+              "appearance": "on both patient and healthcare worker"
             },
             "grounding_score": 0.8
           }
@@ -191,7 +175,7 @@
         "relationships": [
           {
             "subject": "healthcare_worker",
-            "relation": "administering vaccine to",
+            "relation": "treating",
             "object": "patient",
             "grounding_score": 0.75
           }
@@ -209,15 +193,15 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: vaccination_room. People: healthcare_worker, patient. Activities: vaccination. Equipment: syringe"
+      "image_caption": "Setting: vaccination_room. People: patient, healthcare_worker. Activities: vaccination. Equipment: syringe, fan"
     }
   },
   "metrics": {
-    "bleu": 0.04710060749298838,
-    "rouge": 0.21333333333333335,
-    "sent": 0.6132615804672241,
-    "ent": 0.2825378179550171,
-    "clip_c": 0.4925463187906453
+    "bleu": 0.05377744760293576,
+    "rouge": 0.23529411764705882,
+    "sent": 0.5913230180740356,
+    "ent": 0.975592315196991,
+    "clip_c": 0.49258028447854574
   },
   "reference_answer": "Yes the vaccination is proper. The site is deltoid muscle on the left shoulder, the router of injection is intramuscular. The healthcare worker has taken proper precaution by wearing gloves, mask and head-cap."
 }

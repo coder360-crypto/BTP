@@ -1,17 +1,17 @@
 {
   "question": "Does the healthcare worker have proper personal protective equipment on?",
-  "answer": "Based on the provided context, it appears that protective gear and a mask are present, but it does not specifically state that the healthcare worker is wearing them. \n\nWhat is visible in the image: A hospital room with a healthcare worker, a patient, a hospital bed, protective gear, and a mask. \n\nThe context does not contain enough information to confirm if the healthcare worker has proper personal protective equipment on.",
+  "answer": "Based on the provided context, it is mentioned that the equipment present includes \"ppe\", which likely stands for personal protective equipment. However, it is not specified if the healthcare worker is wearing it. \n\nWhat is visible in the image: A hospital room setting with a bed, chair, and at least one healthcare worker and one patient. The equipment present includes PPE.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.009138345718383789,
+    "question_analysis": 0.008243560791015625,
     "roi_detection": 0,
-    "concept_extraction": 3.089853525161743,
-    "grounding_check": 5.5789947509765625e-05,
-    "graph_construction": 0.22217416763305664,
-    "graph_traversal": 2.7213079929351807,
-    "answer_synthesis": 1.5833344459533691,
-    "total": 7.627045631408691
+    "concept_extraction": 3.365074396133423,
+    "grounding_check": 7.534027099609375e-05,
+    "graph_construction": 0.22268223762512207,
+    "graph_traversal": 2.425969362258911,
+    "answer_synthesis": 1.5255990028381348,
+    "total": 7.549670457839966
   },
   "interim_results": {
     "question_analysis": {
@@ -206,7 +206,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: hospital room. People: healthcare worker, patient, healthcare worker, patient, healthcare worker, patient. Equipment: hospital bed, protective gear, mask"
+      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient, healthcare_worker, patient, healthcare_worker. Equipment: bed, chair, ppe"
     }
   }
 }

@@ -1,17 +1,17 @@
 {
   "question": "What is happening in this photo?",
-  "answer": "Based on the provided context, a healthcare worker is administering a swab test to a patient in an outdoor medical facility. The healthcare worker and patient are present, and personal protective equipment (PPE) and a swab are being used.",
+  "answer": "Based on the provided context, a healthcare worker is administering a nasal swab test to a patient in an outdoor medical facility. The healthcare worker and patient are present, and protective gear and a swab are visible.",
   "question_type": "descriptive",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.007754802703857422,
+    "question_analysis": 0.006287336349487305,
     "roi_detection": 0,
-    "concept_extraction": 3.7770745754241943,
-    "grounding_check": 6.437301635742188e-05,
-    "graph_construction": 0.22907662391662598,
-    "graph_traversal": 2.4451205730438232,
-    "answer_synthesis": 1.5315778255462646,
-    "total": 7.992707252502441
+    "concept_extraction": 3.4194700717926025,
+    "grounding_check": 6.747245788574219e-05,
+    "graph_construction": 0.22149324417114258,
+    "graph_traversal": 2.398383855819702,
+    "answer_synthesis": 1.4839766025543213,
+    "total": 7.531648635864258
   },
   "interim_results": {
     "question_analysis": {
@@ -45,35 +45,35 @@
       "raw_concepts": {
         "scene_setting": [
           {
-            "name": "outdoor medical screening area",
+            "name": "Outdoor Medical Facility",
             "attributes": {
-              "location": "outdoor area with tiled floor and concrete walls",
-              "appearance": "brightly lit with natural light"
+              "location": "outdoor area with tiled floor",
+              "appearance": "yellow walls with grey stone accents and metal grating on windows"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "healthcare worker",
+            "name": "Healthcare Worker",
             "attributes": {
-              "actions": "performing a swab test",
-              "position": "standing over a seated patient"
+              "actions": "performing a procedure",
+              "position": "standing, wearing protective gear"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "patient",
+            "name": "Patient",
             "attributes": {
-              "actions": "reacting to the swab test",
-              "position": "seated on a chair"
+              "actions": "sitting, reacting",
+              "position": "seated, mouth open"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "swab test",
+            "name": "Swab Test",
             "attributes": {
               "technique": "nasal swabbing",
               "stage": "in progress"
@@ -83,43 +83,37 @@
         ],
         "equipment": [
           {
-            "name": "personal protective equipment (PPE)",
+            "name": "Protective Gear",
             "attributes": {
-              "usage": "protecting against infectious agents",
-              "position": "worn by the healthcare worker"
+              "usage": "personal protective equipment",
+              "position": "worn by healthcare worker"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "swab",
+            "name": "Swab",
             "attributes": {
-              "usage": "collecting a sample",
-              "position": "held by the healthcare worker"
+              "usage": "medical tool",
+              "position": "held by healthcare worker"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "nasal swab",
+            "name": "Patient's Reaction",
             "attributes": {
-              "significance": "sample collection for testing",
-              "appearance": "long, thin, flexible stick with a cotton tip"
+              "significance": "indicative of discomfort or distress",
+              "appearance": "hands raised, mouth open"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "healthcare worker",
+            "subject": "Healthcare Worker",
             "relation": "interacting with",
-            "object": "patient",
-            "grounding_score": 0.75
-          },
-          {
-            "subject": "patient",
-            "relation": "receiving a swab test from",
-            "object": "healthcare worker",
+            "object": "Patient",
             "grounding_score": 0.75
           }
         ]
@@ -130,35 +124,35 @@
       "grounded_concepts": {
         "scene_setting": [
           {
-            "name": "outdoor medical screening area",
+            "name": "Outdoor Medical Facility",
             "attributes": {
-              "location": "outdoor area with tiled floor and concrete walls",
-              "appearance": "brightly lit with natural light"
+              "location": "outdoor area with tiled floor",
+              "appearance": "yellow walls with grey stone accents and metal grating on windows"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "healthcare worker",
+            "name": "Healthcare Worker",
             "attributes": {
-              "actions": "performing a swab test",
-              "position": "standing over a seated patient"
+              "actions": "performing a procedure",
+              "position": "standing, wearing protective gear"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "patient",
+            "name": "Patient",
             "attributes": {
-              "actions": "reacting to the swab test",
-              "position": "seated on a chair"
+              "actions": "sitting, reacting",
+              "position": "seated, mouth open"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "swab test",
+            "name": "Swab Test",
             "attributes": {
               "technique": "nasal swabbing",
               "stage": "in progress"
@@ -168,43 +162,37 @@
         ],
         "equipment": [
           {
-            "name": "personal protective equipment (PPE)",
+            "name": "Protective Gear",
             "attributes": {
-              "usage": "protecting against infectious agents",
-              "position": "worn by the healthcare worker"
+              "usage": "personal protective equipment",
+              "position": "worn by healthcare worker"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "swab",
+            "name": "Swab",
             "attributes": {
-              "usage": "collecting a sample",
-              "position": "held by the healthcare worker"
+              "usage": "medical tool",
+              "position": "held by healthcare worker"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "nasal swab",
+            "name": "Patient's Reaction",
             "attributes": {
-              "significance": "sample collection for testing",
-              "appearance": "long, thin, flexible stick with a cotton tip"
+              "significance": "indicative of discomfort or distress",
+              "appearance": "hands raised, mouth open"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "healthcare worker",
+            "subject": "Healthcare Worker",
             "relation": "interacting with",
-            "object": "patient",
-            "grounding_score": 0.75
-          },
-          {
-            "subject": "patient",
-            "relation": "receiving a swab test from",
-            "object": "healthcare worker",
+            "object": "Patient",
             "grounding_score": 0.75
           }
         ]
@@ -221,7 +209,7 @@
           ],
           "relation_types": []
         },
-        "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Swab Test. Equipment: Personal Protective Equipment (PPE), Swab",
+        "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Nasal Swab Test. Equipment: Protective Gear, Swab",
         "scene_elements": {
           "image": [
             {
@@ -239,7 +227,7 @@
         "graph_patterns": []
       },
       "traversal_strategy": "reasoning_traversal",
-      "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Swab Test. Equipment: Personal Protective Equipment (PPE), Swab"
+      "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Nasal Swab Test. Equipment: Protective Gear, Swab"
     }
   }
 }

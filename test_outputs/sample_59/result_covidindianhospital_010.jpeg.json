@@ -4,14 +4,14 @@
   "question_type": "descriptive",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006878852844238281,
+    "question_analysis": 0.0065724849700927734,
     "roi_detection": 0,
-    "concept_extraction": 3.4586524963378906,
-    "grounding_check": 5.459785461425781e-05,
-    "graph_construction": 0.2167344093322754,
-    "graph_traversal": 2.759441614151001,
-    "answer_synthesis": 1.5044312477111816,
-    "total": 7.948214054107666
+    "concept_extraction": 3.5150794982910156,
+    "grounding_check": 5.5789947509765625e-05,
+    "graph_construction": 0.21474242210388184,
+    "graph_traversal": 2.5247809886932373,
+    "answer_synthesis": 1.5048446655273438,
+    "total": 7.7681756019592285
   },
   "interim_results": {
     "question_analysis": {
@@ -65,7 +65,7 @@
             "name": "Patient",
             "attributes": {
               "actions": "sitting, reacting",
-              "position": "seated on a chair"
+              "position": "seated, mouth open"
             },
             "grounding_score": 0.85
           }
@@ -74,7 +74,7 @@
           {
             "name": "Nasal Swab Test",
             "attributes": {
-              "technique": "inserting a swab into the patient's nostril",
+              "technique": "inserting swab into patient's nostril",
               "stage": "in progress"
             },
             "grounding_score": 0.8
@@ -84,7 +84,7 @@
           {
             "name": "Protective Gear",
             "attributes": {
-              "usage": "personal protective equipment for healthcare worker",
+              "usage": "personal protective equipment",
               "position": "worn by healthcare worker"
             },
             "grounding_score": 0.85
@@ -103,7 +103,7 @@
             "name": "Patient's Reaction",
             "attributes": {
               "significance": "indicative of discomfort or distress",
-              "appearance": "patient appears to be reacting to the procedure"
+              "appearance": "hands raised, mouth open"
             },
             "grounding_score": 0.8
           }
@@ -144,7 +144,7 @@
             "name": "Patient",
             "attributes": {
               "actions": "sitting, reacting",
-              "position": "seated on a chair"
+              "position": "seated, mouth open"
             },
             "grounding_score": 0.85
           }
@@ -153,7 +153,7 @@
           {
             "name": "Nasal Swab Test",
             "attributes": {
-              "technique": "inserting a swab into the patient's nostril",
+              "technique": "inserting swab into patient's nostril",
               "stage": "in progress"
             },
             "grounding_score": 0.8
@@ -163,7 +163,7 @@
           {
             "name": "Protective Gear",
             "attributes": {
-              "usage": "personal protective equipment for healthcare worker",
+              "usage": "personal protective equipment",
               "position": "worn by healthcare worker"
             },
             "grounding_score": 0.85
@@ -182,7 +182,7 @@
             "name": "Patient's Reaction",
             "attributes": {
               "significance": "indicative of discomfort or distress",
-              "appearance": "patient appears to be reacting to the procedure"
+              "appearance": "hands raised, mouth open"
             },
             "grounding_score": 0.8
           }

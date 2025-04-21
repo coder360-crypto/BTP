@@ -1,17 +1,17 @@
 {
   "question": "Is the height and angle of the patient's bed set properly?",
-  "answer": "The context does not contain information about the height and angle of the patient's bed. What is visible in the image is a hospital room with a patient and multiple healthcare providers, a hospital bed, and medical equipment such as a monitor. No assessment can be made about the bed's settings.",
+  "answer": "The context does not contain information about the height and angle of the patient's bed. What is visible in the image is a hospital room with a patient, a physician, and two healthcare workers, along with a monitor and a hospital bed, but no details about the bed's settings are provided.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.009633541107177734,
+    "question_analysis": 0.008499383926391602,
     "roi_detection": 0,
-    "concept_extraction": 3.3543763160705566,
-    "grounding_check": 5.0067901611328125e-05,
-    "graph_construction": 0.22820425033569336,
-    "graph_traversal": 2.585026741027832,
-    "answer_synthesis": 1.4670765399932861,
-    "total": 7.645378828048706
+    "concept_extraction": 3.3351993560791016,
+    "grounding_check": 4.673004150390625e-05,
+    "graph_construction": 0.22347331047058105,
+    "graph_traversal": 2.2643215656280518,
+    "answer_synthesis": 1.4762604236602783,
+    "total": 7.3087358474731445
   },
   "interim_results": {
     "question_analysis": {
@@ -23,12 +23,12 @@
         ],
         "procedure": [],
         "setting": [
-          "bed",
-          "patient"
+          "patient",
+          "bed"
         ],
         "other_medical": [
-          "the height",
-          "angle"
+          "angle",
+          "the height"
         ]
       },
       "question_type": "procedural",
@@ -138,14 +138,8 @@
             "grounding_score": 0.75
           },
           {
-            "subject": "physician",
-            "relation": "viewing",
-            "object": "monitor",
-            "grounding_score": 0.75
-          },
-          {
             "subject": "healthcare worker 2",
-            "relation": "in proximity to",
+            "relation": "assisting",
             "object": "healthcare worker 3",
             "grounding_score": 0.75
           }
@@ -245,14 +239,8 @@
             "grounding_score": 0.75
           },
           {
-            "subject": "physician",
-            "relation": "viewing",
-            "object": "monitor",
-            "grounding_score": 0.75
-          },
-          {
             "subject": "healthcare worker 2",
-            "relation": "in proximity to",
+            "relation": "assisting",
             "object": "healthcare worker 3",
             "grounding_score": 0.75
           }
@@ -270,7 +258,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: hospital room. People: healthcare provider, healthcare provider, healthcare provider, patient. Activities: monitoring. Equipment: monitor, hospital bed"
+      "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker 2, healthcare worker 3. Activities: monitoring. Equipment: monitor, hospital bed"
     }
   }
 }

@@ -1,0 +1,186 @@
+{
+  "question": "Is the patient critically ill?",
+  "answer": "The context does not provide explicit information about the patient's condition. However, the presence of medical monitoring, ECG electrodes, and an IV line suggests that the patient is receiving medical attention.\n\nWhat is visible in the image: A pregnant woman in a hospital room undergoing medical monitoring, with ECG electrodes and an IV line. \n\nNo speculation can be made about the patient's critical condition based on the provided context.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00757288932800293,
+    "roi_detection": 0,
+    "concept_extraction": 3.565365791320801,
+    "grounding_check": 6.389617919921875e-05,
+    "graph_construction": 0.2243025302886963,
+    "graph_traversal": 2.7495908737182617,
+    "answer_synthesis": 1.7193284034729004,
+    "total": 8.267403364181519
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          600,
+          450
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "dimly lit"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital_bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV_pole",
+            "attributes": {
+              "usage": "medication or fluid administration",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "pregnancy",
+            "attributes": {
+              "significance": "visible swelling of abdomen",
+              "appearance": "advanced pregnancy"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "on",
+            "object": "hospital_bed",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "dimly lit"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital_bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV_pole",
+            "attributes": {
+              "usage": "medication or fluid administration",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "pregnancy",
+            "attributes": {
+              "significance": "visible swelling of abdomen",
+              "appearance": "advanced pregnancy"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "on",
+            "object": "hospital_bed",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital_room. People: pregnant_woman. Activities: medical_monitoring. Equipment: hospital_bed, ECG electrodes, IV line",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital_room. People: pregnant_woman. Activities: medical_monitoring. Equipment: hospital_bed, ECG electrodes, IV line"
+    }
+  },
+  "metrics": {
+    "bleu": 0.04534922877508818,
+    "rouge": 0.15384615384615385,
+    "sent": 0.5383796691894531,
+    "ent": 0.008443172089755535,
+    "clip_c": 0.0
+  },
+  "reference_answer": "No the patient is pregnant, and the vitals of the fetus is continously being monitored using a portable CTG machine."
+}

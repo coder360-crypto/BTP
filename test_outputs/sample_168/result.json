@@ -1,0 +1,190 @@
+{
+  "question": "Is the patient sick or critical?",
+  "answer": "The context does not contain enough information to determine if the patient is sick or critical. \n\nWhat is visible in the image is that the setting is a hospital room, a nurse is present, IV administration is being performed, and there is an IV pole.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00832056999206543,
+    "roi_detection": 0,
+    "concept_extraction": 3.5912094116210938,
+    "grounding_check": 5.030632019042969e-05,
+    "graph_construction": 0.21902966499328613,
+    "graph_traversal": 3.3028881549835205,
+    "answer_synthesis": 1.794837474822998,
+    "total": 8.917640686035156
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          500,
+          470
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "typical hospital room with beds and medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "adjusting IV pole",
+              "position": "standing beside the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "IV administration",
+            "attributes": {
+              "technique": "adjusting IV pole",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "supporting IV bag",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving medical treatment",
+              "appearance": "lying on the bed with an IV"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "nurse",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "typical hospital room with beds and medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "adjusting IV pole",
+              "position": "standing beside the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "IV administration",
+            "attributes": {
+              "technique": "adjusting IV pole",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "supporting IV bag",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving medical treatment",
+              "appearance": "lying on the bed with an IV"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "nurse",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital room. People: nurse. Activities: IV administration. Equipment: IV pole",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital room. People: nurse. Activities: IV administration. Equipment: IV pole"
+    }
+  },
+  "metrics": {
+    "bleu": 0.08657911954691568,
+    "rouge": 0.3142857142857143,
+    "sent": 0.6257656812667847,
+    "ent": 0.035368919372558594,
+    "clip_c": 0.5226344887481049
+  },
+  "reference_answer": "The patient is sick, but not critical or anxious, as the patient is admitted in a hospital and is requiring parenteral fluids or intravenous antibiotics."
+}

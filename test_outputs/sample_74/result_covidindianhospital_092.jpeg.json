@@ -1,17 +1,17 @@
 {
   "question": "Is the patient in a critical condition?",
-  "answer": "The context does not contain the information needed to answer whether the patient is in a critical condition. \n\nWhat is visible in the image is a hospital room with a healthcare provider, a patient, a hospital bed, an infusion pole, a medical monitor, and a medication cart.",
+  "answer": "The context does not contain the information needed to determine if the patient is in a critical condition. \n\nWhat is visible in the image is a hospital room with a patient, a healthcare provider, and various medical equipment such as a hospital bed, medical monitor, IV pole, stool, and medical cart.",
   "question_type": "patient_status",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0062427520751953125,
+    "question_analysis": 0.008616447448730469,
     "roi_detection": 0,
-    "concept_extraction": 3.8279366493225098,
-    "grounding_check": 5.984306335449219e-05,
-    "graph_construction": 0.22686409950256348,
-    "graph_traversal": 2.8751718997955322,
-    "answer_synthesis": 1.5942223072052002,
-    "total": 8.532749891281128
+    "concept_extraction": 3.838175058364868,
+    "grounding_check": 4.76837158203125e-05,
+    "graph_construction": 0.22801613807678223,
+    "graph_traversal": 2.8885345458984375,
+    "answer_synthesis": 1.5166850090026855,
+    "total": 8.48267912864685
   },
   "interim_results": {
     "question_analysis": {
@@ -58,7 +58,7 @@
           {
             "name": "healthcare provider",
             "attributes": {
-              "actions": "kneeled beside the bed, wearing a mask and holding a phone",
+              "actions": "kneeling beside the bed",
               "position": "beside the bed"
             },
             "grounding_score": 0.85
@@ -66,7 +66,7 @@
           {
             "name": "patient",
             "attributes": {
-              "actions": "lying in the bed",
+              "actions": "lying in bed",
               "position": "in the bed"
             },
             "grounding_score": 0.85
@@ -83,10 +83,18 @@
             "grounding_score": 0.85
           },
           {
+            "name": "infusion pole",
+            "attributes": {
+              "usage": "medication or fluid administration",
+              "position": "beside the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
             "name": "medical monitor",
             "attributes": {
-              "usage": "patient monitoring",
-              "position": "on the wall above the bed"
+              "usage": "patient vital sign monitoring",
+              "position": "on the wall"
             },
             "grounding_score": 0.85
           },
@@ -101,18 +109,10 @@
         ],
         "clinical_elements": [
           {
-            "name": "hospital bed",
+            "name": "oxygen mask",
             "attributes": {
-              "significance": "patient care",
-              "appearance": "with a yellow mattress and blue accents"
-            },
-            "grounding_score": 0.8
-          },
-          {
-            "name": "patient",
-            "attributes": {
-              "significance": "receiving care",
-              "appearance": "lying down, covered with a blanket"
+              "significance": "oxygen therapy",
+              "appearance": "on the patient's face"
             },
             "grounding_score": 0.8
           }
@@ -126,7 +126,7 @@
           },
           {
             "subject": "patient",
-            "relation": "in",
+            "relation": "receiving care in",
             "object": "hospital bed",
             "grounding_score": 0.75
           }
@@ -150,7 +150,7 @@
           {
             "name": "healthcare provider",
             "attributes": {
-              "actions": "kneeled beside the bed, wearing a mask and holding a phone",
+              "actions": "kneeling beside the bed",
               "position": "beside the bed"
             },
             "grounding_score": 0.85
@@ -158,7 +158,7 @@
           {
             "name": "patient",
             "attributes": {
-              "actions": "lying in the bed",
+              "actions": "lying in bed",
               "position": "in the bed"
             },
             "grounding_score": 0.85
@@ -175,10 +175,18 @@
             "grounding_score": 0.85
           },
           {
+            "name": "infusion pole",
+            "attributes": {
+              "usage": "medication or fluid administration",
+              "position": "beside the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
             "name": "medical monitor",
             "attributes": {
-              "usage": "patient monitoring",
-              "position": "on the wall above the bed"
+              "usage": "patient vital sign monitoring",
+              "position": "on the wall"
             },
             "grounding_score": 0.85
           },
@@ -193,18 +201,10 @@
         ],
         "clinical_elements": [
           {
-            "name": "hospital bed",
+            "name": "oxygen mask",
             "attributes": {
-              "significance": "patient care",
-              "appearance": "with a yellow mattress and blue accents"
-            },
-            "grounding_score": 0.8
-          },
-          {
-            "name": "patient",
-            "attributes": {
-              "significance": "receiving care",
-              "appearance": "lying down, covered with a blanket"
+              "significance": "oxygen therapy",
+              "appearance": "on the patient's face"
             },
             "grounding_score": 0.8
           }
@@ -218,7 +218,7 @@
           },
           {
             "subject": "patient",
-            "relation": "in",
+            "relation": "receiving care in",
             "object": "hospital bed",
             "grounding_score": 0.75
           }
@@ -230,11 +230,11 @@
         "found": false,
         "nodes": [],
         "edges": [],
-        "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, infusion pole, medical monitor, medication cart",
+        "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, medical monitor, IV pole, stool, medical cart",
         "caption_based": true
       },
       "traversal_strategy": "condition_assessment",
-      "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, infusion pole, medical monitor, medication cart"
+      "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, medical monitor, IV pole, stool, medical cart"
     }
   }
 }

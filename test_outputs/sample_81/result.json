@@ -1,17 +1,17 @@
 {
   "question": "Is this an Intensive Care Unit setup?",
-  "answer": "Based on the provided context, it cannot be confirmed if this is an Intensive Care Unit (ICU) setup. \n\nThe context mentions a hospital room setting with monitoring activities and equipment such as a monitor and hospital bed, but it does not specify if it is an ICU setup. \n\nWhat is visible in the image is a hospital room with a physician, patient, and healthcare workers, where monitoring is taking place, and there is a monitor and hospital bed present.",
+  "answer": "Based on the provided context, it cannot be confirmed if this is an Intensive Care Unit (ICU) setup. \n\nThe context mentions a hospital room setting with monitoring activities and basic equipment such as a monitor and a hospital bed. However, there is no specific information provided that would indicate it is an ICU setup.\n\nVisible in the image: A hospital room with a patient, a physician, and multiple healthcare workers, engaged in monitoring activities, with a monitor and a hospital bed present.",
   "question_type": "equipment",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0064661502838134766,
+    "question_analysis": 0.007487297058105469,
     "roi_detection": 0,
-    "concept_extraction": 1.232182502746582,
-    "grounding_check": 5.173683166503906e-05,
-    "graph_construction": 0.22330880165100098,
-    "graph_traversal": 0.9986710548400879,
-    "answer_synthesis": 2.6488888263702393,
-    "total": 5.1104655265808105
+    "concept_extraction": 3.2505459785461426,
+    "grounding_check": 5.793571472167969e-05,
+    "graph_construction": 0.2304842472076416,
+    "graph_traversal": 2.3758623600006104,
+    "answer_synthesis": 1.5963168144226074,
+    "total": 7.461759328842163
   },
   "interim_results": {
     "question_analysis": {
@@ -48,15 +48,15 @@
           {
             "name": "hospital room",
             "attributes": {
-              "location": "indoor hospital setting",
-              "appearance": "multiple hospital beds"
+              "location": "indoor",
+              "appearance": "medical setting with beds and equipment"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "healthcare provider",
+            "name": "physician",
             "attributes": {
               "actions": "viewing monitor",
               "position": "standing beside bed"
@@ -64,26 +64,26 @@
             "grounding_score": 0.85
           },
           {
-            "name": "healthcare provider",
-            "attributes": {
-              "actions": "",
-              "position": "in background, beside another bed"
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "healthcare provider",
-            "attributes": {
-              "actions": "",
-              "position": "in background, beside another bed"
-            },
-            "grounding_score": 0.85
-          },
-          {
             "name": "patient",
             "attributes": {
               "actions": "",
-              "position": "lying in bed"
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 2",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 3",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
             },
             "grounding_score": 0.85
           }
@@ -92,7 +92,7 @@
           {
             "name": "monitoring",
             "attributes": {
-              "technique": "viewing vital signs on a monitor",
+              "technique": "viewing vital signs on monitor",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -108,10 +108,10 @@
             "grounding_score": 0.85
           },
           {
-            "name": "hospital beds",
+            "name": "hospital bed",
             "attributes": {
               "usage": "patient care",
-              "position": "multiple beds in the room"
+              "position": "center of room"
             },
             "grounding_score": 0.85
           }
@@ -128,15 +128,15 @@
         ],
         "relationships": [
           {
-            "subject": "healthcare provider",
+            "subject": "physician",
             "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "healthcare providers",
-            "relation": "working in proximity",
-            "object": "each other",
+            "subject": "physician",
+            "relation": "viewing",
+            "object": "monitor",
             "grounding_score": 0.75
           }
         ]
@@ -149,15 +149,15 @@
           {
             "name": "hospital room",
             "attributes": {
-              "location": "indoor hospital setting",
-              "appearance": "multiple hospital beds"
+              "location": "indoor",
+              "appearance": "medical setting with beds and equipment"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "healthcare provider",
+            "name": "physician",
             "attributes": {
               "actions": "viewing monitor",
               "position": "standing beside bed"
@@ -165,26 +165,26 @@
             "grounding_score": 0.85
           },
           {
-            "name": "healthcare provider",
-            "attributes": {
-              "actions": "",
-              "position": "in background, beside another bed"
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "healthcare provider",
-            "attributes": {
-              "actions": "",
-              "position": "in background, beside another bed"
-            },
-            "grounding_score": 0.85
-          },
-          {
             "name": "patient",
             "attributes": {
               "actions": "",
-              "position": "lying in bed"
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 2",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 3",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
             },
             "grounding_score": 0.85
           }
@@ -193,7 +193,7 @@
           {
             "name": "monitoring",
             "attributes": {
-              "technique": "viewing vital signs on a monitor",
+              "technique": "viewing vital signs on monitor",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -209,10 +209,10 @@
             "grounding_score": 0.85
           },
           {
-            "name": "hospital beds",
+            "name": "hospital bed",
             "attributes": {
               "usage": "patient care",
-              "position": "multiple beds in the room"
+              "position": "center of room"
             },
             "grounding_score": 0.85
           }
@@ -229,15 +229,15 @@
         ],
         "relationships": [
           {
-            "subject": "healthcare provider",
+            "subject": "physician",
             "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "healthcare providers",
-            "relation": "working in proximity",
-            "object": "each other",
+            "subject": "physician",
+            "relation": "viewing",
+            "object": "monitor",
             "grounding_score": 0.75
           }
         ]
@@ -248,18 +248,18 @@
         "found": false,
         "nodes": [],
         "edges": [],
-        "image_caption": "Setting: hospital_room. People: physician, patient, healthcare_workers. Activities: monitoring. Equipment: monitor, hospital_bed",
+        "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker 2, healthcare worker 3. Activities: monitoring. Equipment: monitor, hospital bed",
         "caption_based": true
       },
       "traversal_strategy": "equipment_verification",
-      "image_caption": "Setting: hospital_room. People: physician, patient, healthcare_workers. Activities: monitoring. Equipment: monitor, hospital_bed"
+      "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker 2, healthcare worker 3. Activities: monitoring. Equipment: monitor, hospital bed"
     }
   },
   "metrics": {
-    "bleu": 0.04005124657156684,
-    "rouge": 0.18749999999999997,
-    "sent": 0.7380889654159546,
-    "ent": 0.0014285700162872672,
+    "bleu": 0.04123445224391067,
+    "rouge": 0.18181818181818182,
+    "sent": 0.7785345315933228,
+    "ent": 0.08259166777133942,
     "clip_c": 0.0
   },
   "reference_answer": "Yes this is an ICU set-up as there are multiple monitors to mitor the patient continuously."

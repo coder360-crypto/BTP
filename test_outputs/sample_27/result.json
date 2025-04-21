@@ -1,17 +1,17 @@
 {
   "question": "Is the vaccination being administered correctly?",
-  "answer": "The context does not contain information about whether the vaccination is being administered correctly. \n\nWhat is visible in the image: A healthcare worker is administering a vaccination to a patient in a vaccination room. The healthcare worker is using a syringe. There is also a fan present.",
+  "answer": "The context does not contain information about the correctness of the vaccination administration. \n\nWhat is visible in the image: A vaccination is being administered in a room (vaccination_room) by a healthcare worker to a patient. The equipment visible includes a syringe and a fan.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.006410121917724609,
+    "question_analysis": 0.007838964462280273,
     "roi_detection": 0,
-    "concept_extraction": 3.1961731910705566,
-    "grounding_check": 0.00010204315185546875,
-    "graph_construction": 0.2296738624572754,
-    "graph_traversal": 2.1203134059906006,
-    "answer_synthesis": 2.463496208190918,
-    "total": 8.016918897628784
+    "concept_extraction": 3.27492356300354,
+    "grounding_check": 8.368492126464844e-05,
+    "graph_construction": 0.22437453269958496,
+    "graph_traversal": 2.139350414276123,
+    "answer_synthesis": 1.5359456539154053,
+    "total": 7.183396100997925
   },
   "interim_results": {
     "question_analysis": {
@@ -240,11 +240,11 @@
     }
   },
   "metrics": {
-    "bleu": 0.08834423196128216,
-    "rouge": 0.22222222222222224,
-    "sent": 0.6320390701293945,
-    "ent": 0.25486621260643005,
-    "clip_c": 0.4840601986822116
+    "bleu": 0.07323823389305682,
+    "rouge": 0.20253164556962028,
+    "sent": 0.5654127597808838,
+    "ent": 0.9361776113510132,
+    "clip_c": 0.47668338136590904
   },
   "reference_answer": "Yes the vaccination is proper. The site is deltoid muscle on the left shoulder, the router of injection is intramuscular. The healthcare worker has taken proper precaution by wearing gloves, mask and head-cap."
 }

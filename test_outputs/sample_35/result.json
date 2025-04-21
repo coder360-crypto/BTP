@@ -1,17 +1,17 @@
 {
   "question": "Is the patient dressed suitably for medical assessment?",
-  "answer": "The context does not contain information about the patient's clothing. \n\nWhat is visible in the image: The patient is in an ambulance, and someone is wrapping their head, possibly with gauze or mesh. The patient is on a stretcher. \n\nNo information is available to assess if the patient is dressed suitably for medical assessment.",
+  "answer": "The context does not contain information about the patient's attire. What is visible in the image is not described in the provided context. \n\nHowever, based on the context provided, it can be stated that the patient is in an ambulance and is on a stretcher, receiving medical attention (bandaging) for head injuries. \n\nTherefore, the question about the patient's attire cannot be answered based on the provided context.",
   "question_type": "general",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0075914859771728516,
+    "question_analysis": 0.007138729095458984,
     "roi_detection": 0,
-    "concept_extraction": 3.960995674133301,
-    "grounding_check": 6.651878356933594e-05,
-    "graph_construction": 0.22893285751342773,
-    "graph_traversal": 2.738173007965088,
-    "answer_synthesis": 1.5132887363433838,
-    "total": 8.451910257339478
+    "concept_extraction": 4.056219816207886,
+    "grounding_check": 4.649162292480469e-05,
+    "graph_construction": 0.21965742111206055,
+    "graph_traversal": 1.8036670684814453,
+    "answer_synthesis": 1.5490498542785645,
+    "total": 7.638422966003418
   },
   "interim_results": {
     "question_analysis": {
@@ -118,10 +118,10 @@
             "grounding_score": 0.8
           },
           {
-            "name": "bandaged head",
+            "name": "bandage",
             "attributes": {
-              "significance": "indicative of head injury",
-              "appearance": "wrapped in gauze or mesh"
+              "significance": "covering injury",
+              "appearance": "on patient's head"
             },
             "grounding_score": 0.8
           }
@@ -219,10 +219,10 @@
             "grounding_score": 0.8
           },
           {
-            "name": "bandaged head",
+            "name": "bandage",
             "attributes": {
-              "significance": "indicative of head injury",
-              "appearance": "wrapped in gauze or mesh"
+              "significance": "covering injury",
+              "appearance": "on patient's head"
             },
             "grounding_score": 0.8
           }
@@ -254,7 +254,7 @@
           ],
           "relation_types": []
         },
-        "image_caption": "Setting: ambulance. People: Patient, Bystander. Activities: head wrapping. Equipment: stretcher, gauze or mesh",
+        "image_caption": "Setting: ambulance. People: patient, bystander or healthcare provider. Activities: bandaging. Equipment: stretcher, gauze or mesh, orange stretcher or divider",
         "scene_elements": {
           "image": [
             {
@@ -272,15 +272,15 @@
         "graph_patterns": []
       },
       "traversal_strategy": "reasoning_traversal",
-      "image_caption": "Setting: ambulance. People: Patient, Bystander. Activities: head wrapping. Equipment: stretcher, gauze or mesh"
+      "image_caption": "Setting: ambulance. People: patient, bystander or healthcare provider. Activities: bandaging. Equipment: stretcher, gauze or mesh, orange stretcher or divider"
     }
   },
   "metrics": {
-    "bleu": 0.03863856830850772,
-    "rouge": 0.16666666666666669,
-    "sent": 0.6529203653335571,
-    "ent": 0.2739637494087219,
-    "clip_c": 0.5097009122378343
+    "bleu": 0.037486203184339956,
+    "rouge": 0.16326530612244897,
+    "sent": 0.645033597946167,
+    "ent": 0.6194368004798889,
+    "clip_c": 0.0
   },
   "reference_answer": "The patient seems to be unconcious and is in hospital, and ideally his regular clothing should be changed, and injured body parts exposed, to ascertain the level of injury."
 }

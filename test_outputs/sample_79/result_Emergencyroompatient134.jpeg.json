@@ -1,17 +1,17 @@
 {
   "question": "Is the PPE kit worn correctly by the healthcare worker?",
-  "answer": "There is not enough information to answer the question. \n\nThe context does not mention PPE (Personal Protective Equipment) or describe the attire of the healthcare workers in detail, so it is not possible to determine if a PPE kit is being worn correctly or at all. \n\nThe context only mentions a hospital room setting with a physician, patient, and two other healthcare workers, along with some equipment, but does not provide specifics about their clothing or PPE.",
+  "answer": "There is no information in the provided context to determine if a PPE kit is present or being worn, let alone if it is worn correctly by a healthcare worker. The context only mentions a hospital room setting with various individuals and equipment but does not specify PPE usage.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.007893085479736328,
+    "question_analysis": 0.013127326965332031,
     "roi_detection": 0,
-    "concept_extraction": 3.551112651824951,
-    "grounding_check": 7.843971252441406e-05,
-    "graph_construction": 0.246842622756958,
-    "graph_traversal": 2.2954635620117188,
-    "answer_synthesis": 1.5656051635742188,
-    "total": 7.66797661781311
+    "concept_extraction": 3.280921697616577,
+    "grounding_check": 5.7220458984375e-05,
+    "graph_construction": 0.22355389595031738,
+    "graph_traversal": 2.3903160095214844,
+    "answer_synthesis": 1.5000309944152832,
+    "total": 7.408962965011597
   },
   "interim_results": {
     "question_analysis": {
@@ -46,18 +46,18 @@
           {
             "name": "hospital room",
             "attributes": {
-              "location": "indoor hospital setting",
-              "appearance": "multiple hospital beds, medical equipment, and sterile environment"
+              "location": "indoor",
+              "appearance": "medical setting with beds and equipment"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "healthcare provider",
+            "name": "physician",
             "attributes": {
-              "actions": "reviewing patient data on a monitor",
-              "position": "standing beside a hospital bed"
+              "actions": "viewing monitor",
+              "position": "standing beside bed"
             },
             "grounding_score": 0.85
           },
@@ -65,24 +65,32 @@
             "name": "patient",
             "attributes": {
               "actions": "",
-              "position": "lying on a hospital bed"
+              "position": "lying on bed"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "healthcare providers",
+            "name": "healthcare worker 2",
             "attributes": {
               "actions": "",
-              "position": "standing or sitting near another hospital bed in the background"
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 3",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "patient monitoring",
+            "name": "monitoring",
             "attributes": {
-              "technique": "reviewing vital signs or medical data on a monitor",
+              "technique": "viewing vital signs on monitor",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -90,51 +98,43 @@
         ],
         "equipment": [
           {
+            "name": "monitor",
+            "attributes": {
+              "usage": "displaying vital signs",
+              "position": "mounted on wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
             "name": "hospital bed",
             "attributes": {
               "usage": "patient care",
-              "position": "center of the room"
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "medical monitor",
-            "attributes": {
-              "usage": "displaying patient data",
-              "position": "mounted on a wall or bedside console"
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "personal protective equipment (PPE)",
-            "attributes": {
-              "usage": "infection control",
-              "position": "worn by healthcare providers"
+              "position": "center of room"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "patient vital signs",
+            "name": "vital signs",
             "attributes": {
-              "significance": "monitoring patient condition",
-              "appearance": "displayed on a monitor"
+              "significance": "monitoring patient's condition",
+              "appearance": "displayed on monitor"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "healthcare provider",
+            "subject": "physician",
             "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "healthcare providers",
-            "relation": "interacting with",
-            "object": "medical equipment",
+            "subject": "healthcare worker 2",
+            "relation": "assisting",
+            "object": "healthcare worker 3",
             "grounding_score": 0.75
           }
         ]
@@ -147,18 +147,18 @@
           {
             "name": "hospital room",
             "attributes": {
-              "location": "indoor hospital setting",
-              "appearance": "multiple hospital beds, medical equipment, and sterile environment"
+              "location": "indoor",
+              "appearance": "medical setting with beds and equipment"
             },
             "grounding_score": 0.85
           }
         ],
         "personnel": [
           {
-            "name": "healthcare provider",
+            "name": "physician",
             "attributes": {
-              "actions": "reviewing patient data on a monitor",
-              "position": "standing beside a hospital bed"
+              "actions": "viewing monitor",
+              "position": "standing beside bed"
             },
             "grounding_score": 0.85
           },
@@ -166,24 +166,32 @@
             "name": "patient",
             "attributes": {
               "actions": "",
-              "position": "lying on a hospital bed"
+              "position": "lying on bed"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "healthcare providers",
+            "name": "healthcare worker 2",
             "attributes": {
               "actions": "",
-              "position": "standing or sitting near another hospital bed in the background"
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 3",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
             },
             "grounding_score": 0.85
           }
         ],
         "procedures": [
           {
-            "name": "patient monitoring",
+            "name": "monitoring",
             "attributes": {
-              "technique": "reviewing vital signs or medical data on a monitor",
+              "technique": "viewing vital signs on monitor",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -191,51 +199,43 @@
         ],
         "equipment": [
           {
+            "name": "monitor",
+            "attributes": {
+              "usage": "displaying vital signs",
+              "position": "mounted on wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
             "name": "hospital bed",
             "attributes": {
               "usage": "patient care",
-              "position": "center of the room"
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "medical monitor",
-            "attributes": {
-              "usage": "displaying patient data",
-              "position": "mounted on a wall or bedside console"
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "personal protective equipment (PPE)",
-            "attributes": {
-              "usage": "infection control",
-              "position": "worn by healthcare providers"
+              "position": "center of room"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
-            "name": "patient vital signs",
+            "name": "vital signs",
             "attributes": {
-              "significance": "monitoring patient condition",
-              "appearance": "displayed on a monitor"
+              "significance": "monitoring patient's condition",
+              "appearance": "displayed on monitor"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "healthcare provider",
+            "subject": "physician",
             "relation": "attending to",
             "object": "patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "healthcare providers",
-            "relation": "interacting with",
-            "object": "medical equipment",
+            "subject": "healthcare worker 2",
+            "relation": "assisting",
+            "object": "healthcare worker 3",
             "grounding_score": 0.75
           }
         ]

@@ -1,0 +1,224 @@
+{
+  "question": "Is the patient wearing the face mask properly?",
+  "answer": "There is no information provided about how the patient is wearing the oxygen mask. The context only mentions that the patient is wearing an oxygen mask, but it does not specify if it is being worn properly. \n\nVisible in the image: A patient, an oxygen mask, a hospital bed, and an IV line.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007676362991333008,
+    "roi_detection": 0,
+    "concept_extraction": 4.093816518783569,
+    "grounding_check": 7.462501525878906e-05,
+    "graph_construction": 0.23269248008728027,
+    "graph_traversal": 1.3103463649749756,
+    "answer_synthesis": 1.599703311920166,
+    "total": 7.245251655578613
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [
+          "face"
+        ],
+        "clinical_findings": [],
+        "equipment": [
+          "mask"
+        ],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          600,
+          337
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "blurred background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on a hospital bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "oxygen mask",
+            "attributes": {
+              "usage": "respiratory support",
+              "position": "on patient's face"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV line",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "on patient's arm"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "oxygen therapy",
+            "attributes": {
+              "significance": "respiratory support",
+              "appearance": "oxygen mask and tubing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving treatment",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "wearing",
+            "object": "oxygen mask",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "IV line",
+            "relation": "attached to",
+            "object": "patient's arm",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "blurred background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on a hospital bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "oxygen mask",
+            "attributes": {
+              "usage": "respiratory support",
+              "position": "on patient's face"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV line",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "on patient's arm"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "oxygen therapy",
+            "attributes": {
+              "significance": "respiratory support",
+              "appearance": "oxygen mask and tubing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving treatment",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "wearing",
+            "object": "oxygen mask",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "IV line",
+            "relation": "attached to",
+            "object": "patient's arm",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: patient. Equipment: oxygen mask, hospital bed, IV line"
+    }
+  }
+}

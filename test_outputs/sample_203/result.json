@@ -1,0 +1,270 @@
+{
+  "question": "Do the medical staff in the picture have on the correct PPE kit?",
+  "answer": "There is not enough information to determine if the medical staff have on the correct PPE kit. \n\nThe image caption does not mention personal protective equipment (PPE) or describe the attire of the medical staff. What is visible in the image, based on the caption, are a physician, nurse, and healthcare worker providing patient care in a hospital room with a hospital bed, medical monitor, and ultrasound machine.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.01102137565612793,
+    "roi_detection": 0,
+    "concept_extraction": 2.7939159870147705,
+    "grounding_check": 6.890296936035156e-05,
+    "graph_construction": 0.2556498050689697,
+    "graph_traversal": 3.1366968154907227,
+    "answer_synthesis": 1.7723054885864258,
+    "total": 7.9720847606658936
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [
+          "ppe"
+        ],
+        "procedure": [
+          "correct"
+        ],
+        "setting": [
+          "staff"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1260,
+          720
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical equipment and white walls"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "standing beside bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "standing beside bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "standing beside bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient care",
+            "attributes": {
+              "technique": "unknown",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient support",
+              "position": "center of room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "wall-mounted"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical device with screen",
+            "attributes": {
+              "usage": "unknown",
+              "position": "wall-mounted"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving care",
+              "appearance": "partially covered by blanket"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare providers",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving care from",
+            "object": "healthcare providers",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical equipment and white walls"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "standing beside bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "standing beside bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "standing beside bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient care",
+            "attributes": {
+              "technique": "unknown",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient support",
+              "position": "center of room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "wall-mounted"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical device with screen",
+            "attributes": {
+              "usage": "unknown",
+              "position": "wall-mounted"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving care",
+              "appearance": "partially covered by blanket"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare providers",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving care from",
+            "object": "healthcare providers",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: physician, nurse, healthcare worker. Activities: patient care. Equipment: hospital bed, medical monitor, ultrasound machine"
+    }
+  },
+  "metrics": {
+    "bleu": 0.028317962187141728,
+    "rouge": 0.07792207792207792,
+    "sent": 0.8340702652931213,
+    "ent": 0.9914141297340393,
+    "clip_c": 0.0
+  },
+  "reference_answer": "Yes the healthcare worker is wearing proper PPE kit."
+}

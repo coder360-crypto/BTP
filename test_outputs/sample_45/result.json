@@ -1,17 +1,17 @@
 {
   "question": "Why hasn't intubation been performed on this critically injured patient?",
-  "answer": "The context does not contain information about the patient's airway status or the reason for not performing intubation. \n\nWhat is visible in the image is a patient, a healthcare provider, a hospital bed, and bloodstained sheets in a trauma bay setting.",
+  "answer": "The context does not contain the information needed to answer why intubation hasn't been performed on this critically injured patient. \n\nThis is what is visible in the image: a patient and a healthcare provider are present in a hospital setting with a hospital bed and bloodstained gauze.",
   "question_type": "patient_status",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.008520841598510742,
+    "question_analysis": 0.00840306282043457,
     "roi_detection": 0,
-    "concept_extraction": 3.204137086868286,
-    "grounding_check": 4.863739013671875e-05,
-    "graph_construction": 0.21231484413146973,
-    "graph_traversal": 2.1239354610443115,
-    "answer_synthesis": 2.466616153717041,
-    "total": 8.016724824905396
+    "concept_extraction": 3.1461257934570312,
+    "grounding_check": 7.82012939453125e-05,
+    "graph_construction": 0.2137765884399414,
+    "graph_traversal": 2.131798028945923,
+    "answer_synthesis": 2.5202887058258057,
+    "total": 8.021614789962769
   },
   "interim_results": {
     "question_analysis": {
@@ -98,7 +98,7 @@
             "name": "head wound",
             "attributes": {
               "significance": "apparent trauma",
-              "appearance": "bleeding"
+              "appearance": "bleeding and bandaged"
             },
             "grounding_score": 0.8
           }
@@ -168,7 +168,7 @@
             "name": "head wound",
             "attributes": {
               "significance": "apparent trauma",
-              "appearance": "bleeding"
+              "appearance": "bleeding and bandaged"
             },
             "grounding_score": 0.8
           }
@@ -188,19 +188,19 @@
         "found": false,
         "nodes": [],
         "edges": [],
-        "image_caption": "Setting: trauma_bay. People: patient, healthcare_provider. Equipment: hospital_bed, bloodstained_sheets",
+        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze",
         "caption_based": true
       },
       "traversal_strategy": "condition_assessment",
-      "image_caption": "Setting: trauma_bay. People: patient, healthcare_provider. Equipment: hospital_bed, bloodstained_sheets"
+      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze"
     }
   },
   "metrics": {
-    "bleu": 0.04153883134217091,
-    "rouge": 0.17142857142857143,
-    "sent": 0.383906751871109,
-    "ent": 0.8438481688499451,
-    "clip_c": 0.4947497440170023
+    "bleu": 0.04098061364198572,
+    "rouge": 0.15789473684210525,
+    "sent": 0.4386158883571625,
+    "ent": 0.18664588034152985,
+    "clip_c": 0.49287996374423665
   },
   "reference_answer": "The patient has suffered a critical head injury, and is most likely in the red-triaged zone (non-salvageable) category, and hence on lower priority for medical attention."
 }

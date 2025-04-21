@@ -1,17 +1,17 @@
 {
   "question": "What is this picture depicting?",
-  "answer": "Based on the provided context, this picture appears to be depicting an outdoor medical facility where a healthcare worker is conducting a swab test on a patient. \n\nThe visible elements in the image include a healthcare worker, a patient, and medical equipment such as protective gear and a swab. \n\nNo further details can be confirmed beyond what is stated in the context.",
+  "answer": "Based on the provided context, this picture appears to be depicting an outdoor medical facility where a healthcare worker is conducting a nasal swab test on a patient. \n\nThe visible elements in the image include a healthcare worker, a patient, and medical equipment such as protective gear and a swab.",
   "question_type": "descriptive",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.00597071647644043,
+    "question_analysis": 0.006679058074951172,
     "roi_detection": 0,
-    "concept_extraction": 3.5204217433929443,
-    "grounding_check": 5.269050598144531e-05,
-    "graph_construction": 0.21942567825317383,
-    "graph_traversal": 2.4463398456573486,
-    "answer_synthesis": 1.6077072620391846,
-    "total": 7.802347421646118
+    "concept_extraction": 3.3900136947631836,
+    "grounding_check": 6.461143493652344e-05,
+    "graph_construction": 0.22784805297851562,
+    "graph_traversal": 2.606048107147217,
+    "answer_synthesis": 1.4916455745697021,
+    "total": 7.724530458450317
   },
   "interim_results": {
     "question_analysis": {
@@ -72,9 +72,9 @@
         ],
         "procedures": [
           {
-            "name": "Swab Test",
+            "name": "Nasal Swab Test",
             "attributes": {
-              "technique": "nasal swabbing",
+              "technique": "inserting swab into patient's nostril",
               "stage": "in progress"
             },
             "grounding_score": 0.8
@@ -92,7 +92,7 @@
           {
             "name": "Swab",
             "attributes": {
-              "usage": "medical tool",
+              "usage": "medical tool for sample collection",
               "position": "held by healthcare worker"
             },
             "grounding_score": 0.85
@@ -151,9 +151,9 @@
         ],
         "procedures": [
           {
-            "name": "Swab Test",
+            "name": "Nasal Swab Test",
             "attributes": {
-              "technique": "nasal swabbing",
+              "technique": "inserting swab into patient's nostril",
               "stage": "in progress"
             },
             "grounding_score": 0.8
@@ -171,7 +171,7 @@
           {
             "name": "Swab",
             "attributes": {
-              "usage": "medical tool",
+              "usage": "medical tool for sample collection",
               "position": "held by healthcare worker"
             },
             "grounding_score": 0.85
@@ -208,7 +208,7 @@
           ],
           "relation_types": []
         },
-        "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Swab Test. Equipment: Protective Gear, Swab",
+        "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Nasal Swab Test. Equipment: Protective Gear, Swab",
         "scene_elements": {
           "image": [
             {
@@ -226,7 +226,7 @@
         "graph_patterns": []
       },
       "traversal_strategy": "reasoning_traversal",
-      "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Swab Test. Equipment: Protective Gear, Swab"
+      "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Nasal Swab Test. Equipment: Protective Gear, Swab"
     }
   }
 }

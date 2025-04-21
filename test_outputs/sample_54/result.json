@@ -4,14 +4,14 @@
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.009105920791625977,
+    "question_analysis": 0.007815122604370117,
     "roi_detection": 0,
-    "concept_extraction": 3.6627628803253174,
-    "grounding_check": 5.7220458984375e-05,
-    "graph_construction": 0.22435855865478516,
-    "graph_traversal": 2.9788601398468018,
-    "answer_synthesis": 1.4830446243286133,
-    "total": 8.361761331558228
+    "concept_extraction": 2.995196580886841,
+    "grounding_check": 6.771087646484375e-05,
+    "graph_construction": 0.23044538497924805,
+    "graph_traversal": 2.8853631019592285,
+    "answer_synthesis": 1.5403430461883545,
+    "total": 7.662171125411987
   },
   "interim_results": {
     "question_analysis": {
@@ -48,8 +48,8 @@
           {
             "name": "hospital room",
             "attributes": {
-              "location": "indoor",
-              "appearance": "medical"
+              "location": "indoor hospital setting",
+              "appearance": "medical equipment and hospital beds"
             },
             "grounding_score": 0.85
           }
@@ -58,16 +58,16 @@
           {
             "name": "healthcare provider 1",
             "attributes": {
-              "actions": "standing",
-              "position": "left side of the bed"
+              "actions": "standing, holding a paper",
+              "position": "left side of the room"
             },
             "grounding_score": 0.85
           },
           {
             "name": "healthcare provider 2",
             "attributes": {
-              "actions": "attending to patient",
-              "position": "right side of the bed"
+              "actions": "attending to a patient",
+              "position": "beside the patient bed"
             },
             "grounding_score": 0.85
           }
@@ -76,7 +76,7 @@
           {
             "name": "patient care",
             "attributes": {
-              "technique": "attending to patient",
+              "technique": "using medical equipment",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -86,41 +86,57 @@
           {
             "name": "IV pole",
             "attributes": {
-              "usage": "medication administration",
-              "position": "near the bed"
+              "usage": "administering medication or fluids",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "monitor",
+            "name": "hospital bed",
             "attributes": {
-              "usage": "patient monitoring",
-              "position": "near the bed"
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient vital signs",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving medical care",
+              "appearance": "lying on a hospital bed"
+            },
+            "grounding_score": 0.8
+          },
+          {
             "name": "electrodes",
             "attributes": {
-              "significance": "ECG monitoring",
-              "appearance": "on patient's chest"
+              "significance": "monitoring patient vital signs",
+              "appearance": "attached to the patient's chest"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "healthcare provider 1",
-            "relation": "near",
-            "object": "healthcare provider 2",
-            "grounding_score": 0.75
-          },
-          {
             "subject": "healthcare provider 2",
             "relation": "attending to",
             "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare provider 1",
+            "relation": "near",
+            "object": "healthcare provider 2",
             "grounding_score": 0.75
           }
         ]
@@ -133,8 +149,8 @@
           {
             "name": "hospital room",
             "attributes": {
-              "location": "indoor",
-              "appearance": "medical"
+              "location": "indoor hospital setting",
+              "appearance": "medical equipment and hospital beds"
             },
             "grounding_score": 0.85
           }
@@ -143,16 +159,16 @@
           {
             "name": "healthcare provider 1",
             "attributes": {
-              "actions": "standing",
-              "position": "left side of the bed"
+              "actions": "standing, holding a paper",
+              "position": "left side of the room"
             },
             "grounding_score": 0.85
           },
           {
             "name": "healthcare provider 2",
             "attributes": {
-              "actions": "attending to patient",
-              "position": "right side of the bed"
+              "actions": "attending to a patient",
+              "position": "beside the patient bed"
             },
             "grounding_score": 0.85
           }
@@ -161,7 +177,7 @@
           {
             "name": "patient care",
             "attributes": {
-              "technique": "attending to patient",
+              "technique": "using medical equipment",
               "stage": "ongoing"
             },
             "grounding_score": 0.8
@@ -171,41 +187,57 @@
           {
             "name": "IV pole",
             "attributes": {
-              "usage": "medication administration",
-              "position": "near the bed"
+              "usage": "administering medication or fluids",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "monitor",
+            "name": "hospital bed",
             "attributes": {
-              "usage": "patient monitoring",
-              "position": "near the bed"
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient vital signs",
+              "position": "near the patient bed"
             },
             "grounding_score": 0.85
           }
         ],
         "clinical_elements": [
           {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving medical care",
+              "appearance": "lying on a hospital bed"
+            },
+            "grounding_score": 0.8
+          },
+          {
             "name": "electrodes",
             "attributes": {
-              "significance": "ECG monitoring",
-              "appearance": "on patient's chest"
+              "significance": "monitoring patient vital signs",
+              "appearance": "attached to the patient's chest"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "healthcare provider 1",
-            "relation": "near",
-            "object": "healthcare provider 2",
-            "grounding_score": 0.75
-          },
-          {
             "subject": "healthcare provider 2",
             "relation": "attending to",
             "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare provider 1",
+            "relation": "near",
+            "object": "healthcare provider 2",
             "grounding_score": 0.75
           }
         ]

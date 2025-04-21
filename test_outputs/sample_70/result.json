@@ -1,17 +1,17 @@
 {
   "question": "Is the medicine in the syringe pump correctly prepared?",
-  "answer": "There is not enough information to determine if the medicine in the syringe pump is correctly prepared.\n\nVisible in the image: A hospital room setting with a patient and an infusion pump in use. No specific details about the preparation of the medicine are visible.",
+  "answer": "The context does not contain information about the preparation of the medicine in the syringe pump. \n\nWhat is visible in the image: A hospital room with a patient undergoing infusion using an infusion pump.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.007785797119140625,
+    "question_analysis": 0.007850408554077148,
     "roi_detection": 0,
-    "concept_extraction": 2.8931925296783447,
-    "grounding_check": 5.0067901611328125e-05,
-    "graph_construction": 0.24702167510986328,
-    "graph_traversal": 2.6312406063079834,
-    "answer_synthesis": 1.4733359813690186,
-    "total": 7.259211301803589
+    "concept_extraction": 3.706031322479248,
+    "grounding_check": 4.7206878662109375e-05,
+    "graph_construction": 0.22119808197021484,
+    "graph_traversal": 3.030686616897583,
+    "answer_synthesis": 1.4203517436981201,
+    "total": 8.392782211303711
   },
   "interim_results": {
     "question_analysis": {
@@ -19,8 +19,8 @@
         "anatomical": [],
         "clinical_findings": [],
         "equipment": [
-          "syringe",
-          "pump"
+          "pump",
+          "syringe"
         ],
         "procedure": [],
         "setting": [],
@@ -195,11 +195,11 @@
     }
   },
   "metrics": {
-    "bleu": 0.06259507408252064,
-    "rouge": 0.19354838709677416,
-    "sent": 0.6407515406608582,
-    "ent": 0.19188278913497925,
-    "clip_c": 0.5601510954089445
+    "bleu": 0.0779674285590839,
+    "rouge": 0.23529411764705885,
+    "sent": 0.644762396812439,
+    "ent": 0.9148305058479309,
+    "clip_c": 0.5698628090798178
   },
   "reference_answer": "Yes the syringe pump has the syringe containing medicine which is proper attached to the syringe pump."
 }

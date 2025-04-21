@@ -1,0 +1,274 @@
+{
+  "question": "Is this patient being carefully monitored for critical health issues?",
+  "answer": "Error generating answer: Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-scout-17b-16e-instruct` in organization `org_01hwmq8x1qeafam9vgdprsmxxy` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m23.928s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.01002812385559082,
+    "roi_detection": 0,
+    "concept_extraction": 62.803200006484985,
+    "grounding_check": 6.175041198730469e-05,
+    "graph_construction": 0.2533283233642578,
+    "graph_traversal": 0.6791610717773438,
+    "answer_synthesis": 0.3319666385650635,
+    "total": 64.07916188240051
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          628,
+          440
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "white walls and dark floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "sitting",
+              "position": "beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on a bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "against the wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV poles",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near the beds"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitors",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "on the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "IV fluids",
+            "attributes": {
+              "significance": "intravenous therapy",
+              "appearance": "hanging from IV poles"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "lying on",
+            "object": "bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "IV pole",
+            "relation": "near",
+            "object": "bed",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "white walls and dark floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "sitting",
+              "position": "beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying down",
+              "position": "on a bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "against the wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV poles",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near the beds"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitors",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "on the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "IV fluids",
+            "attributes": {
+              "significance": "intravenous therapy",
+              "appearance": "hanging from IV poles"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "lying on",
+            "object": "bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "IV pole",
+            "relation": "near",
+            "object": "bed",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": []
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": null
+    }
+  },
+  "metrics": {
+    "bleu": 0,
+    "rouge": 0.024691358024691357,
+    "sent": 0.04620121791958809,
+    "ent": 0.7561612725257874,
+    "clip_c": 0.0
+  },
+  "reference_answer": "Yes this patient looks sick and is being monitored using a multi-parametric monitor."
+}

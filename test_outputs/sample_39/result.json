@@ -4,14 +4,14 @@
   "question_type": "patient_status",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.0069239139556884766,
+    "question_analysis": 0.006471395492553711,
     "roi_detection": 0,
-    "concept_extraction": 3.1700236797332764,
-    "grounding_check": 6.389617919921875e-05,
-    "graph_construction": 0.22794818878173828,
-    "graph_traversal": 2.0993659496307373,
-    "answer_synthesis": 2.483318567276001,
-    "total": 7.988735198974609
+    "concept_extraction": 3.1310434341430664,
+    "grounding_check": 0.0001163482666015625,
+    "graph_construction": 0.2171797752380371,
+    "graph_traversal": 2.113621950149536,
+    "answer_synthesis": 2.5129308700561523,
+    "total": 7.9825599193573
   },
   "interim_results": {
     "question_analysis": {
@@ -77,16 +77,8 @@
           {
             "name": "hospital bed",
             "attributes": {
-              "usage": "",
-              "position": ""
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "bloodstained gauze",
-            "attributes": {
-              "usage": "wound dressing",
-              "position": "on patient's head"
+              "usage": "patient care",
+              "position": "center of image"
             },
             "grounding_score": 0.85
           }
@@ -95,8 +87,8 @@
           {
             "name": "head wound",
             "attributes": {
-              "significance": "bleeding",
-              "appearance": "large and bloody"
+              "significance": "severe injury",
+              "appearance": "bloodied and bandaged"
             },
             "grounding_score": 0.8
           }
@@ -104,14 +96,8 @@
         "relationships": [
           {
             "subject": "patient",
-            "relation": "has",
-            "object": "head wound",
-            "grounding_score": 0.75
-          },
-          {
-            "subject": "patient",
-            "relation": "on",
-            "object": "hospital bed",
+            "relation": "receiving care from",
+            "object": "healthcare provider",
             "grounding_score": 0.75
           }
         ]
@@ -153,16 +139,8 @@
           {
             "name": "hospital bed",
             "attributes": {
-              "usage": "",
-              "position": ""
-            },
-            "grounding_score": 0.85
-          },
-          {
-            "name": "bloodstained gauze",
-            "attributes": {
-              "usage": "wound dressing",
-              "position": "on patient's head"
+              "usage": "patient care",
+              "position": "center of image"
             },
             "grounding_score": 0.85
           }
@@ -171,8 +149,8 @@
           {
             "name": "head wound",
             "attributes": {
-              "significance": "bleeding",
-              "appearance": "large and bloody"
+              "significance": "severe injury",
+              "appearance": "bloodied and bandaged"
             },
             "grounding_score": 0.8
           }
@@ -180,14 +158,8 @@
         "relationships": [
           {
             "subject": "patient",
-            "relation": "has",
-            "object": "head wound",
-            "grounding_score": 0.75
-          },
-          {
-            "subject": "patient",
-            "relation": "on",
-            "object": "hospital bed",
+            "relation": "receiving care from",
+            "object": "healthcare provider",
             "grounding_score": 0.75
           }
         ]

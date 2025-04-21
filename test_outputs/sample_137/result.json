@@ -1,0 +1,234 @@
+{
+  "question": "Is this a critical care unit?",
+  "answer": "Based on the provided context, it cannot be confirmed if this is a critical care unit. \n\nWhat is visible in the image is a hospital room with a patient, another patient, a family member or visitor, a hospital bed, and an IV pole.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.012263059616088867,
+    "roi_detection": 0,
+    "concept_extraction": 3.659391164779663,
+    "grounding_check": 4.863739013671875e-05,
+    "graph_construction": 0.23028850555419922,
+    "graph_traversal": 2.580005168914795,
+    "answer_synthesis": 1.6743133068084717,
+    "total": 8.157474756240845
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "unit"
+        ],
+        "other_medical": [
+          "this"
+        ]
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          650,
+          400
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "multiple beds, brown and white walls, posters on the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed",
+              "position": "on bed 55"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed",
+              "position": "on another bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "family member/visitor",
+            "attributes": {
+              "actions": "sitting or standing",
+              "position": "near the beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room, labeled 55"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near the patient's bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "IV bag",
+            "attributes": {
+              "significance": "likely administering medication or fluids",
+              "appearance": "hanging from IV pole"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient on bed 55",
+            "relation": "near",
+            "object": "IV pole",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "family members",
+            "relation": "near",
+            "object": "patients",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "multiple beds, brown and white walls, posters on the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed",
+              "position": "on bed 55"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on bed",
+              "position": "on another bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "family member/visitor",
+            "attributes": {
+              "actions": "sitting or standing",
+              "position": "near the beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room, labeled 55"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "intravenous therapy",
+              "position": "near the patient's bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "IV bag",
+            "attributes": {
+              "significance": "likely administering medication or fluids",
+              "appearance": "hanging from IV pole"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient on bed 55",
+            "relation": "near",
+            "object": "IV pole",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "family members",
+            "relation": "near",
+            "object": "patients",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital room. People: patient, patient, family member/visitor. Equipment: hospital bed, IV pole",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital room. People: patient, patient, family member/visitor. Equipment: hospital bed, IV pole"
+    }
+  },
+  "metrics": {
+    "bleu": 0.02991139003637336,
+    "rouge": 0.13793103448275862,
+    "sent": 0.5737179517745972,
+    "ent": 0.05436218902468681,
+    "clip_c": 0.5324808258006619
+  },
+  "reference_answer": "No this is not an ICU setup. This is ward for stable non-critical patients"
+}

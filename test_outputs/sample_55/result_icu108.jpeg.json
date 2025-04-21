@@ -1,17 +1,17 @@
 {
   "question": "Does the healthcare worker have appropriate safety equipment on?",
-  "answer": "Based on the provided context, it is not possible to determine if the healthcare worker has appropriate safety equipment on. The context only mentions general equipment such as an IV pole, hospital bed, and medical monitor, but does not specify any personal protective equipment (PPE) or safety gear being worn by the healthcare workers.",
+  "answer": "Based on the provided context, it is not possible to determine if the healthcare worker has appropriate safety equipment on. The context only mentions general equipment such as an IV pole, hospital bed, and medical monitor, but does not provide information about personal protective equipment (PPE) or safety gear worn by the healthcare workers. \n\nWhat is visible in the image: A hospital room with a healthcare provider1, healthcare provider2, an IV pole, a hospital bed, and a medical monitor.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.008614063262939453,
+    "question_analysis": 0.009232521057128906,
     "roi_detection": 0,
-    "concept_extraction": 4.070596218109131,
-    "grounding_check": 6.866455078125e-05,
-    "graph_construction": 0.2411813735961914,
-    "graph_traversal": 1.7210206985473633,
-    "answer_synthesis": 1.4855499267578125,
-    "total": 7.530023574829102
+    "concept_extraction": 3.944685220718384,
+    "grounding_check": 6.29425048828125e-05,
+    "graph_construction": 0.23243355751037598,
+    "graph_traversal": 2.8941233158111572,
+    "answer_synthesis": 1.551919937133789,
+    "total": 8.635677814483643
   },
   "interim_results": {
     "question_analysis": {

@@ -1,0 +1,250 @@
+{
+  "question": "Is the patient critical?",
+  "answer": "The context does not contain the information needed to determine if the patient is critical. \n\nWhat is visible in the image: \n- The setting is a hospital room.\n- There is one patient.\n- Oxygen administration is being performed.\n- Equipment present includes a hospital bed, an oxygen delivery device, and a fetal monitoring device.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.005479574203491211,
+    "roi_detection": 0,
+    "concept_extraction": 2.8959803581237793,
+    "grounding_check": 8.058547973632812e-05,
+    "graph_construction": 0.23917484283447266,
+    "graph_traversal": 2.854342460632324,
+    "answer_synthesis": 1.6870930194854736,
+    "total": 7.683761119842529
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          600,
+          450
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "likely a hospital maternity ward or labor and delivery room",
+              "appearance": "dimly lit, with mauve-colored walls and medical equipment mounted on the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on a hospital bed, holding an oxygen mask to her face",
+              "position": "supine on the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "oxygen administration",
+            "attributes": {
+              "technique": "nasal cannula or oxygen mask",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "oxygen delivery device",
+            "attributes": {
+              "usage": "administering oxygen",
+              "position": "near the patient's face"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": " fetal monitoring device",
+            "attributes": {
+              "usage": "monitoring fetal heart rate",
+              "position": "on the patient's abdomen"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "pregnant abdomen",
+            "attributes": {
+              "significance": "indicative of pregnancy",
+              "appearance": "exposed, with a fetal monitoring device attached"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "tattoo",
+            "attributes": {
+              "significance": "possible identification or personal expression",
+              "appearance": "on the patient's arm"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving care",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "fetal monitoring device",
+            "relation": "attached to",
+            "object": "patient's abdomen",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "likely a hospital maternity ward or labor and delivery room",
+              "appearance": "dimly lit, with mauve-colored walls and medical equipment mounted on the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on a hospital bed, holding an oxygen mask to her face",
+              "position": "supine on the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "oxygen administration",
+            "attributes": {
+              "technique": "nasal cannula or oxygen mask",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "oxygen delivery device",
+            "attributes": {
+              "usage": "administering oxygen",
+              "position": "near the patient's face"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": " fetal monitoring device",
+            "attributes": {
+              "usage": "monitoring fetal heart rate",
+              "position": "on the patient's abdomen"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "pregnant abdomen",
+            "attributes": {
+              "significance": "indicative of pregnancy",
+              "appearance": "exposed, with a fetal monitoring device attached"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "tattoo",
+            "attributes": {
+              "significance": "possible identification or personal expression",
+              "appearance": "on the patient's arm"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving care",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "fetal monitoring device",
+            "relation": "attached to",
+            "object": "patient's abdomen",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital room. People: patient. Activities: oxygen administration. Equipment: hospital bed, oxygen delivery device,  fetal monitoring device",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital room. People: patient. Activities: oxygen administration. Equipment: hospital bed, oxygen delivery device,  fetal monitoring device"
+    }
+  },
+  "metrics": {
+    "bleu": 0.05413808123302197,
+    "rouge": 0.22535211267605632,
+    "sent": 0.4505341649055481,
+    "ent": 0.06900933384895325,
+    "clip_c": 0.4926989303021113
+  },
+  "reference_answer": "No the patient is pregnant, and the vitals of the fetus is continously being monitored using a portable CTG machine."
+}

@@ -1,17 +1,17 @@
 {
   "question": "Is the head injury critical?",
-  "answer": "The context does not contain enough information to determine if the head injury is critical. \n\nWhat is visible in the image is a patient on a hospital bed with a healthcare provider, and there is bloodstained gauze present.",
+  "answer": "The context does not contain information about the severity of the head injury. \n\nWhat is visible in the image: A patient and a healthcare provider are present in a hospital setting with a hospital bed. No detailed medical information or specifics about an injury are provided.",
   "question_type": "patient_status",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.00679779052734375,
+    "question_analysis": 0.007279634475708008,
     "roi_detection": 0,
-    "concept_extraction": 3.1352386474609375,
-    "grounding_check": 5.173683166503906e-05,
-    "graph_construction": 0.22129440307617188,
-    "graph_traversal": 2.107916831970215,
-    "answer_synthesis": 2.6643102169036865,
-    "total": 8.136724948883057
+    "concept_extraction": 3.2939958572387695,
+    "grounding_check": 6.175041198730469e-05,
+    "graph_construction": 0.21744441986083984,
+    "graph_traversal": 2.083176612854004,
+    "answer_synthesis": 2.5029683113098145,
+    "total": 8.10614800453186
   },
   "interim_results": {
     "question_analysis": {
@@ -187,11 +187,11 @@
         "found": false,
         "nodes": [],
         "edges": [],
-        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze",
+        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed",
         "caption_based": true
       },
       "traversal_strategy": "condition_assessment",
-      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, bloodstained gauze"
+      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed"
     }
   }
 }

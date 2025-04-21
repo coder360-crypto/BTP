@@ -1,17 +1,17 @@
 {
   "question": "Is the syringe accurately placed within the syringe pump?",
-  "answer": "The context does not contain information about the placement of a syringe within a syringe pump. \n\nWhat is visible in the image: A hospital room with a patient and an infusion pump.",
+  "answer": "The context does not contain information about the placement of a syringe within a syringe pump. \n\nWhat is visible in the image: A hospital room setting with a patient, an infusion activity taking place, and an infusion pump is present.",
   "question_type": "setting",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.008299827575683594,
+    "question_analysis": 0.007287263870239258,
     "roi_detection": 0,
-    "concept_extraction": 3.5847327709198,
-    "grounding_check": 6.246566772460938e-05,
-    "graph_construction": 0.21916842460632324,
-    "graph_traversal": 2.532618284225464,
-    "answer_synthesis": 1.4095697402954102,
-    "total": 7.761088132858276
+    "concept_extraction": 3.71621036529541,
+    "grounding_check": 6.985664367675781e-05,
+    "graph_construction": 0.22750186920166016,
+    "graph_traversal": 2.716968059539795,
+    "answer_synthesis": 1.4937775135040283,
+    "total": 8.168294906616211
   },
   "interim_results": {
     "question_analysis": {
@@ -19,8 +19,8 @@
         "anatomical": [],
         "clinical_findings": [],
         "equipment": [
-          "syringe",
-          "pump"
+          "pump",
+          "syringe"
         ],
         "procedure": [],
         "setting": [],
@@ -48,7 +48,7 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor",
-              "appearance": "blurry"
+              "appearance": "blurred"
             },
             "grounding_score": 0.85
           }
@@ -77,7 +77,7 @@
           {
             "name": "infusion pump",
             "attributes": {
-              "usage": "medication administration",
+              "usage": "medication delivery",
               "position": "on the bed"
             },
             "grounding_score": 0.85
@@ -87,7 +87,7 @@
           {
             "name": "IV lines",
             "attributes": {
-              "significance": "medication delivery",
+              "significance": "medication administration",
               "appearance": "multiple tubes"
             },
             "grounding_score": 0.8
@@ -96,8 +96,14 @@
         "relationships": [
           {
             "subject": "infusion pump",
-            "relation": "next to",
+            "relation": "connected to",
             "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving",
+            "object": "infusion",
             "grounding_score": 0.75
           }
         ]
@@ -111,7 +117,7 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor",
-              "appearance": "blurry"
+              "appearance": "blurred"
             },
             "grounding_score": 0.85
           }
@@ -140,7 +146,7 @@
           {
             "name": "infusion pump",
             "attributes": {
-              "usage": "medication administration",
+              "usage": "medication delivery",
               "position": "on the bed"
             },
             "grounding_score": 0.85
@@ -150,7 +156,7 @@
           {
             "name": "IV lines",
             "attributes": {
-              "significance": "medication delivery",
+              "significance": "medication administration",
               "appearance": "multiple tubes"
             },
             "grounding_score": 0.8
@@ -159,8 +165,14 @@
         "relationships": [
           {
             "subject": "infusion pump",
-            "relation": "next to",
+            "relation": "connected to",
             "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving",
+            "object": "infusion",
             "grounding_score": 0.75
           }
         ]
@@ -171,19 +183,19 @@
         "found": false,
         "nodes": [],
         "edges": [],
-        "image_caption": "Setting: hospital room. People: patient. Equipment: infusion pump",
+        "image_caption": "Setting: hospital room. People: patient. Activities: infusion. Equipment: infusion pump",
         "caption_based": true
       },
       "traversal_strategy": "location_identification",
-      "image_caption": "Setting: hospital room. People: patient. Equipment: infusion pump"
+      "image_caption": "Setting: hospital room. People: patient. Activities: infusion. Equipment: infusion pump"
     }
   },
   "metrics": {
-    "bleu": 0.05353201579550682,
-    "rouge": 0.24489795918367344,
-    "sent": 0.6210141181945801,
-    "ent": 0.9593364000320435,
-    "clip_c": 0.5690437583055705
+    "bleu": 0.04554042545737577,
+    "rouge": 0.21052631578947367,
+    "sent": 0.6004002094268799,
+    "ent": 0.7941190004348755,
+    "clip_c": 0.5702657515804737
   },
   "reference_answer": "Yes the syringe pump has the syringe containing medicine which is proper attached to the syringe pump."
 }

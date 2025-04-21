@@ -1,17 +1,17 @@
 {
   "question": "Does the collection of a naso-pharyngeal swab require the patient to extend her tongue?",
-  "answer": "No information is provided in the context that indicates the patient needs to extend her tongue for the collection of a naso-pharyngeal swab. What is visible in the image is a healthcare worker and a patient in an outdoor medical facility setting, with the healthcare worker presumably collecting a nasal swab test from the patient. However, the specific action of the patient extending her tongue is not mentioned or implied in the provided context.",
+  "answer": "No information is provided in the context that indicates the patient needs to extend her tongue for the collection of a naso-pharyngeal swab. \n\nWhat is visible in the image: A healthcare worker and a patient are present in an outdoor medical facility, and the healthcare worker is performing a nasal swab test on the patient.",
   "question_type": "general",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.010735273361206055,
+    "question_analysis": 0.010652542114257812,
     "roi_detection": 0,
-    "concept_extraction": 3.454719066619873,
-    "grounding_check": 6.771087646484375e-05,
-    "graph_construction": 0.22261667251586914,
-    "graph_traversal": 2.49985671043396,
-    "answer_synthesis": 1.530282735824585,
-    "total": 7.720298767089844
+    "concept_extraction": 3.458063840866089,
+    "grounding_check": 0.00011014938354492188,
+    "graph_construction": 0.22531771659851074,
+    "graph_traversal": 2.7386040687561035,
+    "answer_synthesis": 1.5809640884399414,
+    "total": 8.015755891799927
   },
   "interim_results": {
     "question_analysis": {
@@ -71,7 +71,7 @@
             "name": "Patient",
             "attributes": {
               "actions": "sitting, reacting",
-              "position": "seated, mouth open"
+              "position": "seated on a chair"
             },
             "grounding_score": 0.85
           }
@@ -80,7 +80,7 @@
           {
             "name": "Nasal Swab Test",
             "attributes": {
-              "technique": "inserting swab into patient's nostril",
+              "technique": "inserting a swab into the patient's nostril",
               "stage": "in progress"
             },
             "grounding_score": 0.8
@@ -90,7 +90,7 @@
           {
             "name": "Protective Gear",
             "attributes": {
-              "usage": "personal protective equipment",
+              "usage": "personal protective equipment for healthcare worker",
               "position": "worn by healthcare worker"
             },
             "grounding_score": 0.85
@@ -109,7 +109,7 @@
             "name": "Patient's Reaction",
             "attributes": {
               "significance": "indicative of discomfort or distress",
-              "appearance": "hands raised, mouth open"
+              "appearance": "patient appears to be reacting to the procedure"
             },
             "grounding_score": 0.8
           }
@@ -150,7 +150,7 @@
             "name": "Patient",
             "attributes": {
               "actions": "sitting, reacting",
-              "position": "seated, mouth open"
+              "position": "seated on a chair"
             },
             "grounding_score": 0.85
           }
@@ -159,7 +159,7 @@
           {
             "name": "Nasal Swab Test",
             "attributes": {
-              "technique": "inserting swab into patient's nostril",
+              "technique": "inserting a swab into the patient's nostril",
               "stage": "in progress"
             },
             "grounding_score": 0.8
@@ -169,7 +169,7 @@
           {
             "name": "Protective Gear",
             "attributes": {
-              "usage": "personal protective equipment",
+              "usage": "personal protective equipment for healthcare worker",
               "position": "worn by healthcare worker"
             },
             "grounding_score": 0.85
@@ -188,7 +188,7 @@
             "name": "Patient's Reaction",
             "attributes": {
               "significance": "indicative of discomfort or distress",
-              "appearance": "hands raised, mouth open"
+              "appearance": "patient appears to be reacting to the procedure"
             },
             "grounding_score": 0.8
           }
@@ -236,11 +236,11 @@
     }
   },
   "metrics": {
-    "bleu": 0.03595719693721448,
-    "rouge": 0.1839080459770115,
-    "sent": 0.698493242263794,
-    "ent": 0.006922505795955658,
-    "clip_c": 0.0
+    "bleu": 0.04054400046437589,
+    "rouge": 0.23529411764705882,
+    "sent": 0.7211982011795044,
+    "ent": 0.22385787963867188,
+    "clip_c": 0.5537009080905301
   },
   "reference_answer": "No tongue protrusion is not required for collection of naso-pharyngeal swab."
 }

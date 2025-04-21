@@ -1,17 +1,17 @@
 {
   "question": "Is the current setup of the syringe accurate?",
-  "answer": "There is not enough information to determine if the current setup of the syringe is accurate. \n\nThe context mentions an infusion pump and infusion activity, but does not provide details about a syringe or its setup. \n\nWhat is visible in the context is a hospital room setting with a patient undergoing infusion using an infusion pump.",
+  "answer": "The context does not contain information about a syringe or its setup. \n\nWhat is visible in the image: A hospital room with a patient undergoing infusion using an infusion pump.",
   "question_type": "equipment",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.008536577224731445,
+    "question_analysis": 0.00835728645324707,
     "roi_detection": 0,
-    "concept_extraction": 3.77982759475708,
-    "grounding_check": 6.628036499023438e-05,
-    "graph_construction": 0.2244887351989746,
-    "graph_traversal": 2.6260149478912354,
-    "answer_synthesis": 1.6854357719421387,
-    "total": 8.330854415893555
+    "concept_extraction": 3.77640700340271,
+    "grounding_check": 6.890296936035156e-05,
+    "graph_construction": 0.2222278118133545,
+    "graph_traversal": 2.654956102371216,
+    "answer_synthesis": 1.4551632404327393,
+    "total": 8.123671531677246
   },
   "interim_results": {
     "question_analysis": {
@@ -49,7 +49,7 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor",
-              "appearance": "blurry"
+              "appearance": "blurred"
             },
             "grounding_score": 0.85
           }
@@ -103,8 +103,8 @@
           },
           {
             "subject": "patient",
-            "relation": "lying on",
-            "object": "bed",
+            "relation": "receiving",
+            "object": "infusion",
             "grounding_score": 0.75
           }
         ]
@@ -118,7 +118,7 @@
             "name": "hospital room",
             "attributes": {
               "location": "indoor",
-              "appearance": "blurry"
+              "appearance": "blurred"
             },
             "grounding_score": 0.85
           }
@@ -172,8 +172,8 @@
           },
           {
             "subject": "patient",
-            "relation": "lying on",
-            "object": "bed",
+            "relation": "receiving",
+            "object": "infusion",
             "grounding_score": 0.75
           }
         ]

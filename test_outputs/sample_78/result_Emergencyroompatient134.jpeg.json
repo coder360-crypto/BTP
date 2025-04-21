@@ -1,17 +1,17 @@
 {
   "question": "Has the healthcare worker donned the PPE suit correctly?",
-  "answer": "There is not enough information to answer the question. The context does not mention or describe the healthcare worker wearing a PPE suit. What is visible in the image is a hospital room with a physician, a patient, and a healthcare worker, who are engaged in monitoring activities, and there is a monitor and a bed present.",
+  "answer": "There is not enough information to answer the question. \n\nThe context does not mention or describe the healthcare worker wearing a PPE suit. What is visible in the image is a hospital room with a physician, a patient, and two other healthcare workers, but no information about PPE is provided.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.009093999862670898,
+    "question_analysis": 0.008289813995361328,
     "roi_detection": 0,
-    "concept_extraction": 3.320660352706909,
-    "grounding_check": 5.841255187988281e-05,
-    "graph_construction": 0.2356431484222412,
-    "graph_traversal": 2.2816312313079834,
-    "answer_synthesis": 1.519378900527954,
-    "total": 7.367441654205322
+    "concept_extraction": 3.3411777019500732,
+    "grounding_check": 4.839897155761719e-05,
+    "graph_construction": 0.2305588722229004,
+    "graph_traversal": 2.3510050773620605,
+    "answer_synthesis": 1.5112714767456055,
+    "total": 7.443231582641602
   },
   "interim_results": {
     "question_analysis": {
@@ -139,7 +139,7 @@
           },
           {
             "subject": "healthcare worker 2",
-            "relation": "near",
+            "relation": "in proximity to",
             "object": "healthcare worker 3",
             "grounding_score": 0.75
           }
@@ -246,7 +246,7 @@
           },
           {
             "subject": "healthcare worker 2",
-            "relation": "near",
+            "relation": "in proximity to",
             "object": "healthcare worker 3",
             "grounding_score": 0.75
           }
@@ -264,7 +264,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker. Activities: monitoring. Equipment: monitor, bed"
+      "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker 2, healthcare worker 3. Activities: monitoring. Equipment: monitor, hospital bed"
     }
   }
 }

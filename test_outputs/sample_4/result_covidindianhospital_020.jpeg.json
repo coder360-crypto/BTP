@@ -1,17 +1,17 @@
 {
   "question": "Is the facility adequate?",
-  "answer": "Based on the provided context, it is not possible to determine if the facility is adequate. \n\nVisible in the image are: \n- A COVID-19 testing site \n- Multiple healthcare workers and patients \n- Swab testing activities \n- Personal Protective Equipment (PPE) \n- Swab collection tools \n- Blue chairs \n\nNo information is available about the facility's overall adequacy.",
+  "answer": "Based on the provided context, it is not possible to determine if the facility is adequate. \n\nVisible in the image are: \n- A COVID-19 testing site \n- A healthcare worker and a patient \n- Swab testing activity \n- Personal Protective Equipment (PPE) \n- Swab collection tools \n- Blue chairs \n\nNo information is available about the facility's overall adequacy.",
   "question_type": "procedural",
   "roi_detection_enabled": false,
   "execution_times": {
-    "question_analysis": 0.00775456428527832,
+    "question_analysis": 0.006999492645263672,
     "roi_detection": 0,
-    "concept_extraction": 2.0718226432800293,
-    "grounding_check": 6.031990051269531e-05,
-    "graph_construction": 0.2358260154724121,
-    "graph_traversal": 1.9614007472991943,
-    "answer_synthesis": 0.45539331436157227,
-    "total": 4.733854055404663
+    "concept_extraction": 2.0771095752716064,
+    "grounding_check": 5.936622619628906e-05,
+    "graph_construction": 0.2316606044769287,
+    "graph_traversal": 1.6829545497894287,
+    "answer_synthesis": 0.4345436096191406,
+    "total": 4.434836149215698
   },
   "interim_results": {
     "question_analysis": {
@@ -54,50 +54,50 @@
         ],
         "personnel": [
           {
-            "name": "Healthcare Worker 1",
+            "name": "Healthcare worker",
             "attributes": {
-              "actions": "Collecting swab sample",
-              "position": "Standing next to seated patient on the left"
+              "actions": "Collecting swab samples",
+              "position": "Standing, wearing PPE"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "Healthcare Worker 2",
+            "name": "Healthcare worker",
             "attributes": {
-              "actions": "Collecting swab sample",
-              "position": "Standing next to seated patient in the middle"
+              "actions": "Collecting swab samples",
+              "position": "Standing, wearing PPE"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "Healthcare Worker 3",
+            "name": "Healthcare worker",
             "attributes": {
-              "actions": "Preparing or holding equipment",
-              "position": "Standing next to seated patient on the right"
+              "actions": "Collecting swab samples",
+              "position": "Standing, wearing PPE"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "Patient 1",
+            "name": "Patient",
             "attributes": {
               "actions": "Receiving swab test",
-              "position": "Seated on the left"
+              "position": "Sitting in a blue chair"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "Patient 2",
+            "name": "Patient",
             "attributes": {
               "actions": "Receiving swab test",
-              "position": "Seated in the middle"
+              "position": "Sitting in a blue chair"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "Patient 3",
+            "name": "Patient",
             "attributes": {
               "actions": "Receiving swab test",
-              "position": "Seated on the right"
+              "position": "Sitting in a blue chair"
             },
             "grounding_score": 0.85
           }
@@ -106,8 +106,8 @@
           {
             "name": "Swab testing",
             "attributes": {
-              "technique": "Nasopharyngeal swabbing",
-              "stage": "Active sampling"
+              "technique": "Nasopharyngeal swab",
+              "stage": "Active testing"
             },
             "grounding_score": 0.8
           }
@@ -116,7 +116,7 @@
           {
             "name": "Personal Protective Equipment (PPE)",
             "attributes": {
-              "usage": "Protecting healthcare workers from potential infection",
+              "usage": "Protecting against COVID-19",
               "position": "Worn by healthcare workers"
             },
             "grounding_score": 0.85
@@ -124,7 +124,7 @@
           {
             "name": "Swab collection tools",
             "attributes": {
-              "usage": "Collecting patient samples",
+              "usage": "Collecting samples",
               "position": "Held by healthcare workers"
             },
             "grounding_score": 0.85
@@ -133,15 +133,23 @@
             "name": "Blue chairs",
             "attributes": {
               "usage": "Seating for patients",
-              "position": "Placed under patients"
+              "position": "Placed around the testing area"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Table",
+            "attributes": {
+              "usage": "Holding supplies",
+              "position": "Behind the patients"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Hand sanitizer or disinfectant",
             "attributes": {
-              "usage": "Hygiene and infection control",
-              "position": "On the table behind the patients"
+              "usage": "Disinfecting",
+              "position": "On the table"
             },
             "grounding_score": 0.85
           }
@@ -150,37 +158,37 @@
           {
             "name": "Face masks",
             "attributes": {
-              "significance": "Infection control and prevention",
+              "significance": "Preventing transmission",
               "appearance": "Worn by patients and healthcare workers"
             },
             "grounding_score": 0.8
           },
           {
-            "name": "Protective suits",
+            "name": "Swab samples",
             "attributes": {
-              "significance": "Protective gear against infectious agents",
-              "appearance": "Worn by healthcare workers"
+              "significance": "Diagnostic testing",
+              "appearance": "Being collected"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "Healthcare Worker 1",
+            "subject": "Healthcare worker",
             "relation": "interacting with",
-            "object": "Patient 1",
+            "object": "Patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "Healthcare Worker 2",
-            "relation": "interacting with",
-            "object": "Patient 2",
+            "subject": "Patient",
+            "relation": "sitting in",
+            "object": "Blue chair",
             "grounding_score": 0.75
           },
           {
-            "subject": "Healthcare Worker 3",
-            "relation": "interacting with",
-            "object": "Patient 3",
+            "subject": "Healthcare worker",
+            "relation": "standing near",
+            "object": "Table with supplies",
             "grounding_score": 0.75
           }
         ]
@@ -201,50 +209,50 @@
         ],
         "personnel": [
           {
-            "name": "Healthcare Worker 1",
+            "name": "Healthcare worker",
             "attributes": {
-              "actions": "Collecting swab sample",
-              "position": "Standing next to seated patient on the left"
+              "actions": "Collecting swab samples",
+              "position": "Standing, wearing PPE"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "Healthcare Worker 2",
+            "name": "Healthcare worker",
             "attributes": {
-              "actions": "Collecting swab sample",
-              "position": "Standing next to seated patient in the middle"
+              "actions": "Collecting swab samples",
+              "position": "Standing, wearing PPE"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "Healthcare Worker 3",
+            "name": "Healthcare worker",
             "attributes": {
-              "actions": "Preparing or holding equipment",
-              "position": "Standing next to seated patient on the right"
+              "actions": "Collecting swab samples",
+              "position": "Standing, wearing PPE"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "Patient 1",
+            "name": "Patient",
             "attributes": {
               "actions": "Receiving swab test",
-              "position": "Seated on the left"
+              "position": "Sitting in a blue chair"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "Patient 2",
+            "name": "Patient",
             "attributes": {
               "actions": "Receiving swab test",
-              "position": "Seated in the middle"
+              "position": "Sitting in a blue chair"
             },
             "grounding_score": 0.85
           },
           {
-            "name": "Patient 3",
+            "name": "Patient",
             "attributes": {
               "actions": "Receiving swab test",
-              "position": "Seated on the right"
+              "position": "Sitting in a blue chair"
             },
             "grounding_score": 0.85
           }
@@ -253,8 +261,8 @@
           {
             "name": "Swab testing",
             "attributes": {
-              "technique": "Nasopharyngeal swabbing",
-              "stage": "Active sampling"
+              "technique": "Nasopharyngeal swab",
+              "stage": "Active testing"
             },
             "grounding_score": 0.8
           }
@@ -263,7 +271,7 @@
           {
             "name": "Personal Protective Equipment (PPE)",
             "attributes": {
-              "usage": "Protecting healthcare workers from potential infection",
+              "usage": "Protecting against COVID-19",
               "position": "Worn by healthcare workers"
             },
             "grounding_score": 0.85
@@ -271,7 +279,7 @@
           {
             "name": "Swab collection tools",
             "attributes": {
-              "usage": "Collecting patient samples",
+              "usage": "Collecting samples",
               "position": "Held by healthcare workers"
             },
             "grounding_score": 0.85
@@ -280,15 +288,23 @@
             "name": "Blue chairs",
             "attributes": {
               "usage": "Seating for patients",
-              "position": "Placed under patients"
+              "position": "Placed around the testing area"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Table",
+            "attributes": {
+              "usage": "Holding supplies",
+              "position": "Behind the patients"
             },
             "grounding_score": 0.85
           },
           {
             "name": "Hand sanitizer or disinfectant",
             "attributes": {
-              "usage": "Hygiene and infection control",
-              "position": "On the table behind the patients"
+              "usage": "Disinfecting",
+              "position": "On the table"
             },
             "grounding_score": 0.85
           }
@@ -297,37 +313,37 @@
           {
             "name": "Face masks",
             "attributes": {
-              "significance": "Infection control and prevention",
+              "significance": "Preventing transmission",
               "appearance": "Worn by patients and healthcare workers"
             },
             "grounding_score": 0.8
           },
           {
-            "name": "Protective suits",
+            "name": "Swab samples",
             "attributes": {
-              "significance": "Protective gear against infectious agents",
-              "appearance": "Worn by healthcare workers"
+              "significance": "Diagnostic testing",
+              "appearance": "Being collected"
             },
             "grounding_score": 0.8
           }
         ],
         "relationships": [
           {
-            "subject": "Healthcare Worker 1",
+            "subject": "Healthcare worker",
             "relation": "interacting with",
-            "object": "Patient 1",
+            "object": "Patient",
             "grounding_score": 0.75
           },
           {
-            "subject": "Healthcare Worker 2",
-            "relation": "interacting with",
-            "object": "Patient 2",
+            "subject": "Patient",
+            "relation": "sitting in",
+            "object": "Blue chair",
             "grounding_score": 0.75
           },
           {
-            "subject": "Healthcare Worker 3",
-            "relation": "interacting with",
-            "object": "Patient 3",
+            "subject": "Healthcare worker",
+            "relation": "standing near",
+            "object": "Table with supplies",
             "grounding_score": 0.75
           }
         ]
@@ -344,7 +360,7 @@
         "key_relationships": []
       },
       "traversal_strategy": "procedure_evaluation",
-      "image_caption": "Setting: COVID-19 testing site. People: Healthcare worker, Healthcare worker, Healthcare worker, Patient, Patient, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools, Blue chairs"
+      "image_caption": "Setting: COVID-19 testing site. People: Healthcare Worker, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools, Blue chairs"
     }
   }
 }

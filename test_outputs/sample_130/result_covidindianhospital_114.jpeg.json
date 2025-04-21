@@ -1,0 +1,257 @@
+{
+  "question": "Has the intramuscular shot been administered at the right location?",
+  "answer": "The context does not contain information about the location of the intramuscular shot administration. \n\nWhat is visible in the image: A vaccination room with a healthcare worker(s) administering a vaccination to a patient using a syringe. Other equipment present includes a tablet and a biohazard bin. \n\nTherefore, it is not possible to determine if the intramuscular shot has been administered at the right location based on the provided context.",
+  "question_type": "setting",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.010151386260986328,
+    "roi_detection": 0,
+    "concept_extraction": 3.3648061752319336,
+    "grounding_check": 7.176399230957031e-05,
+    "graph_construction": 0.24387383460998535,
+    "graph_traversal": 5.305399179458618,
+    "answer_synthesis": 2.674509048461914,
+    "total": 11.602520942687988
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [],
+        "other_medical": [
+          "the right location",
+          "the intramuscular shot"
+        ]
+      },
+      "question_type": "setting",
+      "traversal_strategy": "location_identification",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1200,
+          900
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "vaccination_room",
+            "attributes": {
+              "location": "hospital or clinic",
+              "appearance": "a room with tiled walls and signs in a foreign language"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker_1",
+            "attributes": {
+              "actions": "administering a vaccine",
+              "position": "left of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker_2",
+            "attributes": {
+              "actions": "recording information",
+              "position": "right of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "center"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccination",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering vaccine",
+              "position": "in healthcare worker 1's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "tablet",
+            "attributes": {
+              "usage": "recording information",
+              "position": "in healthcare worker 2's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "biohazard_bin",
+            "attributes": {
+              "usage": "disposing of medical waste",
+              "position": "on the floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "vaccine",
+            "attributes": {
+              "significance": "COVID-19 vaccine",
+              "appearance": "not clearly visible"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker_1",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare_worker_2",
+            "relation": "recording information for",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "vaccination_room",
+            "attributes": {
+              "location": "hospital or clinic",
+              "appearance": "a room with tiled walls and signs in a foreign language"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker_1",
+            "attributes": {
+              "actions": "administering a vaccine",
+              "position": "left of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker_2",
+            "attributes": {
+              "actions": "recording information",
+              "position": "right of the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "center"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccination",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering vaccine",
+              "position": "in healthcare worker 1's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "tablet",
+            "attributes": {
+              "usage": "recording information",
+              "position": "in healthcare worker 2's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "biohazard_bin",
+            "attributes": {
+              "usage": "disposing of medical waste",
+              "position": "on the floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "vaccine",
+            "attributes": {
+              "significance": "COVID-19 vaccine",
+              "appearance": "not clearly visible"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker_1",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare_worker_2",
+            "relation": "recording information for",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: vaccination_room. People: healthcare_worker_1, healthcare_worker_2, patient. Activities: vaccination. Equipment: syringe, tablet, biohazard_bin",
+        "caption_based": true
+      },
+      "traversal_strategy": "location_identification",
+      "image_caption": "Setting: vaccination_room. People: healthcare_worker_1, healthcare_worker_2, patient. Activities: vaccination. Equipment: syringe, tablet, biohazard_bin"
+    }
+  }
+}

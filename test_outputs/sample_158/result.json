@@ -1,0 +1,209 @@
+{
+  "question": "Is the way the injection is given appropriate?",
+  "answer": "The context does not contain information about the appropriateness of the way the injection is given. \n\nWhat is visible in the image: \n- The setting is indoors.\n- A healthcare provider and a patient are present.\n- An injection is being given.\n- A syringe is being used. \n\nNo further information is available to assess the appropriateness of the injection method.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007744789123535156,
+    "roi_detection": 0,
+    "concept_extraction": 3.755117893218994,
+    "grounding_check": 4.9114227294921875e-05,
+    "graph_construction": 0.21738052368164062,
+    "graph_traversal": 2.559765577316284,
+    "answer_synthesis": 1.737403392791748,
+    "total": 8.27891230583191
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "injection",
+          "appropriate"
+        ],
+        "setting": [],
+        "other_medical": [
+          "the way"
+        ]
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          700,
+          525
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "Indoor Setting",
+            "attributes": {
+              "location": "possibly a hospital or clinic",
+              "appearance": "wood-paneled walls and a large window"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "Healthcare Provider",
+            "attributes": {
+              "actions": "administering an injection",
+              "position": "standing"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Patient",
+            "attributes": {
+              "actions": "",
+              "position": "seated"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "Injection",
+            "attributes": {
+              "technique": "intramuscular or subcutaneous",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "Syringe",
+            "attributes": {
+              "usage": "administering medication or vaccine",
+              "position": "in the healthcare provider's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "Mask",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "white with red straps"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "Healthcare Provider",
+            "relation": "treating",
+            "object": "Patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "Indoor Setting",
+            "attributes": {
+              "location": "possibly a hospital or clinic",
+              "appearance": "wood-paneled walls and a large window"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "Healthcare Provider",
+            "attributes": {
+              "actions": "administering an injection",
+              "position": "standing"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Patient",
+            "attributes": {
+              "actions": "",
+              "position": "seated"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "Injection",
+            "attributes": {
+              "technique": "intramuscular or subcutaneous",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "Syringe",
+            "attributes": {
+              "usage": "administering medication or vaccine",
+              "position": "in the healthcare provider's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "Mask",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "white with red straps"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "Healthcare Provider",
+            "relation": "treating",
+            "object": "Patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: Indoor Setting. People: Healthcare Provider, Patient. Activities: Injection. Equipment: Syringe"
+    }
+  },
+  "metrics": {
+    "bleu": 0.02773388605178954,
+    "rouge": 0.18666666666666665,
+    "sent": 0.5962684154510498,
+    "ent": 0.040448758751153946,
+    "clip_c": 0.4950778287897118
+  },
+  "reference_answer": "Yes the technique of intramuscular injection is proper, hower the healthcare personnel should wear gloves, while adminstering injection"
+}
