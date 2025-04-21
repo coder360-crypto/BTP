@@ -1,0 +1,194 @@
+{
+  "question": "Is the patient's condition serious?",
+  "answer": "The context does not contain enough information to determine if the patient's condition is serious. \n\nWhat is visible in the image: \n- The scene is set in an ambulance.\n- A patient and a bystander are present.\n- A stretcher and a bandage are visible.\n\nNo further information is available to assess the seriousness of the patient's condition.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.0059583187103271484,
+    "roi_detection": 0,
+    "concept_extraction": 3.4666552543640137,
+    "grounding_check": 4.76837158203125e-05,
+    "graph_construction": 0.2200934886932373,
+    "graph_traversal": 2.6333651542663574,
+    "answer_synthesis": 1.477083683013916,
+    "total": 7.805842161178589
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          714,
+          1019
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "ambulance",
+            "attributes": {
+              "location": "moving or stationary",
+              "appearance": "interior with medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on stretcher",
+              "position": "supine on stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bystander",
+            "attributes": {
+              "actions": "sitting and holding phone",
+              "position": "beside the stretcher"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "stretcher",
+            "attributes": {
+              "usage": "supporting patient",
+              "position": "center of image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bandage",
+            "attributes": {
+              "usage": "covering head and face",
+              "position": "on patient's head and face"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "blood",
+            "attributes": {
+              "significance": "visible on patient's clothing and bandage",
+              "appearance": "red staining"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "next to",
+            "object": "bystander",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "ambulance",
+            "attributes": {
+              "location": "moving or stationary",
+              "appearance": "interior with medical equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on stretcher",
+              "position": "supine on stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bystander",
+            "attributes": {
+              "actions": "sitting and holding phone",
+              "position": "beside the stretcher"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "stretcher",
+            "attributes": {
+              "usage": "supporting patient",
+              "position": "center of image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bandage",
+            "attributes": {
+              "usage": "covering head and face",
+              "position": "on patient's head and face"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "blood",
+            "attributes": {
+              "significance": "visible on patient's clothing and bandage",
+              "appearance": "red staining"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "next to",
+            "object": "bystander",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: ambulance. People: patient, bystander. Equipment: stretcher, bandage",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: ambulance. People: patient, bystander. Equipment: stretcher, bandage"
+    }
+  }
+}

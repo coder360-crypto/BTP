@@ -1,0 +1,259 @@
+{
+  "question": "Does the healthcare worker have appropriate safety equipment on?",
+  "answer": "Based on the provided context, it is not possible to determine if the healthcare worker has appropriate safety equipment on. The context only mentions general equipment such as an IV pole, hospital bed, and medical monitor, but does not specify any personal protective equipment (PPE) or safety gear being worn by the healthcare workers.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.008614063262939453,
+    "roi_detection": 0,
+    "concept_extraction": 4.070596218109131,
+    "grounding_check": 6.866455078125e-05,
+    "graph_construction": 0.2411813735961914,
+    "graph_traversal": 1.7210206985473633,
+    "answer_synthesis": 1.4855499267578125,
+    "total": 7.530023574829102
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "safety",
+          "appropriate"
+        ],
+        "setting": [],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1200,
+          800
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "medical equipment and hospital beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider 1",
+            "attributes": {
+              "actions": "standing, holding a paper",
+              "position": "left side of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider 2",
+            "attributes": {
+              "actions": "attending to a patient",
+              "position": "beside the patient bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient care",
+            "attributes": {
+              "technique": "using medical equipment",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "administering medication or fluids",
+              "position": "near the patient bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient vital signs",
+              "position": "near the patient bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving medical care",
+              "appearance": "lying on a hospital bed"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "electrodes",
+            "attributes": {
+              "significance": "monitoring patient vital signs",
+              "appearance": "attached to the patient's chest"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider 2",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare provider 1",
+            "relation": "near",
+            "object": "healthcare provider 2",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "medical equipment and hospital beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider 1",
+            "attributes": {
+              "actions": "standing, holding a paper",
+              "position": "left side of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider 2",
+            "attributes": {
+              "actions": "attending to a patient",
+              "position": "beside the patient bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient care",
+            "attributes": {
+              "technique": "using medical equipment",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "administering medication or fluids",
+              "position": "near the patient bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient vital signs",
+              "position": "near the patient bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving medical care",
+              "appearance": "lying on a hospital bed"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "electrodes",
+            "attributes": {
+              "significance": "monitoring patient vital signs",
+              "appearance": "attached to the patient's chest"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider 2",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare provider 1",
+            "relation": "near",
+            "object": "healthcare provider 2",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: healthcare provider 1, healthcare provider 2. Activities: patient care. Equipment: IV pole, hospital bed, medical monitor"
+    }
+  }
+}

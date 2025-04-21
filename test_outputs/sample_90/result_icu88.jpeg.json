@@ -1,0 +1,256 @@
+{
+  "question": "Are the patient's eyes being examined properly?",
+  "answer": "The context does not contain information about the patient's eyes being examined. There is no mention of an eye examination or any equipment related to eye care. What is visible in the image is a physician and a patient in a hospital room setting, with a medical examination taking place, but the specifics of the examination are not described.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007085084915161133,
+    "roi_detection": 0,
+    "concept_extraction": 3.545187473297119,
+    "grounding_check": 6.031990051269531e-05,
+    "graph_construction": 0.2332780361175537,
+    "graph_traversal": 2.7366716861724854,
+    "answer_synthesis": 1.4804978370666504,
+    "total": 8.00495195388794
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [
+          "eyes"
+        ],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1000,
+          651
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical equipment and supplies"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "physician",
+            "attributes": {
+              "actions": "treating patient",
+              "position": "standing beside the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving treatment",
+              "position": "lying on the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "medical examination",
+            "attributes": {
+              "technique": "using a medical tool",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient's vital signs",
+              "position": "in the foreground"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "infusion pump",
+            "attributes": {
+              "usage": "administering medication or fluids",
+              "position": "on the right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "electrodes",
+            "attributes": {
+              "usage": "monitoring patient's heart activity",
+              "position": "on the patient's chest"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "electrode",
+            "attributes": {
+              "significance": "monitoring heart activity",
+              "appearance": "attached to patient's chest"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "physician",
+            "relation": "treating",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving treatment from",
+            "object": "physician",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "medical monitor",
+            "relation": "next to",
+            "object": "infusion pump",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical equipment and supplies"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "physician",
+            "attributes": {
+              "actions": "treating patient",
+              "position": "standing beside the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving treatment",
+              "position": "lying on the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "medical examination",
+            "attributes": {
+              "technique": "using a medical tool",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient's vital signs",
+              "position": "in the foreground"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "infusion pump",
+            "attributes": {
+              "usage": "administering medication or fluids",
+              "position": "on the right side of the image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "electrodes",
+            "attributes": {
+              "usage": "monitoring patient's heart activity",
+              "position": "on the patient's chest"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "electrode",
+            "attributes": {
+              "significance": "monitoring heart activity",
+              "appearance": "attached to patient's chest"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "physician",
+            "relation": "treating",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving treatment from",
+            "object": "physician",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "medical monitor",
+            "relation": "next to",
+            "object": "infusion pump",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: physician, patient. Activities: medical examination. Equipment: medical monitor, infusion pump, electrodes"
+    }
+  }
+}

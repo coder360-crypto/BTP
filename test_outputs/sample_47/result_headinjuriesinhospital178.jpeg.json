@@ -1,0 +1,200 @@
+{
+  "question": "Why is the patient not receiving intubation despite being in a critical state?",
+  "answer": "The context does not contain the information needed to answer why the patient is not receiving intubation despite being in a critical state. \n\nThis is what is visible in the image: A patient and a healthcare provider are present in a trauma bay, with a hospital bed and blood-soaked gauze visible.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.010564327239990234,
+    "roi_detection": 0,
+    "concept_extraction": 3.1411800384521484,
+    "grounding_check": 4.9114227294921875e-05,
+    "graph_construction": 0.2173473834991455,
+    "graph_traversal": 2.143463611602783,
+    "answer_synthesis": 2.4993221759796143,
+    "total": 8.013165473937988
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [
+          "intubation"
+        ],
+        "procedure": [
+          "intubation"
+        ],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          600,
+          450
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "trauma bay",
+            "attributes": {
+              "location": "hospital",
+              "appearance": "emergency"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "supine on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "",
+              "position": "standing behind bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of scene"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "blood-stained gauze",
+            "attributes": {
+              "usage": "wound care",
+              "position": "on patient's head"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "head wound",
+            "attributes": {
+              "significance": "bleeding",
+              "appearance": "large and bloody"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving care from",
+            "object": "healthcare provider",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "trauma bay",
+            "attributes": {
+              "location": "hospital",
+              "appearance": "emergency"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "supine on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "",
+              "position": "standing behind bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of scene"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "blood-stained gauze",
+            "attributes": {
+              "usage": "wound care",
+              "position": "on patient's head"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "head wound",
+            "attributes": {
+              "significance": "bleeding",
+              "appearance": "large and bloody"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving care from",
+            "object": "healthcare provider",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: trauma bay. People: patient, healthcare provider. Equipment: hospital bed, blood-soaked gauze",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: trauma bay. People: patient, healthcare provider. Equipment: hospital bed, blood-soaked gauze"
+    }
+  }
+}

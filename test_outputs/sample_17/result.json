@@ -1,0 +1,192 @@
+{
+  "question": "Is the patient's face mask properly positioned?",
+  "answer": "The context does not contain information about the position of the face mask on the patient's face. It only mentions that a face mask is present among the equipment. What is visible in the image is a hospital room with a patient, healthcare workers, a hospital bed, and a face mask, but the specific positioning of the face mask is not described.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00724482536315918,
+    "roi_detection": 0,
+    "concept_extraction": 0.9068520069122314,
+    "grounding_check": 7.104873657226562e-05,
+    "graph_construction": 0.22413206100463867,
+    "graph_traversal": 2.272596597671509,
+    "answer_synthesis": 1.5031497478485107,
+    "total": 4.915196418762207
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [
+          "face"
+        ],
+        "clinical_findings": [],
+        "equipment": [
+          "mask"
+        ],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          550,
+          414
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "multiple beds, people wearing masks"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker",
+            "attributes": {
+              "actions": "standing, interacting",
+              "position": "beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting",
+              "position": "on a bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital_bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "personal_protective_equipment",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "white with blue straps"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker",
+            "relation": "interacting_with",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "multiple beds, people wearing masks"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker",
+            "attributes": {
+              "actions": "standing, interacting",
+              "position": "beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting",
+              "position": "on a bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital_bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "personal_protective_equipment",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "white with blue straps"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker",
+            "relation": "interacting_with",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient, healthcare_worker, patient, healthcare_worker. Equipment: hospital_bed, face_mask"
+    }
+  },
+  "metrics": {
+    "bleu": 0.047751858060120084,
+    "rouge": 0.1794871794871795,
+    "sent": 0.5877015590667725,
+    "ent": 0.007504586596041918,
+    "clip_c": 0.49418641594463075
+  },
+  "reference_answer": "No, the patient is not wearing the face mask properly, as the nostrils are exposed."
+}

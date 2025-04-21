@@ -1,0 +1,236 @@
+{
+  "question": "Is it necessary for the patient to stick out her tongue for naso-pharyngeal swab collection?",
+  "answer": "No information is provided in the context that suggests it is necessary for the patient to stick out her tongue for naso-pharyngeal swab collection. \n\nWhat is visible in the image: A healthcare worker and a patient in an outdoor medical facility setting, with the healthcare worker performing a nasal swab test on the patient. No information about the patient's tongue is provided.",
+  "question_type": "general",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.01316380500793457,
+    "roi_detection": 0,
+    "concept_extraction": 3.392892360687256,
+    "grounding_check": 6.604194641113281e-05,
+    "graph_construction": 0.21845245361328125,
+    "graph_traversal": 2.4443199634552,
+    "answer_synthesis": 1.5294544696807861,
+    "total": 7.600425958633423
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [
+          "tongue"
+        ],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "collection"
+        ],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "general",
+      "traversal_strategy": "reasoning_traversal",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          970,
+          545
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "setting_name",
+            "attributes": {
+              "location": "outdoor or covered area",
+              "appearance": "tiled floor, yellow walls, metal grating on windows"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "performing swab test",
+              "position": "standing"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "reacting to swab test",
+              "position": "seated"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "swab test",
+            "attributes": {
+              "technique": "nasal swab",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "PPE",
+            "attributes": {
+              "usage": "protective gear",
+              "position": "on healthcare worker"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "swab",
+            "attributes": {
+              "usage": "for testing",
+              "position": "in healthcare worker's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "face mask",
+            "attributes": {
+              "significance": "protective gear",
+              "appearance": "partially removed"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare worker",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "setting_name",
+            "attributes": {
+              "location": "outdoor or covered area",
+              "appearance": "tiled floor, yellow walls, metal grating on windows"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "performing swab test",
+              "position": "standing"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "reacting to swab test",
+              "position": "seated"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "swab test",
+            "attributes": {
+              "technique": "nasal swab",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "PPE",
+            "attributes": {
+              "usage": "protective gear",
+              "position": "on healthcare worker"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "swab",
+            "attributes": {
+              "usage": "for testing",
+              "position": "in healthcare worker's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "face mask",
+            "attributes": {
+              "significance": "protective gear",
+              "appearance": "partially removed"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare worker",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "reasoning_applied": true,
+        "graph_structure": {
+          "nodes_count": 1,
+          "edges_count": 0,
+          "node_types": [
+            "image"
+          ],
+          "relation_types": []
+        },
+        "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Nasal Swab Test. Equipment: Protective Gear, Swab",
+        "scene_elements": {
+          "image": [
+            {
+              "id": "image:covidindianhospital_010.jpeg",
+              "name": "covidindianhospital_010.jpeg",
+              "attributes": {
+                "id": "covidindianhospital_010.jpeg"
+              }
+            }
+          ]
+        },
+        "key_relationships": [],
+        "central_elements": [],
+        "query_focus": "patient",
+        "graph_patterns": []
+      },
+      "traversal_strategy": "reasoning_traversal",
+      "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Nasal Swab Test. Equipment: Protective Gear, Swab"
+    }
+  }
+}

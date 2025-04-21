@@ -1,0 +1,215 @@
+{
+  "question": "Are the vaccination measures proper?",
+  "answer": "The context does not contain information about the vaccination measures being proper or not. \n\nWhat is visible in the image: A healthcare worker, a patient, and a syringe are present in a vaccination room, and a vaccination activity is taking place.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.005924701690673828,
+    "roi_detection": 0,
+    "concept_extraction": 3.261798620223999,
+    "grounding_check": 5.650520324707031e-05,
+    "graph_construction": 0.2125239372253418,
+    "graph_traversal": 2.053619861602783,
+    "answer_synthesis": 2.483441114425659,
+    "total": 8.0181725025177
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "vaccination",
+          "proper"
+        ],
+        "setting": [],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          400,
+          225
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "vaccination_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical setting"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving vaccination",
+              "position": "sitting"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker",
+            "attributes": {
+              "actions": "administering vaccine",
+              "position": "sitting"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccination",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering vaccine",
+              "position": "in healthcare worker's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "fan",
+            "attributes": {
+              "usage": "air circulation",
+              "position": "behind patient"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "face_mask",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "on both individuals"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "vaccination_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical setting"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving vaccination",
+              "position": "sitting"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare_worker",
+            "attributes": {
+              "actions": "administering vaccine",
+              "position": "sitting"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccination",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering vaccine",
+              "position": "in healthcare worker's hand"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "fan",
+            "attributes": {
+              "usage": "air circulation",
+              "position": "behind patient"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "face_mask",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "on both individuals"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: vaccination_room. People: healthcare_worker, patient. Activities: vaccination. Equipment: syringe"
+    }
+  }
+}

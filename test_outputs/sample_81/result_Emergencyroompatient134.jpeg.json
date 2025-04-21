@@ -1,0 +1,258 @@
+{
+  "question": "Is this an Intensive Care Unit setup?",
+  "answer": "Based on the provided context, it cannot be confirmed if this is an Intensive Care Unit (ICU) setup. \n\nThe context mentions a hospital room setting with monitoring activities and equipment such as a monitor and hospital bed, but it does not specify if it is an ICU setup. \n\nWhat is visible in the image is a hospital room with a physician, patient, and healthcare workers, where monitoring is taking place, and there is a monitor and hospital bed present.",
+  "question_type": "equipment",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.0064661502838134766,
+    "roi_detection": 0,
+    "concept_extraction": 1.232182502746582,
+    "grounding_check": 5.173683166503906e-05,
+    "graph_construction": 0.22330880165100098,
+    "graph_traversal": 0.9986710548400879,
+    "answer_synthesis": 2.6488888263702393,
+    "total": 5.1104655265808105
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "unit"
+        ],
+        "other_medical": [
+          "this"
+        ]
+      },
+      "question_type": "equipment",
+      "traversal_strategy": "equipment_verification",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          509,
+          339
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "multiple hospital beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "viewing monitor",
+              "position": "standing beside bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "",
+              "position": "in background, beside another bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "",
+              "position": "in background, beside another bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying in bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "monitoring",
+            "attributes": {
+              "technique": "viewing vital signs on a monitor",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "monitor",
+            "attributes": {
+              "usage": "displaying vital signs",
+              "position": "mounted on wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "multiple beds in the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "vital signs",
+            "attributes": {
+              "significance": "monitoring patient's condition",
+              "appearance": "displayed on monitor"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare providers",
+            "relation": "working in proximity",
+            "object": "each other",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "multiple hospital beds"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "viewing monitor",
+              "position": "standing beside bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "",
+              "position": "in background, beside another bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "",
+              "position": "in background, beside another bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying in bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "monitoring",
+            "attributes": {
+              "technique": "viewing vital signs on a monitor",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "monitor",
+            "attributes": {
+              "usage": "displaying vital signs",
+              "position": "mounted on wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "multiple beds in the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "vital signs",
+            "attributes": {
+              "significance": "monitoring patient's condition",
+              "appearance": "displayed on monitor"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare providers",
+            "relation": "working in proximity",
+            "object": "each other",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital_room. People: physician, patient, healthcare_workers. Activities: monitoring. Equipment: monitor, hospital_bed",
+        "caption_based": true
+      },
+      "traversal_strategy": "equipment_verification",
+      "image_caption": "Setting: hospital_room. People: physician, patient, healthcare_workers. Activities: monitoring. Equipment: monitor, hospital_bed"
+    }
+  }
+}

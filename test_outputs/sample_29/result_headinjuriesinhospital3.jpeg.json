@@ -1,0 +1,258 @@
+{
+  "question": "Does the patient need urgent medical attention?",
+  "answer": "Based on the provided context, it is not possible to determine with certainty whether the patient needs urgent medical attention. However, the fact that the patient is in an ambulance and a healthcare provider is bandaging them suggests that the patient is receiving medical care, which may imply that they have a medical issue that requires attention. \n\nWhat is visible in the image: \n- The patient is in an ambulance.\n- A healthcare provider or bystander is bandaging the patient.\n- A stretcher, gauze or mesh, and an orange stretcher or divider are present.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.0067403316497802734,
+    "roi_detection": 0,
+    "concept_extraction": 3.892367362976074,
+    "grounding_check": 7.486343383789062e-05,
+    "graph_construction": 0.22377538681030273,
+    "graph_traversal": 2.907426118850708,
+    "answer_synthesis": 1.6000034809112549,
+    "total": 8.633008241653442
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "urgent"
+        ],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          714,
+          1019
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "ambulance",
+            "attributes": {
+              "location": "moving or stationary, likely in an emergency setting",
+              "appearance": "interior with medical equipment and storage compartments"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on stretcher, appears to be injured",
+              "position": "supine on stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bystander or healthcare provider",
+            "attributes": {
+              "actions": "sitting, holding phone",
+              "position": "beside the stretcher"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "bandaging",
+            "attributes": {
+              "technique": "head wrapped in gauze or mesh",
+              "stage": "already performed"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "stretcher",
+            "attributes": {
+              "usage": "supporting patient",
+              "position": "within ambulance"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "gauze or mesh",
+            "attributes": {
+              "usage": "covering patient's head",
+              "position": "on patient's head"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "orange stretcher or divider",
+            "attributes": {
+              "usage": "divider or additional storage",
+              "position": "side of ambulance"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "blood",
+            "attributes": {
+              "significance": "indicative of injury",
+              "appearance": "visible on patient's clothing and bandage"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "bandaged head",
+            "attributes": {
+              "significance": "indicative of head injury",
+              "appearance": "wrapped in gauze or mesh"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving care from",
+            "object": "healthcare providers (not clearly visible)",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "bystander or healthcare provider",
+            "relation": "accompanying",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "ambulance",
+            "attributes": {
+              "location": "moving or stationary, likely in an emergency setting",
+              "appearance": "interior with medical equipment and storage compartments"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on stretcher, appears to be injured",
+              "position": "supine on stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bystander or healthcare provider",
+            "attributes": {
+              "actions": "sitting, holding phone",
+              "position": "beside the stretcher"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "bandaging",
+            "attributes": {
+              "technique": "head wrapped in gauze or mesh",
+              "stage": "already performed"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "stretcher",
+            "attributes": {
+              "usage": "supporting patient",
+              "position": "within ambulance"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "gauze or mesh",
+            "attributes": {
+              "usage": "covering patient's head",
+              "position": "on patient's head"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "orange stretcher or divider",
+            "attributes": {
+              "usage": "divider or additional storage",
+              "position": "side of ambulance"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "blood",
+            "attributes": {
+              "significance": "indicative of injury",
+              "appearance": "visible on patient's clothing and bandage"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "bandaged head",
+            "attributes": {
+              "significance": "indicative of head injury",
+              "appearance": "wrapped in gauze or mesh"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving care from",
+            "object": "healthcare providers (not clearly visible)",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "bystander or healthcare provider",
+            "relation": "accompanying",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: ambulance. People: patient, bystander or healthcare provider. Activities: bandaging. Equipment: stretcher, gauze or mesh, orange stretcher or divider",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: ambulance. People: patient, bystander or healthcare provider. Activities: bandaging. Equipment: stretcher, gauze or mesh, orange stretcher or divider"
+    }
+  }
+}

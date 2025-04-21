@@ -1,0 +1,248 @@
+{
+  "question": "Is the patient in a critical condition?",
+  "answer": "The context does not contain the information needed to answer whether the patient is in a critical condition. \n\nWhat is visible in the image is a hospital room with a healthcare provider, a patient, a hospital bed, an infusion pole, a medical monitor, and a medication cart.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.0062427520751953125,
+    "roi_detection": 0,
+    "concept_extraction": 3.8279366493225098,
+    "grounding_check": 5.984306335449219e-05,
+    "graph_construction": 0.22686409950256348,
+    "graph_traversal": 2.8751718997955322,
+    "answer_synthesis": 1.5942223072052002,
+    "total": 8.532749891281128
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          992,
+          652
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "a small, simple hospital room with blue and white walls and a tiled floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "kneeled beside the bed, wearing a mask and holding a phone",
+              "position": "beside the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying in the bed",
+              "position": "in the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "on the wall above the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medication cart",
+            "attributes": {
+              "usage": "storage of medical supplies",
+              "position": "against the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "significance": "patient care",
+              "appearance": "with a yellow mattress and blue accents"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving care",
+              "appearance": "lying down, covered with a blanket"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "in",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "a small, simple hospital room with blue and white walls and a tiled floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "kneeled beside the bed, wearing a mask and holding a phone",
+              "position": "beside the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying in the bed",
+              "position": "in the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "on the wall above the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medication cart",
+            "attributes": {
+              "usage": "storage of medical supplies",
+              "position": "against the wall"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "significance": "patient care",
+              "appearance": "with a yellow mattress and blue accents"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "significance": "receiving care",
+              "appearance": "lying down, covered with a blanket"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "in",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, infusion pole, medical monitor, medication cart",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, infusion pole, medical monitor, medication cart"
+    }
+  },
+  "metrics": {
+    "bleu": 0.06351663120509611,
+    "rouge": 0.20289855072463767,
+    "sent": 0.5697906017303467,
+    "ent": 0.9514548182487488,
+    "clip_c": 0.5351811378305442
+  },
+  "reference_answer": "Yes the patient is sick, and is critical as she is being monitored using a multi-parametric monitor, although she looks comfortable."
+}

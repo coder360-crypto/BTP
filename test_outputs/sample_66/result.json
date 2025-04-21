@@ -1,0 +1,236 @@
+{
+  "question": "Is the patient's head positioned correctly?",
+  "answer": "The context does not contain information about the position of the patient's head. It mentions a nasal swab test, but does not provide details about the patient's head position. \n\nVisible in the image: A healthcare worker, a patient, and a nasal swab test being performed in an outdoor medical facility.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.008076667785644531,
+    "roi_detection": 0,
+    "concept_extraction": 3.86824631690979,
+    "grounding_check": 4.482269287109375e-05,
+    "graph_construction": 0.22470951080322266,
+    "graph_traversal": 2.4889183044433594,
+    "answer_synthesis": 1.4569272994995117,
+    "total": 8.048933506011963
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [
+          "head"
+        ],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          970,
+          545
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "outdoor medical screening area",
+            "attributes": {
+              "location": "outside a building",
+              "appearance": "tiled floor, yellow walls, metal grating on windows"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "performing a swab test",
+              "position": "standing, leaning forward"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting, reacting, hands raised",
+              "position": "seated on a bench"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "swab test",
+            "attributes": {
+              "technique": "nasal swab",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "personal protective equipment (PPE)",
+            "attributes": {
+              "usage": "protecting against infection",
+              "position": "worn by healthcare worker"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "swab",
+            "attributes": {
+              "usage": "collecting sample",
+              "position": "held by healthcare worker"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "nasal swab",
+            "attributes": {
+              "significance": "sample collection for testing",
+              "appearance": "long, thin, flexible stick with cotton tip"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare worker",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving care from",
+            "object": "healthcare worker",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "outdoor medical screening area",
+            "attributes": {
+              "location": "outside a building",
+              "appearance": "tiled floor, yellow walls, metal grating on windows"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "performing a swab test",
+              "position": "standing, leaning forward"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting, reacting, hands raised",
+              "position": "seated on a bench"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "swab test",
+            "attributes": {
+              "technique": "nasal swab",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "personal protective equipment (PPE)",
+            "attributes": {
+              "usage": "protecting against infection",
+              "position": "worn by healthcare worker"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "swab",
+            "attributes": {
+              "usage": "collecting sample",
+              "position": "held by healthcare worker"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "nasal swab",
+            "attributes": {
+              "significance": "sample collection for testing",
+              "appearance": "long, thin, flexible stick with cotton tip"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare worker",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving care from",
+            "object": "healthcare worker",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: Outdoor Medical Facility. People: Healthcare Worker, Patient. Activities: Nasal Swab Test. Equipment: Protective Gear, Swab"
+    }
+  },
+  "metrics": {
+    "bleu": 0.03976136256726502,
+    "rouge": 0.17142857142857146,
+    "sent": 0.6611664891242981,
+    "ent": 0.06587465107440948,
+    "clip_c": 0.5029834533495516
+  },
+  "reference_answer": "Yes, the patient's head is tilted slightly backwards, which is appropriate position for collecting naso-pharyngeal swabs."
+}

@@ -1,0 +1,246 @@
+{
+  "question": "Does the image show a critical care unit with monitoring equipment?",
+  "answer": "Based on the provided context, the answer is: \n\nThe image shows a hospital room with a monitor and a hospital bed, and the activity of monitoring is taking place. However, there is not enough information to confirm if it is a critical care unit. \n\nThe image does show monitoring equipment, specifically a monitor.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007841825485229492,
+    "roi_detection": 0,
+    "concept_extraction": 3.225764751434326,
+    "grounding_check": 7.343292236328125e-05,
+    "graph_construction": 0.22163176536560059,
+    "graph_traversal": 2.253541946411133,
+    "answer_synthesis": 1.5420398712158203,
+    "total": 7.251790523529053
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [],
+        "procedure": [
+          "monitoring"
+        ],
+        "setting": [
+          "unit"
+        ],
+        "other_medical": [
+          "the image"
+        ]
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          509,
+          339
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "Hospital Room",
+            "attributes": {
+              "location": "Indoor hospital setting",
+              "appearance": "Clean and organized"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "Healthcare Worker",
+            "attributes": {
+              "actions": "Reviewing patient data on a monitor",
+              "position": "Standing beside a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Patient",
+            "attributes": {
+              "actions": "",
+              "position": "Lying in a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Healthcare Workers",
+            "attributes": {
+              "actions": "Working",
+              "position": "In the background, near another bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "Monitoring",
+            "attributes": {
+              "technique": "Reviewing vital signs or patient data",
+              "stage": "Ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "Computer Monitor",
+            "attributes": {
+              "usage": "Displaying patient data",
+              "position": "Mounted on an adjustable arm above a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Hospital Beds",
+            "attributes": {
+              "usage": "Patient care",
+              "position": "Multiple beds in the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "Personal Protective Equipment (PPE)",
+            "attributes": {
+              "significance": "Protecting against infection",
+              "appearance": "White suits, masks, gloves, and face shields"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "Healthcare Worker",
+            "relation": "attending to",
+            "object": "Patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "Healthcare Workers",
+            "relation": "working in proximity to",
+            "object": "Patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "Hospital Room",
+            "attributes": {
+              "location": "Indoor hospital setting",
+              "appearance": "Clean and organized"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "Healthcare Worker",
+            "attributes": {
+              "actions": "Reviewing patient data on a monitor",
+              "position": "Standing beside a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Patient",
+            "attributes": {
+              "actions": "",
+              "position": "Lying in a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Healthcare Workers",
+            "attributes": {
+              "actions": "Working",
+              "position": "In the background, near another bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "Monitoring",
+            "attributes": {
+              "technique": "Reviewing vital signs or patient data",
+              "stage": "Ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "Computer Monitor",
+            "attributes": {
+              "usage": "Displaying patient data",
+              "position": "Mounted on an adjustable arm above a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Hospital Beds",
+            "attributes": {
+              "usage": "Patient care",
+              "position": "Multiple beds in the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "Personal Protective Equipment (PPE)",
+            "attributes": {
+              "significance": "Protecting against infection",
+              "appearance": "White suits, masks, gloves, and face shields"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "Healthcare Worker",
+            "relation": "attending to",
+            "object": "Patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "Healthcare Workers",
+            "relation": "working in proximity to",
+            "object": "Patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker 2, healthcare worker 3. Activities: monitoring. Equipment: monitor, hospital bed",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker 2, healthcare worker 3. Activities: monitoring. Equipment: monitor, hospital bed"
+    }
+  }
+}

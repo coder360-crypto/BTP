@@ -1,0 +1,30 @@
+{
+  "total_samples": 100,
+  "processed_samples": 100,
+  "metrics": {
+    "avg_bleu": 0.03490093139276473,
+    "median_bleu": 0.03140040499532559,
+    "min_bleu": 0.005945152609300319,
+    "max_bleu": 0.13634937316626652,
+    "avg_rouge": 0.15645606565538236,
+    "median_rouge": 0.1568627450980392,
+    "min_rouge": 0.051948051948051945,
+    "max_rouge": 0.3243243243243243,
+    "avg_sent": 0.5679244443774223,
+    "median_sent": 0.5901334285736084,
+    "min_sent": 0.31920990347862244,
+    "max_sent": 0.8167744278907776,
+    "avg_ent": 0.36904435233096594,
+    "median_ent": 0.14625337719917297,
+    "min_ent": 0.0014285700162872672,
+    "max_ent": 0.9964596629142761,
+    "avg_clip_c": 0.3729693384636612,
+    "median_clip_c": 0.500472574885226,
+    "min_clip_c": 0.0,
+    "max_clip_c": 0.5755592858554619
+  },
+  "enable_grounding": false,
+  "roi_detection_enabled": false,
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "roi_model": "HuggingFaceTB/SmolVLM-256M-Instruct"
+}

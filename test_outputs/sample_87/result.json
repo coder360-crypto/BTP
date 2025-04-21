@@ -1,0 +1,253 @@
+{
+  "question": "Is the patient lying in a properly elevated bed with the correct positioning?",
+  "answer": "The context does not contain information about the position of the patient's bed or the patient's positioning. \n\nWhat is visible in the image: A hospital room with a patient, a physician, and two healthcare workers, and a hospital bed with a monitor.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.009119272232055664,
+    "roi_detection": 0,
+    "concept_extraction": 3.5274553298950195,
+    "grounding_check": 5.1021575927734375e-05,
+    "graph_construction": 0.22463488578796387,
+    "graph_traversal": 2.2539560794830322,
+    "answer_synthesis": 1.4333016872406006,
+    "total": 7.449448108673096
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [
+          "bed"
+        ],
+        "procedure": [
+          "correct"
+        ],
+        "setting": [
+          "bed",
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          509,
+          339
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "multiple hospital beds, medical equipment, and sterile environment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "reviewing data on a monitor",
+              "position": "standing beside a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare providers",
+            "attributes": {
+              "actions": "",
+              "position": "in the background, near another bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "monitor",
+            "attributes": {
+              "usage": "displaying vital signs or medical data",
+              "position": "mounted on an adjustable arm above a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "multiple beds in the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "medical masks",
+            "attributes": {
+              "significance": "personal protective equipment",
+              "appearance": "visible on patient and healthcare providers"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "protective suits",
+            "attributes": {
+              "significance": "personal protective equipment",
+              "appearance": "visible on healthcare providers"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare providers",
+            "relation": "interacting with",
+            "object": "medical equipment",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "multiple hospital beds, medical equipment, and sterile environment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "reviewing data on a monitor",
+              "position": "standing beside a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare providers",
+            "attributes": {
+              "actions": "",
+              "position": "in the background, near another bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "monitor",
+            "attributes": {
+              "usage": "displaying vital signs or medical data",
+              "position": "mounted on an adjustable arm above a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "multiple beds in the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "medical masks",
+            "attributes": {
+              "significance": "personal protective equipment",
+              "appearance": "visible on patient and healthcare providers"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "protective suits",
+            "attributes": {
+              "significance": "personal protective equipment",
+              "appearance": "visible on healthcare providers"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare providers",
+            "relation": "interacting with",
+            "object": "medical equipment",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker 2, healthcare worker 3. Activities: monitoring. Equipment: monitor, hospital bed"
+    }
+  },
+  "metrics": {
+    "bleu": 0.043328407924472595,
+    "rouge": 0.24242424242424246,
+    "sent": 0.5306800603866577,
+    "ent": 0.9913492202758789,
+    "clip_c": 0.5151456234529004
+  },
+  "reference_answer": "Yes the elevation of the bed is proper, and the patient is appropriately propped-up up to ease the work of breathing"
+}

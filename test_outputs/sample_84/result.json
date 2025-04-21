@@ -1,0 +1,273 @@
+{
+  "question": "Is the elevation and postion of the patiemyts bed appropriate?",
+  "answer": "The context does not contain information about the elevation and position of the patient's bed. It only mentions that there is a hospital bed present, but does not provide details about its position or elevation. Therefore, it is not possible to determine if the elevation and position of the patient's bed is appropriate based on the provided context.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.008321285247802734,
+    "roi_detection": 0,
+    "concept_extraction": 3.3489561080932617,
+    "grounding_check": 6.747245788574219e-05,
+    "graph_construction": 0.2226119041442871,
+    "graph_traversal": 2.280407190322876,
+    "answer_synthesis": 1.5228471755981445,
+    "total": 7.384167194366455
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [
+          "bed"
+        ],
+        "procedure": [
+          "appropriate"
+        ],
+        "setting": [
+          "bed"
+        ],
+        "other_medical": [
+          "the elevation",
+          "postion"
+        ]
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          509,
+          339
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical setting with beds and equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "physician",
+            "attributes": {
+              "actions": "viewing monitor",
+              "position": "standing beside bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 2",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 3",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "monitoring",
+            "attributes": {
+              "technique": "viewing vital signs on monitor",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "monitor",
+            "attributes": {
+              "usage": "displaying vital signs",
+              "position": "mounted on wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "vital signs",
+            "attributes": {
+              "significance": "monitoring patient status",
+              "appearance": "displayed on monitor"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "physician",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare worker 2",
+            "relation": "assisting",
+            "object": "healthcare worker 3",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical setting with beds and equipment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "physician",
+            "attributes": {
+              "actions": "viewing monitor",
+              "position": "standing beside bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 2",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker 3",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "monitoring",
+            "attributes": {
+              "technique": "viewing vital signs on monitor",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "monitor",
+            "attributes": {
+              "usage": "displaying vital signs",
+              "position": "mounted on wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "vital signs",
+            "attributes": {
+              "significance": "monitoring patient status",
+              "appearance": "displayed on monitor"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "physician",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare worker 2",
+            "relation": "assisting",
+            "object": "healthcare worker 3",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker 2, healthcare worker 3. Activities: monitoring. Equipment: monitor, hospital bed"
+    }
+  },
+  "metrics": {
+    "bleu": 0.05313680948121373,
+    "rouge": 0.29268292682926833,
+    "sent": 0.7699118852615356,
+    "ent": 0.7173354625701904,
+    "clip_c": 0.48122835120663215
+  },
+  "reference_answer": "Yes the elevation of the bed is proper, and the patient is appropriately propped-up up to ease the work of breathing"
+}

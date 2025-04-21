@@ -1,0 +1,230 @@
+{
+  "question": "Is the medicines properly attached?",
+  "answer": "There is not enough information to determine if medicines are properly attached. \n\nThe context mentions \"IV Poles\" which could suggest the presence of intravenous lines, possibly for medicine administration. However, it does not provide specifics about the attachment of medicines.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00613856315612793,
+    "roi_detection": 0,
+    "concept_extraction": 3.8517816066741943,
+    "grounding_check": 6.29425048828125e-05,
+    "graph_construction": 0.212846040725708,
+    "graph_traversal": 2.8318119049072266,
+    "answer_synthesis": 1.446784257888794,
+    "total": 8.352864265441895
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [],
+        "other_medical": [
+          "the medicines"
+        ]
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1200,
+          800
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider 1",
+            "attributes": {
+              "actions": "standing",
+              "position": "left side of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider 2",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "beside the patient"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "medical procedure",
+            "attributes": {
+              "technique": "unspecified",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "medication administration",
+              "position": "near the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "electrodes",
+            "attributes": {
+              "significance": "ECG monitoring",
+              "appearance": "on patient's chest"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider 2",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider 1",
+            "attributes": {
+              "actions": "standing",
+              "position": "left side of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider 2",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "beside the patient"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "medical procedure",
+            "attributes": {
+              "technique": "unspecified",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "medication administration",
+              "position": "near the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "above the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "electrodes",
+            "attributes": {
+              "significance": "ECG monitoring",
+              "appearance": "on patient's chest"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider 2",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: Physician, Nurse or Healthcare Worker. Activities: ECG or defibrillation. Equipment: IV Poles, Defibrillator or ECG Machine, Hospital Bed"
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "question": "Do the healthcare staff have the necessary protective equipment on?",
+  "answer": "Based on the provided context, it is mentioned that the equipment includes Personal Protective Equipment (PPE). However, it does not provide specific details on whether the healthcare staff are wearing the PPE.\n\nWhat is visible in the context: A COVID-19 testing site with a healthcare worker, a patient, and equipment including PPE and swab collection tools. \n\nThe context does not contain enough information to confirm if the healthcare staff have the necessary protective equipment on.",
+  "question_type": "equipment",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.010000228881835938,
+    "roi_detection": 0,
+    "concept_extraction": 1.3404250144958496,
+    "grounding_check": 6.580352783203125e-05,
+    "graph_construction": 0.22214913368225098,
+    "graph_traversal": 1.3052854537963867,
+    "answer_synthesis": 0.4715735912322998,
+    "total": 3.351163864135742
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "staff"
+        ],
+        "other_medical": []
+      },
+      "question_type": "equipment",
+      "traversal_strategy": "equipment_verification",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          750,
+          500
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "COVID-19 testing site",
+            "attributes": {
+              "location": "Indoor setting with a red and white wall",
+              "appearance": "A makeshift or temporary testing site"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "Healthcare worker",
+            "attributes": {
+              "actions": "Collecting swab samples",
+              "position": "Standing, wearing protective gear"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Patient",
+            "attributes": {
+              "actions": "",
+              "position": "Sitting on a blue chair"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "Swab test",
+            "attributes": {
+              "technique": "Nasopharyngeal swab",
+              "stage": "Sample collection"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "Protective gear",
+            "attributes": {
+              "usage": "Personal protective equipment (PPE) for healthcare workers",
+              "position": "Worn by healthcare workers"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Swab",
+            "attributes": {
+              "usage": "For sample collection",
+              "position": "Held by healthcare workers"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "Face mask",
+            "attributes": {
+              "significance": "Worn by patients and healthcare workers",
+              "appearance": "Surgical or cloth masks"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "Healthcare worker",
+            "relation": "interacting with",
+            "object": "Patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "COVID-19 testing site",
+            "attributes": {
+              "location": "Indoor setting with a red and white wall",
+              "appearance": "A makeshift or temporary testing site"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "Healthcare worker",
+            "attributes": {
+              "actions": "Collecting swab samples",
+              "position": "Standing, wearing protective gear"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Patient",
+            "attributes": {
+              "actions": "",
+              "position": "Sitting on a blue chair"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "Swab test",
+            "attributes": {
+              "technique": "Nasopharyngeal swab",
+              "stage": "Sample collection"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "Protective gear",
+            "attributes": {
+              "usage": "Personal protective equipment (PPE) for healthcare workers",
+              "position": "Worn by healthcare workers"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "Swab",
+            "attributes": {
+              "usage": "For sample collection",
+              "position": "Held by healthcare workers"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "Face mask",
+            "attributes": {
+              "significance": "Worn by patients and healthcare workers",
+              "appearance": "Surgical or cloth masks"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "Healthcare worker",
+            "relation": "interacting with",
+            "object": "Patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: COVID-19 testing site. People: Healthcare Worker, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools",
+        "caption_based": true
+      },
+      "traversal_strategy": "equipment_verification",
+      "image_caption": "Setting: COVID-19 testing site. People: Healthcare Worker, Patient. Activities: Swab testing. Equipment: Personal Protective Equipment (PPE), Swab collection tools"
+    }
+  },
+  "metrics": {
+    "bleu": 0.059860875499878556,
+    "rouge": 0.15384615384615383,
+    "sent": 0.6731501817703247,
+    "ent": 0.00947396457195282,
+    "clip_c": 0.0
+  },
+  "reference_answer": "Yes the healthcare staff are wearing adequate peronal protective equipments - face shield, goggles, gown, gloves."
+}

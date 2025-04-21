@@ -1,0 +1,208 @@
+{
+  "question": "Given the patient's critical condition, why is intubation not being administered?",
+  "answer": "The context does not contain the information needed to answer the question. \n\nThis is what is visible in the image: A patient and a healthcare provider are present in a hospital setting with a hospital bed and a blood pressure cuff. \n\nNo information is available about the patient's respiratory status, medical condition, or the treatments being considered or administered.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.013400554656982422,
+    "roi_detection": 0,
+    "concept_extraction": 3.199706554412842,
+    "grounding_check": 4.887580871582031e-05,
+    "graph_construction": 0.23556900024414062,
+    "graph_traversal": 2.1789326667785645,
+    "answer_synthesis": 2.492105484008789,
+    "total": 8.120911836624146
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [
+          "intubation"
+        ],
+        "procedure": [
+          "intubation"
+        ],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          600,
+          450
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "location": "emergency room",
+              "appearance": "bloodstained"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "bandage",
+            "attributes": {
+              "usage": "covering wound",
+              "position": "on patient's head"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "blood",
+            "attributes": {
+              "significance": "indicative of injury",
+              "appearance": "visible on bed and patient's head"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "has",
+            "object": "bandage",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "has",
+            "object": "blood",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare provider",
+            "relation": "standing near",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "location": "emergency room",
+              "appearance": "bloodstained"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "bandage",
+            "attributes": {
+              "usage": "covering wound",
+              "position": "on patient's head"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "blood",
+            "attributes": {
+              "significance": "indicative of injury",
+              "appearance": "visible on bed and patient's head"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "has",
+            "object": "bandage",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "has",
+            "object": "blood",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare provider",
+            "relation": "standing near",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, blood pressure cuff",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed, blood pressure cuff"
+    }
+  }
+}

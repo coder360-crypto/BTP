@@ -1,0 +1,290 @@
+{
+  "question": "Is the PPE worn by the healthcare worker proper?",
+  "answer": "The context does not contain enough information to determine if the PPE worn by the healthcare worker is proper. \n\nWhat is visible in the image: \n- A hospital room setting\n- Multiple healthcare workers and patients\n- Hospital beds\n- Personal protective equipment (PPE) worn by a healthcare worker.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007180690765380859,
+    "roi_detection": 0,
+    "concept_extraction": 3.9073550701141357,
+    "grounding_check": 5.650520324707031e-05,
+    "graph_construction": 0.22411632537841797,
+    "graph_traversal": 2.8650572299957275,
+    "answer_synthesis": 1.4964540004730225,
+    "total": 8.501365661621094
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [
+          "ppe"
+        ],
+        "procedure": [
+          "proper"
+        ],
+        "setting": [],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          550,
+          414
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor setting, possibly a COVID-19 ward or isolation area",
+              "appearance": "multiple beds, presence of healthcare workers in protective gear"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "standing, likely consulting or assessing",
+              "position": "standing beside a bed, facing a patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting up in bed, looking at the healthcare worker",
+              "position": "sitting up in bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "",
+              "position": "sitting in the background, appears to be observing or waiting"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying in bed, partially visible"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "",
+              "position": "sitting in the background, appears to be observing or waiting"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "sitting in a chair, partially visible"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "multiple beds in the room, some occupied"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "personal protective equipment (PPE)",
+            "attributes": {
+              "usage": "infection control",
+              "position": "worn by healthcare worker standing"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "face masks",
+            "attributes": {
+              "usage": "infection control",
+              "position": "worn by patients and some healthcare workers"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient with mask",
+            "attributes": {
+              "significance": "possible respiratory infection or COVID-19 precautions",
+              "appearance": "sitting up in bed, wearing a blue face mask"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare worker in PPE",
+            "relation": "interacting with",
+            "object": "patient with mask",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient with mask",
+            "relation": "sitting near",
+            "object": "another patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor setting, possibly a COVID-19 ward or isolation area",
+              "appearance": "multiple beds, presence of healthcare workers in protective gear"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "standing, likely consulting or assessing",
+              "position": "standing beside a bed, facing a patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting up in bed, looking at the healthcare worker",
+              "position": "sitting up in bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "",
+              "position": "sitting in the background, appears to be observing or waiting"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying in bed, partially visible"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "",
+              "position": "sitting in the background, appears to be observing or waiting"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "sitting in a chair, partially visible"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital beds",
+            "attributes": {
+              "usage": "patient care",
+              "position": "multiple beds in the room, some occupied"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "personal protective equipment (PPE)",
+            "attributes": {
+              "usage": "infection control",
+              "position": "worn by healthcare worker standing"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "face masks",
+            "attributes": {
+              "usage": "infection control",
+              "position": "worn by patients and some healthcare workers"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient with mask",
+            "attributes": {
+              "significance": "possible respiratory infection or COVID-19 precautions",
+              "appearance": "sitting up in bed, wearing a blue face mask"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare worker in PPE",
+            "relation": "interacting with",
+            "object": "patient with mask",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient with mask",
+            "relation": "sitting near",
+            "object": "another patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient, healthcare_worker, patient, healthcare_worker, patient. Equipment: hospital_bed, hospital_bed, personal_protective_equipment"
+    }
+  }
+}

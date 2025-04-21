@@ -1,0 +1,252 @@
+{
+  "question": "Is the healthcare worker wearing proper PPE?",
+  "answer": "There is not enough information to determine if the healthcare worker is wearing proper PPE. The image context does not mention personal protective equipment (PPE) or describe the attire of the healthcare worker.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00681757926940918,
+    "roi_detection": 0,
+    "concept_extraction": 3.6825335025787354,
+    "grounding_check": 4.696846008300781e-05,
+    "graph_construction": 0.23576855659484863,
+    "graph_traversal": 2.9538962841033936,
+    "answer_synthesis": 1.43587064743042,
+    "total": 8.318994998931885
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [
+          "ppe"
+        ],
+        "procedure": [
+          "proper"
+        ],
+        "setting": [],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1200,
+          800
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "medical equipment and hospital furniture"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "physician",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "standing over patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse or healthcare worker",
+            "attributes": {
+              "actions": "observing or reviewing information",
+              "position": "standing near the background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient examination or treatment",
+            "attributes": {
+              "technique": "manual examination or intervention",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "supporting intravenous fluids",
+              "position": "near the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "displaying patient data",
+              "position": "on the bed or nearby"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "supporting patient",
+              "position": "central to the scene"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "electrode pads",
+            "attributes": {
+              "significance": "monitoring or therapeutic",
+              "appearance": "adhesive pads on patient's chest"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "physician",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse or healthcare worker",
+            "relation": "near",
+            "object": "physician",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "medical equipment and hospital furniture"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "physician",
+            "attributes": {
+              "actions": "attending to patient",
+              "position": "standing over patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse or healthcare worker",
+            "attributes": {
+              "actions": "observing or reviewing information",
+              "position": "standing near the background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient examination or treatment",
+            "attributes": {
+              "technique": "manual examination or intervention",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "supporting intravenous fluids",
+              "position": "near the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "displaying patient data",
+              "position": "on the bed or nearby"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "supporting patient",
+              "position": "central to the scene"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "electrode pads",
+            "attributes": {
+              "significance": "monitoring or therapeutic",
+              "appearance": "adhesive pads on patient's chest"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "physician",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse or healthcare worker",
+            "relation": "near",
+            "object": "physician",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: Physician, Nurse or Healthcare Worker. Activities: patient examination or treatment. Equipment: IV pole, Patient monitoring system, Hospital bed"
+    }
+  },
+  "metrics": {
+    "bleu": 0.03395551869931059,
+    "rouge": 0.17391304347826086,
+    "sent": 0.49342820048332214,
+    "ent": 0.9964596629142761,
+    "clip_c": 0.5530796979577648
+  },
+  "reference_answer": "Yes he is wearing a face shield, proper PPE suit, gloves, goggles, etc"
+}

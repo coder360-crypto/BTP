@@ -1,0 +1,226 @@
+{
+  "question": "Should the patient extend her tongue while collecting a naso-pharyngeal swab?",
+  "answer": "The context does not contain information about specific medical procedures for collecting a naso-pharyngeal swab. \n\nIt is visible in the image that a healthcare worker is performing a swab test on a patient in an outdoor medical screening area. \n\nTherefore, based on the provided context, there is no information to support an answer to whether the patient should extend her tongue while collecting a naso-pharyngeal swab.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00884556770324707,
+    "roi_detection": 0,
+    "concept_extraction": 3.7485101222991943,
+    "grounding_check": 7.796287536621094e-05,
+    "graph_construction": 0.2360546588897705,
+    "graph_traversal": 2.7588164806365967,
+    "answer_synthesis": 1.5542776584625244,
+    "total": 8.308647871017456
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [
+          "tongue"
+        ],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": [
+          "a naso-pharyngeal swab"
+        ]
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          970,
+          545
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "setting_name",
+            "attributes": {
+              "location": "a covered area, possibly an outdoor or transitional space adjacent to a hospital or healthcare facility",
+              "appearance": "The area has yellow walls, grey marble-like panels on the lower part of the walls, and tiled flooring. There are metal grilles on the windows, and vehicles are visible outside."
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "The healthcare worker is performing a procedure, likely a COVID-19 test, on the patient.",
+              "position": "standing"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "The patient appears to be reacting, possibly due to discomfort or anxiety, with her hands raised and mouth open.",
+              "position": "seated"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "swab test",
+            "attributes": {
+              "technique": "The healthcare worker is using a swab to collect a sample from the patient's throat.",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "personal protective equipment (PPE)",
+            "attributes": {
+              "usage": "The healthcare worker is wearing PPE, including a gown, gloves, a face shield, and a cap, likely for protection against infectious diseases.",
+              "position": "on the healthcare worker"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "swab",
+            "attributes": {
+              "usage": "The swab is being used to collect a sample from the patient's throat.",
+              "position": "in the healthcare worker's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient's reaction",
+            "attributes": {
+              "significance": "The patient's reaction could indicate discomfort or distress during the procedure.",
+              "appearance": "The patient has her mouth open and her hands raised in a defensive or reactive posture."
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare worker",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "setting_name",
+            "attributes": {
+              "location": "a covered area, possibly an outdoor or transitional space adjacent to a hospital or healthcare facility",
+              "appearance": "The area has yellow walls, grey marble-like panels on the lower part of the walls, and tiled flooring. There are metal grilles on the windows, and vehicles are visible outside."
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare worker",
+            "attributes": {
+              "actions": "The healthcare worker is performing a procedure, likely a COVID-19 test, on the patient.",
+              "position": "standing"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "The patient appears to be reacting, possibly due to discomfort or anxiety, with her hands raised and mouth open.",
+              "position": "seated"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "swab test",
+            "attributes": {
+              "technique": "The healthcare worker is using a swab to collect a sample from the patient's throat.",
+              "stage": "in progress"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "personal protective equipment (PPE)",
+            "attributes": {
+              "usage": "The healthcare worker is wearing PPE, including a gown, gloves, a face shield, and a cap, likely for protection against infectious diseases.",
+              "position": "on the healthcare worker"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "swab",
+            "attributes": {
+              "usage": "The swab is being used to collect a sample from the patient's throat.",
+              "position": "in the healthcare worker's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient's reaction",
+            "attributes": {
+              "significance": "The patient's reaction could indicate discomfort or distress during the procedure.",
+              "appearance": "The patient has her mouth open and her hands raised in a defensive or reactive posture."
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare worker",
+            "relation": "interacting with",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "general_correctness",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: outdoor medical screening area. People: healthcare worker, patient. Activities: swab test. Equipment: personal protective equipment (PPE), nasal swab"
+    }
+  },
+  "metrics": {
+    "bleu": 0.025606545488635123,
+    "rouge": 0.15,
+    "sent": 0.7750093936920166,
+    "ent": 0.02589789405465126,
+    "clip_c": 0.0
+  },
+  "reference_answer": "No tongue protrusion is not required for collection of naso-pharyngeal swab."
+}

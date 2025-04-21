@@ -1,0 +1,216 @@
+{
+  "question": "Is the patient in a critical state?",
+  "answer": "The context does not contain enough information to determine if the patient is in a critical state. \n\nWhat is visible in the image is a patient, a healthcare provider, and a hospital bed, but no specific details about the patient's condition are provided.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.0069239139556884766,
+    "roi_detection": 0,
+    "concept_extraction": 3.1700236797332764,
+    "grounding_check": 6.389617919921875e-05,
+    "graph_construction": 0.22794818878173828,
+    "graph_traversal": 2.0993659496307373,
+    "answer_synthesis": 2.483318567276001,
+    "total": 7.988735198974609
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          600,
+          450
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "location": "emergency room",
+              "appearance": "bloodstained"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "",
+              "position": ""
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bloodstained gauze",
+            "attributes": {
+              "usage": "wound dressing",
+              "position": "on patient's head"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "head wound",
+            "attributes": {
+              "significance": "bleeding",
+              "appearance": "large and bloody"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "has",
+            "object": "head wound",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "on",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "location": "emergency room",
+              "appearance": "bloodstained"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "",
+              "position": "standing in background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "",
+              "position": ""
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bloodstained gauze",
+            "attributes": {
+              "usage": "wound dressing",
+              "position": "on patient's head"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "head wound",
+            "attributes": {
+              "significance": "bleeding",
+              "appearance": "large and bloody"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "has",
+            "object": "head wound",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "on",
+            "object": "hospital bed",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: hospital bed. People: patient, healthcare provider. Equipment: hospital bed"
+    }
+  },
+  "metrics": {
+    "bleu": 0.02991139003637336,
+    "rouge": 0.1290322580645161,
+    "sent": 0.47054988145828247,
+    "ent": 0.02173445373773575,
+    "clip_c": 0.48345458962776217
+  },
+  "reference_answer": "The patient has had a very serious head injury major trauma, and most likely comatosed or passed away."
+}

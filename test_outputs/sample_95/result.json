@@ -1,0 +1,296 @@
+{
+  "question": "Is the arrangement at the vaccination camp adequate?",
+  "answer": "There is no information in the context to determine if the arrangement at the vaccination camp is adequate. \n\nWhat is visible in the image: A hospital room with a doctor, nurse, and two patients. A medical cart and syringe are present, and vaccine administration is taking place. \n\nThe context does not mention a vaccination camp; it mentions a hospital room.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007241964340209961,
+    "roi_detection": 0,
+    "concept_extraction": 3.9796741008758545,
+    "grounding_check": 5.245208740234375e-05,
+    "graph_construction": 0.23204517364501953,
+    "graph_traversal": 6.0402021408081055,
+    "answer_synthesis": 0.4258153438568115,
+    "total": 10.687201499938965
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [
+          "vaccination"
+        ],
+        "setting": [],
+        "other_medical": [
+          "the arrangement"
+        ]
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          977,
+          549
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor setting",
+              "appearance": "medical supplies on a cart"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "administering a vaccine",
+              "position": "seated, beside the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "assisting",
+              "position": "standing, beside the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving a vaccine",
+              "position": "seated"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "second patient",
+            "attributes": {
+              "actions": "waiting",
+              "position": "seated, behind the first patient"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccine administration",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical cart",
+            "attributes": {
+              "usage": "storage of medical supplies",
+              "position": "against the wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering vaccine",
+              "position": "in the nurse's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "face masks",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "on the faces of healthcare workers and patients"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "gloves",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "on the doctor's hands"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse",
+            "relation": "assisting",
+            "object": "doctor",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "seated beside",
+            "object": "second patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor setting",
+              "appearance": "medical supplies on a cart"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "administering a vaccine",
+              "position": "seated, beside the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "nurse",
+            "attributes": {
+              "actions": "assisting",
+              "position": "standing, beside the patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving a vaccine",
+              "position": "seated"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "second patient",
+            "attributes": {
+              "actions": "waiting",
+              "position": "seated, behind the first patient"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "vaccine administration",
+            "attributes": {
+              "technique": "intramuscular injection",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical cart",
+            "attributes": {
+              "usage": "storage of medical supplies",
+              "position": "against the wall"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "syringe",
+            "attributes": {
+              "usage": "administering vaccine",
+              "position": "in the nurse's hand"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "face masks",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "on the faces of healthcare workers and patients"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "gloves",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "on the doctor's hands"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "administering vaccine to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "nurse",
+            "relation": "assisting",
+            "object": "doctor",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "seated beside",
+            "object": "second patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "general_correctness",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: doctor, nurse, patient, second patient. Activities: vaccine administration. Equipment: medical cart, syringe"
+    }
+  },
+  "metrics": {
+    "bleu": 0.011946026905661898,
+    "rouge": 0.10126582278481013,
+    "sent": 0.41454482078552246,
+    "ent": 0.9829431772232056,
+    "clip_c": 0.5114260378951704
+  },
+  "reference_answer": "No there should be seclusion between two patients, to maintain privacy as well as to prevent hospital cross infections"
+}

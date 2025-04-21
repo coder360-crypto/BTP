@@ -1,0 +1,184 @@
+{
+  "question": "Is the healthcare worker's PPE appropriate for the situation?",
+  "answer": "There is not enough information to determine if the healthcare worker's PPE is appropriate for the situation. \n\nThe image context does not mention personal protective equipment (PPE) or any specific medical procedures that would require certain types of PPE. Only a hospital room setting with people and equipment is described.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007645130157470703,
+    "roi_detection": 0,
+    "concept_extraction": 3.103097677230835,
+    "grounding_check": 5.650520324707031e-05,
+    "graph_construction": 0.218245267868042,
+    "graph_traversal": 2.34860897064209,
+    "answer_synthesis": 2.469517707824707,
+    "total": 8.148369789123535
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [
+          "ppe"
+        ],
+        "procedure": [
+          "appropriate"
+        ],
+        "setting": [],
+        "other_medical": [
+          "the situation"
+        ]
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          550,
+          414
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "multiple beds, people wearing masks"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker",
+            "attributes": {
+              "actions": "standing, interacting",
+              "position": "beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting",
+              "position": "on a bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital_bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "personal_protective_equipment",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "white with blue straps"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker",
+            "relation": "interacting_with",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital_room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "multiple beds, people wearing masks"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare_worker",
+            "attributes": {
+              "actions": "standing, interacting",
+              "position": "beside a bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "sitting",
+              "position": "on a bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital_bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "personal_protective_equipment",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "white with blue straps"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare_worker",
+            "relation": "interacting_with",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital_room. People: healthcare_worker, patient, healthcare_worker_2, patient_2. Equipment: hospital_bed"
+    }
+  }
+}

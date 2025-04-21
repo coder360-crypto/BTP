@@ -1,0 +1,226 @@
+{
+  "question": "Are the eyes being checked properly?",
+  "answer": "It is not possible to determine if the eyes are being checked properly. \n\nWhat is visible in the image: A hospital room with a physician, a patient, a medical monitor, an infusion pump, and electrodes. A medical examination is taking place. No specific eye examination or procedures are visible.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007184028625488281,
+    "roi_detection": 0,
+    "concept_extraction": 3.4262449741363525,
+    "grounding_check": 5.8650970458984375e-05,
+    "graph_construction": 0.22370505332946777,
+    "graph_traversal": 2.578723430633545,
+    "answer_synthesis": 1.479701042175293,
+    "total": 7.719088554382324
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [
+          "eyes"
+        ],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          1000,
+          651
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "treating",
+              "position": "standing over patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving treatment",
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "medical examination",
+            "attributes": {
+              "technique": "using a medical tool",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient",
+              "position": "near bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "administering medication",
+              "position": "near bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "electrode",
+            "attributes": {
+              "significance": "monitoring",
+              "appearance": "on patient's chest"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "treating",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving treatment from",
+            "object": "doctor",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "medical"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "doctor",
+            "attributes": {
+              "actions": "treating",
+              "position": "standing over patient"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "receiving treatment",
+              "position": "lying on bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "medical examination",
+            "attributes": {
+              "technique": "using a medical tool",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "monitoring patient",
+              "position": "near bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "administering medication",
+              "position": "near bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "electrode",
+            "attributes": {
+              "significance": "monitoring",
+              "appearance": "on patient's chest"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "doctor",
+            "relation": "treating",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "receiving treatment from",
+            "object": "doctor",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: physician, patient. Activities: medical examination. Equipment: medical monitor, infusion pump, electrodes"
+    }
+  }
+}

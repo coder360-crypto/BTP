@@ -1,0 +1,286 @@
+{
+  "question": "Is the patient unwell?",
+  "answer": "Based on the provided context, it is not possible to determine if the patient is unwell. \n\nWhat is visible in the image: A hospital room with a healthcare provider, a patient, a hospital bed, a medical monitor, an IV pole, a stool, and a medical cart.",
+  "question_type": "general",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.005266666412353516,
+    "roi_detection": 0,
+    "concept_extraction": 3.9984514713287354,
+    "grounding_check": 6.0558319091796875e-05,
+    "graph_construction": 0.2365410327911377,
+    "graph_traversal": 3.354375123977661,
+    "answer_synthesis": 1.5165011882781982,
+    "total": 9.113416194915771
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "general",
+      "traversal_strategy": "reasoning_traversal",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          992,
+          652
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "a small, simple hospital room with blue and white walls and a tiled floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "kneeled beside the bed",
+              "position": "beside the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying in bed",
+              "position": "in the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "on the wall above the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "medication administration",
+              "position": "beside the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "stool",
+            "attributes": {
+              "usage": "seating",
+              "position": "to the right of the man"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical cart",
+            "attributes": {
+              "usage": "storage of medical supplies",
+              "position": "against the wall to the right"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "face mask",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "on the man's face"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "man",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "lying on",
+            "object": "bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "medical monitor",
+            "relation": "mounted on",
+            "object": "wall",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor",
+              "appearance": "a small, simple hospital room with blue and white walls and a tiled floor"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "kneeled beside the bed",
+              "position": "beside the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying in bed",
+              "position": "in the bed"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "patient monitoring",
+              "position": "on the wall above the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "IV pole",
+            "attributes": {
+              "usage": "medication administration",
+              "position": "beside the bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "stool",
+            "attributes": {
+              "usage": "seating",
+              "position": "to the right of the man"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical cart",
+            "attributes": {
+              "usage": "storage of medical supplies",
+              "position": "against the wall to the right"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "face mask",
+            "attributes": {
+              "significance": "infection control",
+              "appearance": "on the man's face"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "man",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "patient",
+            "relation": "lying on",
+            "object": "bed",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "medical monitor",
+            "relation": "mounted on",
+            "object": "wall",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "reasoning_applied": true,
+        "graph_structure": {
+          "nodes_count": 1,
+          "edges_count": 0,
+          "node_types": [
+            "image"
+          ],
+          "relation_types": []
+        },
+        "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, medical monitor, IV pole, stool, medical cart",
+        "scene_elements": {
+          "image": [
+            {
+              "id": "image:covidindianhospital_092.jpeg",
+              "name": "covidindianhospital_092.jpeg",
+              "attributes": {
+                "id": "covidindianhospital_092.jpeg"
+              }
+            }
+          ]
+        },
+        "key_relationships": [],
+        "central_elements": [],
+        "query_focus": "patient",
+        "graph_patterns": []
+      },
+      "traversal_strategy": "reasoning_traversal",
+      "image_caption": "Setting: hospital room. People: healthcare provider, patient. Equipment: hospital bed, medical monitor, IV pole, stool, medical cart"
+    }
+  }
+}

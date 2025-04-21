@@ -1,0 +1,232 @@
+{
+  "question": "Is the patient critical?",
+  "answer": "The context does not contain information about the patient's condition. \n\nWhat is visible in the image is an ambulance with a patient, a bystander, a stretcher, and a bandage. \n\nThere is no information to determine if the patient is critical.",
+  "question_type": "patient_status",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.00532841682434082,
+    "roi_detection": 0,
+    "concept_extraction": 3.5832901000976562,
+    "grounding_check": 6.318092346191406e-05,
+    "graph_construction": 0.2485039234161377,
+    "graph_traversal": 2.530283212661743,
+    "answer_synthesis": 1.4946417808532715,
+    "total": 7.86609411239624
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [
+          "critical"
+        ],
+        "equipment": [],
+        "procedure": [],
+        "setting": [
+          "patient"
+        ],
+        "other_medical": []
+      },
+      "question_type": "patient_status",
+      "traversal_strategy": "condition_assessment",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          714,
+          1019
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "ambulance",
+            "attributes": {
+              "location": "inside",
+              "appearance": "equipped with medical supplies and storage compartments"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on stretcher",
+              "position": "supine on stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bystander",
+            "attributes": {
+              "actions": "sitting and holding phone",
+              "position": "beside stretcher"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "stretcher",
+            "attributes": {
+              "usage": "supporting patient",
+              "position": "center of image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bandage",
+            "attributes": {
+              "usage": "covering head injury",
+              "position": "around patient's head"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "head injury",
+            "attributes": {
+              "significance": "visible trauma",
+              "appearance": "bandaged with gauze"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "bloodstains",
+            "attributes": {
+              "significance": "indicative of trauma",
+              "appearance": "on patient's clothing and bandage"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving care from",
+            "object": "bystander or medical personnel (not clearly visible)",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "bystander",
+            "relation": "accompanying",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "ambulance",
+            "attributes": {
+              "location": "inside",
+              "appearance": "equipped with medical supplies and storage compartments"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "lying on stretcher",
+              "position": "supine on stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bystander",
+            "attributes": {
+              "actions": "sitting and holding phone",
+              "position": "beside stretcher"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [],
+        "equipment": [
+          {
+            "name": "stretcher",
+            "attributes": {
+              "usage": "supporting patient",
+              "position": "center of image"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "bandage",
+            "attributes": {
+              "usage": "covering head injury",
+              "position": "around patient's head"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "head injury",
+            "attributes": {
+              "significance": "visible trauma",
+              "appearance": "bandaged with gauze"
+            },
+            "grounding_score": 0.8
+          },
+          {
+            "name": "bloodstains",
+            "attributes": {
+              "significance": "indicative of trauma",
+              "appearance": "on patient's clothing and bandage"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "patient",
+            "relation": "receiving care from",
+            "object": "bystander or medical personnel (not clearly visible)",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "bystander",
+            "relation": "accompanying",
+            "object": "patient",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": [],
+        "image_caption": "Setting: ambulance. People: patient, bystander. Equipment: stretcher, bandage",
+        "caption_based": true
+      },
+      "traversal_strategy": "condition_assessment",
+      "image_caption": "Setting: ambulance. People: patient, bystander. Equipment: stretcher, bandage"
+    }
+  },
+  "metrics": {
+    "bleu": 0.036002867514605685,
+    "rouge": 0.12500000000000003,
+    "sent": 0.49219512939453125,
+    "ent": 0.04952094331383705,
+    "clip_c": 0.5362645755531174
+  },
+  "reference_answer": "Yes the patient seems to have suffered trauma, with serious injury to head. He seems unconcious, and hence should be attended on priority."
+}

@@ -1,0 +1,232 @@
+{
+  "question": "Is the patient's condition critical?",
+  "answer": "The finding was not observed in the relevant region.",
+  "question_type": "general",
+  "execution_times": {
+    "question_analysis": 0.0052051544189453125,
+    "roi_detection": 17.483172178268433,
+    "concept_extraction": 1.9386777877807617,
+    "grounding_check": 6.818771362304688e-05,
+    "graph_construction": 0.13956642150878906,
+    "graph_traversal": 0.011518001556396484,
+    "answer_synthesis": 0.2780735492706299,
+    "total": 19.85658097267151
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "conditions": [],
+        "modalities": [],
+        "other_medical": []
+      },
+      "question_type": "general",
+      "traversal_strategy": "subgraph_extraction"
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          712,
+          508
+        ],
+        [
+          0,
+          254,
+          712,
+          1016
+        ]
+      ]
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "anatomical_structures": [
+          {
+            "name": "head",
+            "attributes": {
+              "location": "center of the image",
+              "appearance": "wrapped in a bandage"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "face",
+            "attributes": {
+              "location": "front of the head",
+              "appearance": "covered by bandage"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hair",
+            "attributes": {
+              "location": "on the head",
+              "appearance": "black and short"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "body",
+            "attributes": {
+              "location": "rest of the person",
+              "appearance": "lying on a stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "legs",
+            "attributes": {
+              "location": "lower part of the body",
+              "appearance": "extended and barefoot"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "stretcher",
+            "attributes": {
+              "location": "under the body",
+              "appearance": "gray and leather-like"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "findings": [
+          {
+            "name": "head injury",
+            "attributes": {
+              "severity": "visible bloodstains on clothing and bandage",
+              "appearance": "bandaged with visible blood"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "head",
+            "relation": "located_on",
+            "object": "body",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "body",
+            "relation": "lying_on",
+            "object": "stretcher",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "legs",
+            "relation": "adjacent_to",
+            "object": "stretcher edge",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "bandage",
+            "relation": "covering",
+            "object": "head and face",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "anatomical_structures": [
+          {
+            "name": "head",
+            "attributes": {
+              "location": "center of the image",
+              "appearance": "wrapped in a bandage"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "face",
+            "attributes": {
+              "location": "front of the head",
+              "appearance": "covered by bandage"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "hair",
+            "attributes": {
+              "location": "on the head",
+              "appearance": "black and short"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "body",
+            "attributes": {
+              "location": "rest of the person",
+              "appearance": "lying on a stretcher"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "legs",
+            "attributes": {
+              "location": "lower part of the body",
+              "appearance": "extended and barefoot"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "stretcher",
+            "attributes": {
+              "location": "under the body",
+              "appearance": "gray and leather-like"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "findings": [
+          {
+            "name": "head injury",
+            "attributes": {
+              "severity": "visible bloodstains on clothing and bandage",
+              "appearance": "bandaged with visible blood"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "head",
+            "relation": "located_on",
+            "object": "body",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "body",
+            "relation": "lying_on",
+            "object": "stretcher",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "legs",
+            "relation": "adjacent_to",
+            "object": "stretcher edge",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "bandage",
+            "relation": "covering",
+            "object": "head and face",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "found": false,
+        "nodes": [],
+        "edges": []
+      },
+      "traversal_strategy": "subgraph_extraction"
+    }
+  }
+}

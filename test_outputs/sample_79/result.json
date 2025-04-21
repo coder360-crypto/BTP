@@ -1,0 +1,266 @@
+{
+  "question": "Is the PPE kit worn correctly by the healthcare worker?",
+  "answer": "There is not enough information to answer the question. \n\nThe context does not mention PPE (Personal Protective Equipment) or describe the attire of the healthcare workers in detail, so it is not possible to determine if a PPE kit is being worn correctly or at all. \n\nThe context only mentions a hospital room setting with a physician, patient, and two other healthcare workers, along with some equipment, but does not provide specifics about their clothing or PPE.",
+  "question_type": "procedural",
+  "roi_detection_enabled": false,
+  "execution_times": {
+    "question_analysis": 0.007893085479736328,
+    "roi_detection": 0,
+    "concept_extraction": 3.551112651824951,
+    "grounding_check": 7.843971252441406e-05,
+    "graph_construction": 0.246842622756958,
+    "graph_traversal": 2.2954635620117188,
+    "answer_synthesis": 1.5656051635742188,
+    "total": 7.66797661781311
+  },
+  "interim_results": {
+    "question_analysis": {
+      "concepts": {
+        "anatomical": [],
+        "clinical_findings": [],
+        "equipment": [
+          "ppe"
+        ],
+        "procedure": [],
+        "setting": [],
+        "other_medical": []
+      },
+      "question_type": "procedural",
+      "traversal_strategy": "procedure_evaluation",
+      "roi_detection_enabled": false
+    },
+    "roi_detection": {
+      "roi_coords": [
+        [
+          0,
+          0,
+          509,
+          339
+        ]
+      ],
+      "roi_detection_enabled": false
+    },
+    "concept_extraction": {
+      "raw_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "multiple hospital beds, medical equipment, and sterile environment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "reviewing patient data on a monitor",
+              "position": "standing beside a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare providers",
+            "attributes": {
+              "actions": "",
+              "position": "standing or sitting near another hospital bed in the background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient monitoring",
+            "attributes": {
+              "technique": "reviewing vital signs or medical data on a monitor",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "displaying patient data",
+              "position": "mounted on a wall or bedside console"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "personal protective equipment (PPE)",
+            "attributes": {
+              "usage": "infection control",
+              "position": "worn by healthcare providers"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient vital signs",
+            "attributes": {
+              "significance": "monitoring patient condition",
+              "appearance": "displayed on a monitor"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare providers",
+            "relation": "interacting with",
+            "object": "medical equipment",
+            "grounding_score": 0.75
+          }
+        ]
+      },
+      "extraction_confidence": 0.8
+    },
+    "grounding_check": {
+      "grounded_concepts": {
+        "scene_setting": [
+          {
+            "name": "hospital room",
+            "attributes": {
+              "location": "indoor hospital setting",
+              "appearance": "multiple hospital beds, medical equipment, and sterile environment"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "personnel": [
+          {
+            "name": "healthcare provider",
+            "attributes": {
+              "actions": "reviewing patient data on a monitor",
+              "position": "standing beside a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "patient",
+            "attributes": {
+              "actions": "",
+              "position": "lying on a hospital bed"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "healthcare providers",
+            "attributes": {
+              "actions": "",
+              "position": "standing or sitting near another hospital bed in the background"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "procedures": [
+          {
+            "name": "patient monitoring",
+            "attributes": {
+              "technique": "reviewing vital signs or medical data on a monitor",
+              "stage": "ongoing"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "equipment": [
+          {
+            "name": "hospital bed",
+            "attributes": {
+              "usage": "patient care",
+              "position": "center of the room"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "medical monitor",
+            "attributes": {
+              "usage": "displaying patient data",
+              "position": "mounted on a wall or bedside console"
+            },
+            "grounding_score": 0.85
+          },
+          {
+            "name": "personal protective equipment (PPE)",
+            "attributes": {
+              "usage": "infection control",
+              "position": "worn by healthcare providers"
+            },
+            "grounding_score": 0.85
+          }
+        ],
+        "clinical_elements": [
+          {
+            "name": "patient vital signs",
+            "attributes": {
+              "significance": "monitoring patient condition",
+              "appearance": "displayed on a monitor"
+            },
+            "grounding_score": 0.8
+          }
+        ],
+        "relationships": [
+          {
+            "subject": "healthcare provider",
+            "relation": "attending to",
+            "object": "patient",
+            "grounding_score": 0.75
+          },
+          {
+            "subject": "healthcare providers",
+            "relation": "interacting with",
+            "object": "medical equipment",
+            "grounding_score": 0.75
+          }
+        ]
+      }
+    },
+    "graph_traversal": {
+      "query_result": {
+        "evaluation_possible": true,
+        "procedure_identified": false,
+        "procedures": [],
+        "related_equipment": [],
+        "personnel_involved": [],
+        "evaluation_focus": "technique",
+        "key_relationships": []
+      },
+      "traversal_strategy": "procedure_evaluation",
+      "image_caption": "Setting: hospital room. People: physician, patient, healthcare worker 2, healthcare worker 3. Activities: monitoring. Equipment: monitor, hospital bed"
+    }
+  },
+  "metrics": {
+    "bleu": 0.038350113873237,
+    "rouge": 0.18181818181818182,
+    "sent": 0.8167744278907776,
+    "ent": 0.09521622210741043,
+    "clip_c": 0.0
+  },
+  "reference_answer": "Yres the PPE kit is properly worn by the healthcare worker"
+}
